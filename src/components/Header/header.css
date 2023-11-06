@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .bell-icon {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  .profile-dropdown {
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .profile-imageContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap:5px;
+  }
+  
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+    top: 50px;
+    right: 0;
+  }
+  
+  .profile-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropdown-content li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content li:hover {
+    background-color: #f0f0f0;
+  }
+  

@@ -1,0 +1,243 @@
+.rounded-card {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    /* padding: 10px; */
+    width: 96%;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .card-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    padding:20px 0px;
+  }
+  
+  .card-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+
+  
+  .cards-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .equity-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    width: 96%;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 245px;
+  }
+
+  .equity-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .equity-card-header .heading{
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .opening-balance{
+    color:#989898;
+    font-size: 12px;
+  }
+
+  .balance{
+    color: #00BA77;
+
+  }
+
+  .equity-card-body {
+    flex:1;
+  }
+
+  .equity-card-body p {
+    color: #00BA77;
+    font-size: 60px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .wallet-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    width: 96%;
+    margin: 10px;
+    background-color: #00BA77;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 245px;
+  }
+
+  .wallet-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .wallet-card-header .heading{
+    color:#F9F9F9;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .wallet-balance{
+    color:#F9F9F9;
+    font-size: 12px;
+  }
+
+  .wallet-balance .balance{
+    color:white;
+    font-weight: 500;
+  }
+
+.wallet-row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.wallet-item img{
+    width: 172px;
+    height:150px;
+    padding:10px 0px;
+}
+
+.right-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-item p{
+    color:white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.right-item .info {
+    padding:10px 0px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.right-item button{
+    width: 93px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 5px;
+    border:none
+}
+
+
+.holdings-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    width: 96%;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 273px;
+  }
+
+  .holdings-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .holdings-left-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+  }
+
+ .additional-heading{
+    font-size: 12px;
+    font-weight: 400;
+    color:#989898;
+  }
+
+  .holdings-card-header .heading{
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .opening-balance{
+    color:#989898;
+    font-size: 12px;
+  }
+
+  .balance{
+    color: #00BA77;
+  }
+
+  .holdings-card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0px 10px;
+  }
+
+  .holdings-card-body p {
+    align-items: center;
+    justify-content: center;
+    color: #00BA77;
+    display: flex;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .selector{
+    height:35px;
+    width:122px;
+    border:0.5px solid #D9D9D9;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 5px;
+    padding:0px;
+  }

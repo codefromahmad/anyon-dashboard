@@ -1,47 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './sidebar.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./sidebar.css";
+import home from "../../assets/images/home.svg";
+import markets from "../../assets/images/markets.svg";
+import holdings from "../../assets/images/holdings.svg";
+import wallet from "../../assets/images/wallet.svg";
+import alert from "../../assets/images/alert.svg";
+import apps from "../../assets/images/apps.svg";
 
 const Sidebar = () => {
   const sidebarItems = [
     {
-      name: 'Home',
-      img: require('../../assets/images/home.png'),
-      path: '/',
+      name: "Home",
+      img: home,
+      path: "/",
     },
     {
-      name: 'Markets',
-      img: require('../../assets/images/markets.png'),
-      path: '/markets',
+      name: "Markets",
+      img: markets,
+      path: "/markets",
     },
     {
-      name: 'Holdings',
-      img: require('../../assets/images/holdings.png'),
-      path: '/holdings',
+      name: "Holdings",
+      img: holdings,
+      path: "/holdings",
     },
     {
-      name: 'Wallet',
-      img: require('../../assets/images/wallet.png'),
-      path: '/wallet',
+      name: "Wallet",
+      img: wallet,
+      path: "/wallet",
     },
     {
-      name: 'Alert',
-      img: require('../../assets/images/alerts.png'),
-      path: '/alert',
+      name: "Alert",
+      img: alert,
+      path: "/alert",
     },
     {
-      name: 'Apps',
-      img: require('../../assets/images/apps.png'),
-      path: '/apps',
+      name: "Apps",
+      img: apps,
+      path: "/apps",
     },
   ];
 
   return (
-    <div className="sidebar-container"> 
+    <div className="sidebar-container">
       <div className="user-profile"></div>
       <div className="item-list">
         {sidebarItems.map((item, index) => (
-          <div key={index} >
+          <div key={index}>
             <Link to={item.path} className="menu-item">
               <img src={item.img} alt={`${item.name} Logo`} />
               <span className="item-name">{item.name}</span>

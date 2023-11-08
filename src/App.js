@@ -18,6 +18,7 @@ function App() {
             <Route path="/markets" element={<Markets />} />
             <Route path="/holdings" element={<Holdings />} />
             <Route path="/wallet" element={<Wallet />} />
+            <Route path="/wallet/addfunds" element={<Alert />} />
             <Route path="/alert" element={<Alert />} />
             <Route path="/apps" element={<Apps />} />
           </Routes>

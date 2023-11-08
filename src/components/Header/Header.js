@@ -3,12 +3,13 @@ import "./header.css";
 import { GoBell } from "react-icons/go";
 import { FaChevronDown } from "react-icons/fa";
 import profilePicture from "../../assets/images/profile-picture.avif";
+import bellIcon from "../../assets/images/bellicon.svg";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="bell-icon">
-        <GoBell />
+        <img src={bellIcon} />
       </div>
       <div className="profile-dropdown">
         <div className="profile-imageContainer">
@@ -17,7 +18,7 @@ const Header = () => {
             alt="Profile Picture"
             className="profile-image"
           />
-          <FaChevronDown />
+          <FaChevronDown className="dropdown-icon" />
         </div>
         <div className="dropdown-content">
           {/* Dropdown content can go here */}

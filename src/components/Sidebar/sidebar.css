@@ -42,3 +42,8 @@
     width: 25px;
     height: 25px;
 }
+@media (max-width:600px) {
+    .sidebar-container{
+        display: none;
+    }
+}

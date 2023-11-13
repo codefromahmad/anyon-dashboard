@@ -1,0 +1,183 @@
+.withdrawContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+}
+.withdrawHeading {
+  font-weight: 500;
+  font-size: 25px;
+  color: #151515;
+  margin-bottom: 0;
+}
+.withdrawHeading h4 {
+  margin-bottom: 0;
+}
+.portfolioBalance {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.portfolioBalance p {
+  font-weight: 400;
+  font-size: 13px;
+}
+.portfolioAmount p {
+  color: #00ba77;
+}
+.withdrawText p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #484848;
+}
+.bankNameCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 444px;
+  padding-top: 10px;
+}
+.bankNameCard p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #151515;
+}
+.branchName p {
+  color: #484848;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+.accountNumberCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 444px;
+  padding-top: 10px;
+}
+.accountNumberCard p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #151515;
+}
+.accountNumber p {
+  color: #484848;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+.koredeText {
+  margin-left: 348px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #00ba77;
+}
+.enterAmountCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 444px;
+  padding-top: 10px;
+  margin-bottom: 60px;
+}
+.enterAmountCard p {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  color: #151515;
+}
+.enterAmount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 13px;
+  column-gap: 10px;
+}
+.enterAmountLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  padding: 15px 12px;
+}
+.enterAmountLeft p {
+  margin-top: 0;
+}
+.enterAmountRight p {
+  margin-top: 0;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  padding: 15px 12px;
+  width: 315px;
+}
+.withdrawButton {
+  border: 0.5px solid #80808080;
+  padding: 14px 185px;
+  background: #00ba77;
+  border-radius: 5px;
+}
+.withdrawButton a {
+  color: white;
+  text-decoration: none;
+}
+.changeDetail p {
+  color: #00ba77;
+
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 500px) {
+  .withdrawContainer {
+    padding: 40px 0 60px;
+  }
+  .withdrawText {
+    display: none;
+  }
+  .bankNameCard {
+    width: 300px;
+  }
+  .accountNumberCard {
+    width: 300px;
+  }
+  .enterAmountCard {
+    width: 300px;
+  }
+  .enterAmountRight p {
+    width: 177px;
+  }
+  .koredeText {
+    margin-left: 200px;
+  }
+  .withdrawButton{
+    padding: 15px 120px;
+  }
+}
+@media (max-width: 380px) {
+  .withdrawText {
+    display: none;
+  }
+  .bankNameCard {
+    width: 280px;
+  }
+  .accountNumberCard {
+    width: 280px;
+  }
+  .enterAmountCard {
+    width: 280px;
+  }
+  .enterAmountRight p {
+    width: 150px;
+  }
+  .koredeText {
+    margin-left: 178px;
+  }
+  .withdrawButton {
+    padding: 13px 100px;
+  }
+}

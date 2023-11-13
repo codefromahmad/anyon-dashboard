@@ -1,0 +1,115 @@
+.savingLockCard {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 200px;
+}
+.savingLockTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.savingLockHeading {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  padding-bottom: 25px;
+}
+.savingLockHeading h4 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+}
+.createButton{
+    margin-top: 10px;
+}
+.createButton a {
+  background: #02915d;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.savingLockBottom {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+}
+.savingLockLeft {
+  width: 45%;
+}
+.lockWalletCard {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  padding: 7px 20px;
+}
+.lockWalletTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.interestRateText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 15px;
+}
+.interestRateText p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.interestRateText h4 {
+  color: #00ba77;
+  font-weight: 300;
+  font-size: 30px;
+}
+.noText {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.noText p {
+  margin: 0;
+  font-size: 50px;
+  color: #00ba77;
+  font-weight: 400;
+  line-height: 76.56px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.contentdiv p {
+  /* margin-bottom: 0; */
+  font-size: 12px;
+  color: #00ba77;
+}
+.savingLockRight {
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  padding: 7px 20px;
+  width: 49%;
+}
+@media (max-width: 600px) {
+  .savingLockLeft {
+    width: 100%;
+  }
+  .savingLockBottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .savingLockRight {
+    width: 91%;
+  }
+  .interestRateText h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .savingLockCard {
+    padding: 20px 10px 200px;
+  }
+
+  .lockWalletCard {
+    padding: 5px 15px;
+  }
+}

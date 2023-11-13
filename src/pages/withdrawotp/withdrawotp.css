@@ -1,0 +1,80 @@
+.otpCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0;
+}
+.otpHeading {
+  font-weight: 500;
+  font-size: 25px;
+}
+.otpHeading h4 {
+  margin-bottom: 0;
+}
+.otpText p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.otpCards {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  column-gap: 18px;
+  padding-bottom: 60px;
+}
+.card1 {
+  border: 0.5px solid #000000;
+  width: 55px;
+  height: 60px;
+  border-radius: 5px;
+}
+.confirmButton {
+  border: 0.5px solid #80808080;
+  padding: 14px 185px;
+  background: #00ba77;
+  border-radius: 5px;
+}
+.confirmButton a {
+  color: white;
+}
+.otpCardBottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+.otpCardBottom p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.resendText p {
+  color: #00ba77;
+  text-decoration: underline;
+}
+@media (max-width:500px) {
+    .otpCard{
+        padding: 30px 0 200px;
+    }
+    .otpCards{
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+    }
+    .card1{
+        width: 40px;
+        height: 45px;
+    }
+    .confirmButton{
+        padding: 14px 130px;
+    }
+}
+@media (max-width:380px) {
+    .otpText{
+        text-align: center;
+        width: 242px;
+    }
+    .confirmButton{
+        padding: 14px 100px;
+    }
+    
+}

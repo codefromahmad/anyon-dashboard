@@ -1,0 +1,143 @@
+.bankTransferContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+}
+.bankTransferHeading h4 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+.bankTransferText p {
+  width: 318px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  color: #515151;
+  padding-bottom: 20px;
+}
+.detailCard {
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  padding: 20px 25px 40px;
+}
+.bankCard p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #484848;
+}
+.bankName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  width: 430px;
+  padding: 0 18px;
+}
+.bankName p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #151515;
+}
+.accountNoCard {
+  padding-top: 10px;
+}
+.accountNoCard p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #484848;
+}
+.accountNo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  width: 430px;
+  padding: 0 18px;
+}
+.accountNo p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #151515;
+}
+.accountNameCard {
+  padding-top: 10px;
+}
+.accountNameCard p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #484848;
+}
+.accountName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  width: 430px;
+  padding: 0 18px;
+}
+.accountName p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #151515;
+}
+.paymentButton p {
+  border-radius: 5px;
+  border: 0.5px solid #cccccce5;
+  color: white;
+  background: #00ba77;
+  margin-top: 25px;
+  padding: 13px 162px;
+}
+@media (max-width: 600px) {
+  .bankTransferHeading {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .bankName {
+    width: 298px;
+  }
+  .accountNo {
+    width: 298px;
+  }
+  .accountName {
+    width: 298px;
+  }
+  .paymentButton p {
+    padding: 10px 90px;
+  }
+}
+@media (max-width: 400px) {
+  .bankTransferContainer {
+    padding: 30px 0;
+  }
+  .bankTransferText p {
+    width: 260px;
+  }
+  .detailCard {
+    padding: 10px 10px 15px;
+  }
+  .accountNameCard {
+    padding-top: 3px;
+  }
+  .accountNoCard {
+    padding-top: 3px;
+  }
+  .bankName {
+    width: 230px;
+  }
+  .accountNo {
+    width: 230px;
+  }
+  .accountName {
+    width: 230px;
+  }
+  .paymentButton p {
+    padding: 10px 45px;
+  }
+}

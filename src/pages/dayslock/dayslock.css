@@ -1,0 +1,140 @@
+.daysLockCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 200px;
+}
+.daysLockHeading h4 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.dayslockText {
+  width: 378px;
+}
+.dayslockText p {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  color: #515151;
+}
+.amountToLock {
+  width: 430px;
+}
+.amountToLock p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #151515;
+}
+.amountValue {
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+
+  padding: 0 18px;
+}
+.amountValue p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #151515;
+}
+.titleToLock {
+  width: 430px;
+}
+.titleToLock p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #151515;
+  padding-top: 13px;
+}
+.titleValue {
+  justify-content: space-between;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  padding: 0 18px;
+  height: 50px;
+}
+.sourceOfFunding {
+  width: 430px;
+}
+.sourceOfFunding p {
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 13px;
+}
+.funding {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  padding: 0 18px;
+}
+.funding p {
+  font-weight: 400;
+  padding-top: 0;
+  font-size: 16px;
+  color: #484848;
+}
+.paybackDate {
+  width: 430px;
+}
+.paybackDate p {
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 13px;
+}
+.payback {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  padding: 10px 18px;
+}
+.payback p {
+  font-weight: 400;
+  padding-top: 0;
+  font-size: 16px;
+  color: #484848;
+}
+.daysLockButton {
+  margin-top: 40px;
+}
+.daysLockButton p {
+  background: #00ba77;
+  color: white;
+  padding: 18px 180px;
+  border: 0.5px solid #cccccce5;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .daysLockCard {
+    padding: 30px 0 200px;
+  }
+  .daysLockHeading h4 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .dayslockText {
+    width: 299px;
+  }
+  .titleToLock{
+    width: 280px;
+  }
+  .amountToLock{
+    width: 280px;
+  }
+  .sourceOfFunding{
+    width: 280px;
+  }
+  .paybackDate{
+    width: 280px;
+  }
+  .daysLockButton p{
+    padding: 18px 110px;
+  }
+}

@@ -1,0 +1,181 @@
+.alertCard {
+  display: flex;
+  flex-direction: row;
+}
+.alertLeft {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+}
+.historyCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  margin: 2px 2px ;
+  padding: 7px 20px;
+  align-items: center;
+}
+.historyCard p {
+  font-weight: 500;
+  font-size: 22px;
+  color: #5e5e5e;
+}
+.newChatButton p {
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  background: #00ba77;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.timeRemaining {
+  background-color: white;
+  border-radius: 5px;
+  margin: 0px 2px 2px;
+  padding: 7px 20px 320px;
+}
+.timeRemaining h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #cccccccc;
+}
+.timeRemaining p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.alertLeftBottom {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 0 150px;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0px 2px;
+}
+.alertLeftBottom h4 {
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #515151;
+}
+.alertRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.alertColumn1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #f0f0f0;
+}
+.alertColumn2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #f0f0f0;
+}
+.alertColumn3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #f0f0f0;
+}
+.alertColumn4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #f0f0f0;
+}
+.alertColumn1 h4 {
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  background: #f5f5f5;
+  padding: 10px 15px;
+  margin: 0;
+}
+.alertColumn2 h4 {
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  background: #f5f5f5;
+  padding: 10px 41px;
+  margin: 0;
+}
+.alertColumn3 h4 {
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  background: #f5f5f5;
+  padding: 10px 15px;
+  margin: 0;
+}
+.alertColumn4 h4 {
+  font-weight: 400;
+  font-size: 12px;
+  color: black;
+  background: #f5f5f5;
+  padding: 10px 17px;
+  margin: 0;
+}
+.alertColumn1 p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.alertColumn2 p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.alertColumn3 p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.alertColumn4 img{
+  padding: 10px 0;
+}
+.alertRight{
+    background-color: white;
+    border-radius: 5px;
+    margin: 2px 0;
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aiPromptHeading h4{
+font-weight: 500;
+font-size: 25px;
+margin-bottom: 0;
+}
+.aiPromptText p{
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 200px;
+}
+.alertRightTextCard{
+width: 452px;
+padding-bottom: 70px;
+}
+.alertRightText p{
+background: #CCCCCC1A;
+font-weight: 400;
+font-size: 13px;
+padding: 15px 25px;
+}
+.messageHere{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 648px;
+    border: 0.3px solid #CCCCCC;
+    padding: 3px 23px;
+    border-radius: 5px;
+}
+.messageHere p{
+    font-weight: 400;
+    font-size: 14px;
+}

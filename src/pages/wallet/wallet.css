@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+
+.rounded-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  /* padding: 10px; */
+  width: 96%;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.walletCard{
+padding: 20px 30px 150px;
+}
+.walletCardHeader {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+.walletBalanceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 25px 30px;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+  width: 70%;
+}
+.wallet-balance-card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.text p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.wallet-balance-card-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.withdraw {
+  padding: 8px 20px;
+  border: 1px solid #02915d;
+  border-radius: 5px;
+}
+.withdraw a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  font-size: 14px;
+}
+.add-funds {
+  padding: 8px 20px;
+  border-radius: 5px;
+  background-color: #02915d;
+}
+.add-funds a{
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.wallet-balance-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.no-text {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.no-text p {
+  margin: 0;
+  font-size: 50px;
+  color: #00ba77;
+  font-weight: 400;
+  line-height: 76.56px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.contentDiv p {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #00ba77;
+}
+.totalReturnCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #d9d9d9;
+  padding: 10px 40px;
+  border-radius: 5px;
+  width: 20%;
+}
+.totalReturnText p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.totalReturnBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.smallText p {
+  font-size: 13px;
+  margin-bottom: 0;
+  color: #00ba77;
+}
+
+.todaysReturnCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #d9d9d9;
+  padding: 10px 40px;
+  border-radius: 5px;
+  width: 20%;
+}
+.todaysReturnText p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.todaysReturnBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.smallText p {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #00ba77;
+}
+.walletCardFooter {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  padding-top: 20px;
+}
+.investCard {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 25px 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #02915d;
+  width: 53%;
+}
+.investCard {
+  padding: 30px 20px;
+  column-gap: 10px;
+}
+.investCardImg img {
+  height: 160px;
+  width: 230px;
+}
+.investCardRight {
+  width: 261px;
+}
+.investCardRight h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+.investCardText{
+  margin-bottom: 25px;
+}
+.investCardText p {
+  font-size: 13px;
+  color: white;
+  width: max-content;
+  font-weight: 300;
+  margin: 0;
+  line-height: 16.59px;
+}
+.investButton a {
+  padding: 15px 50px;
+  background: white;
+  width: max-content;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 15px;
+  text-decoration: none;
+  color: black;
+}
+.walletGraph {
+  width: 50%;
+}
+@media (max-width: 780px) {
+  .walletCardHeader {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .walletBalanceDiv {
+    width: 90%;
+  }
+  .totalReturnCard {
+    width: 85%;
+  }
+  .todaysReturnCard {
+    width: 85%;
+  }
+  .walletCardFooter {
+    display: flex;
+    flex-direction: column;
+  }
+  .investCard {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    justify-content: center;
+    align-items: center;
+  }
+  .investCardRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .walletCardHeader {
+    padding: 10px;
+  }
+  .walletCardFooter{
+    padding: 15px;
+  }
+  .walletBalanceDiv {
+    padding: 10px;
+    width: 94%;
+  }
+  .totalReturnCard {
+    width: 82%;
+  }
+  .todaysReturnCard {
+    width: 82%;
+  }
+}
+@media (max-width: 400px) {
+.text p{
+    font-size: 13px;
+}
+.totalReturnText{
+    font-size: 13px;
+}
+.totalReturnCard{
+    width: 73%;
+}
+.todaysReturnText{
+    font-size: 13px;
+}
+.todaysReturnCard{
+    width: 73%;
+}
+.investCard{
+    width: 87%;
+}
+.wallet-balance-card-buttons{
+    column-gap: 5px;
+}
+.withdraw{
+    padding: 5px 10px;
+}
+.withdraw p{
+    font-size: 11px;
+}
+.add-funds{
+    padding: 5px 10px;
+}
+.add-funds p{
+    font-size: 11px;
+}
+}

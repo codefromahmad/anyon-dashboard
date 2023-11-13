@@ -1,0 +1,84 @@
+.rounded-card {
+  /* height: 100%; */
+}
+.addFundDiv { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 200px;
+  row-gap: 30px;
+}
+.addFundsBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 25px;
+}
+.bankTransferCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #d9d9d9;
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+.bankTransferCard a {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 13px 0;
+  text-decoration: none;
+  color: black;
+}
+.bankTransferCard p {
+  font-size: 13px;
+  font-weight: 300;
+  width: 259px;
+  margin-top: 0;
+  color: #515151;
+}
+.payStackCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #d9d9d9;
+  padding: 36px 30px 25px;
+  border-radius: 5px;
+  row-gap: 10px;
+}
+.payStackCard p {
+  margin-top: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  width: 259px;
+  color: #515151;
+}
+@media (max-width: 850px) {
+  .addFundsBottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+@media (max-width: 400px) {
+    .addFundDiv{
+        padding: 50px 10px;
+       row-gap: 15px;
+    }
+    .addFundsText h2{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .bankTransferCard{
+        padding:10px 10px ;
+    }
+    .payStackCard{
+        padding:40px 10px ;
+        gap: 0;
+    }
+    .payStackCard p{
+        margin-top: 20px;
+    }
+}

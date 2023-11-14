@@ -1,7 +1,7 @@
+import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Sidebar } from "./components";
-import "./App.css";
 import { Alert, Apps, Holdings, Home, Markets, Wallet } from "./pages";
 import AddFunds from "./pages/addfunds/AddFunds";
 import BankTransfer from "./pages/banktransfer/BankTransfer";
@@ -24,14 +24,20 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/markets" element={<Markets />} />
             <Route path="/holdings" element={<Holdings />} />
-            <Route path="/wallet" element={<Wallet />} />
-            <Route path="/wallet/addfunds" element={<AddFunds />} />
-            <Route path="/wallet/withdraw" element={<Withdraw />} />
-            <Route path="/wallet/withdraw/otp" element={<WithdrawOTP/>} />
-            <Route path="/wallet/addfunds/banktransfer" element={<BankTransfer />} />
-            <Route path="/wallet/savinglock" element={<SavingLock/>} />
-            <Route path="/wallet/savinglock/durationselection" element={<DurationSelection/>} />
-            <Route path="/wallet/savinglock/durationselection/dayslock" element={<DaysLock/>} />
+            <Route path="/wallet/*" element={<Wallet />}>
+              <Route path="withdraw" element={<Withdraw />}>
+                <Route path="otp" element={<WithdrawOTP />} />
+              </Route>
+              <Route path="addfunds" element={<AddFunds />}>
+                <Route path="banktransfer" element={<BankTransfer />} />
+              </Route>
+              <Route path="savinglock" element={<SavingLock />}>
+                <Route path="durationselection" element={<DurationSelection />}>
+                  <Route path="dayslock" element={<DaysLock />} />
+                </Route>
+              </Route>
+            </Route>
+
             <Route path="/alert" element={<Alert />} />
             <Route path="/apps" element={<Apps />} />
           </Routes>

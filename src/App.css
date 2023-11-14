@@ -1,20 +1,15 @@
-.app {
-  background-color: #F0F0F0;
-}
-
 .app{
+  background-color: #F0F0F0;
   display: flex;
   flex-direction: row;
-}
-
-.sidebar {
-  width: 73px;
   height: 100vh;
 }
 
 .content {
-  flex: 1;
-  overflow: auto;
+  /* flex: 1;
+  overflow: auto; */
+  flex-grow: 1;
+  overflow-y: auto;
 }
 .App-logo {
   height: 40vmin;

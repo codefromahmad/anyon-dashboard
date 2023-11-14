@@ -3,6 +3,7 @@ import "./home.css";
 import walletImage from "../../assets/images/walletImage.svg";
 import currentValues from "../../assets/images/currentValues.svg";
 import ColumnGraph from "../../components/ColumnGraph";
+import { MarketOverview } from "../../components";
 
 const Home = () => {
   const [selectedValue, setSelectedValue] = useState("Positions");
@@ -85,8 +86,20 @@ const Home = () => {
             {selectedValue === "Current Value" ? (
               <img src={currentValues} alt="wallet image" />
             ) : (
-                <ColumnGraph data={data} />
+              <ColumnGraph data={data} />
             )}
+          </div>
+        </div>
+
+        <div className="holdings-container">
+          <div className="holdings-card-header">
+            <div className="holdings-left-header">
+              <p className="heading">Market Overview</p>
+            </div>
+            <p>something else</p>
+          </div>
+          <div className="market-card-body">
+            <MarketOverview />
           </div>
         </div>
       </div>

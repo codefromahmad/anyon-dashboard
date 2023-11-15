@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import { FaChevronDown } from "react-icons/fa";
 import profilePicture from "../../assets/images/profile-picture.jpeg";
-import bellIcon from "../../assets/images/bellicon.svg";
+// import bellIcon from "../../assets/images/bellicon.svg";
 import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
 

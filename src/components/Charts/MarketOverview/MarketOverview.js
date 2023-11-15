@@ -5,9 +5,12 @@ const MarketOverview = () => {
   const chartContainerRef = useRef(null);
 
   useEffect(() => {
+    const width = window.innerWidth > 480 ? 300 : 240; // Adjust as needed
+    const height = 120;
+
     const chart = createChart(chartContainerRef.current, {
-      width: 900,
-      height: 200,
+      width: width,
+      height: height,
       layout: {
         backgroundColor: '#000',
       },

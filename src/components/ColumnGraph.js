@@ -7,9 +7,12 @@ const ColumnGraph = ({ data }) => {
   useEffect(() => {
     if (!chartContainer.current) return;
 
+    const width = window.innerWidth > 480 ? 300 : 240; // Adjust as needed
+    const height = 120;
+
     const chart = createChart(chartContainer.current, {
-      width: 400,
-      height: 200,
+      width: width,
+      height: height,
     });
 
     const series = chart.addHistogramSeries({
@@ -53,7 +56,7 @@ const ColumnGraph = ({ data }) => {
     };
   }, [data]);
 
-  return <div style={{position:'sticky'}} ref={chartContainer} />;
+  return <div style={{ position: "sticky" }} ref={chartContainer} />;
 };
 
 export default ColumnGraph;

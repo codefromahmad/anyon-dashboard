@@ -2,16 +2,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./popupsidebar.css";
 import home from "../../assets/images/menu/home.svg";
-import homeActive from "../../assets/images/menu/home-active.svg";
 import markets from "../../assets/images/menu/markets.svg";
-import marketsActive from "../../assets/images/menu/markets-active.svg";
 import holdings from "../../assets/images/menu/holdings.svg";
-import holdingsActive from "../../assets/images/menu/holdings-active.svg";
 import wallet from "../../assets/images/menu/wallet.svg";
-import walletActive from "../../assets/images/menu/wallet-active.svg";
 import alert from "../../assets/images/menu/alert.svg";
-import alertActive from "../../assets/images/menu/alert-active.svg";
 import apps from "../../assets/images/menu/apps.svg";
+import homeActive from "../../assets/images/menu/home-active.svg";
+import marketsActive from "../../assets/images/menu/markets-active.svg";
+import holdingsActive from "../../assets/images/menu/holdings-active.svg";
+import walletActive from "../../assets/images/menu/wallet-active.svg";
+import alertActive from "../../assets/images/menu/alert-active.svg";
 import appsActive from "../../assets/images/menu/apps-active.svg";
 import logo from "../../assets/images/logo.svg";
 
@@ -44,7 +44,7 @@ const PopupSidebar = () => {
       name: "Wallet",
       img: wallet,
       activeImage: walletActive,
-      active: pathname === "/wallet",
+      active: pathname === "/wallet/*",
       path: "/wallet",
     },
     {

@@ -19,7 +19,6 @@ const Home = () => {
     { time: "2023-11-07", value: -12 },
     { time: "2023-11-21", value: -30 },
     { time: "2023-11-22", value: 30 },
-    // Add more data points as needed
   ];
 
   return (
@@ -36,8 +35,8 @@ const Home = () => {
                 Opening balance <span className="balance">0</span>
               </p>
             </div>
-            <div className="homeNoText">
-            <div className="no-text">
+            <div className="homeNoTextEquity">
+              <div className="no-text">
                 <div className="n-text">
                   <p>N</p>
                 </div>
@@ -45,7 +44,7 @@ const Home = () => {
                   <p>O</p>
                 </div>
               </div>
-              </div>
+            </div>
           </div>
           <div className="wallet-container">
             <div className="wallet-card-header">
@@ -89,11 +88,22 @@ const Home = () => {
             </select>
           </div>
           <div className="holdings-card-body">
-            <p>NO</p>
+            <div className="homeNoText">
+              <div className="no-text">
+                <div className="n-text">
+                  <p>N</p>
+                </div>
+                <div className="o-text">
+                  <p>O</p>
+                </div>
+              </div>
+            </div>
             {selectedValue === "Current Value" ? (
               <img src={currentValues} alt="wallet image" />
             ) : (
-              <ColumnGraph data={data} />
+              <div className="profit-loss-container">
+                <ColumnGraph data={data} />
+              </div>
             )}
           </div>
         </div>

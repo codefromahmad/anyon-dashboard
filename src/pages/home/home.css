@@ -80,7 +80,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 0px;
+  }
+
+  .profit-loss-container{
+    display:flex;
+    justify-content: center;
+    margin:15px 0px;
   }
 
   .equity-card-body {
@@ -95,7 +101,12 @@
     width: 100%;
 
   }
-
+  .homeNoTextEquity{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;  
+  }
+  
   .wallet-container{
     display: flex;
     flex-direction: column;
@@ -238,6 +249,11 @@
     padding:0px 10px;
   }
 
+  .holdings-card-body img{
+    width:300px;
+    height:120px;
+  }
+
   .holdings-card-body p {
     align-items: center;
     justify-content: center;
@@ -288,6 +304,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top:0px
   }
   }
   @media (max-width:450px) {
@@ -311,6 +328,27 @@
     .wallet-container{
       width: 91%;
     }
+    .holdings-left-header{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .holdings-container{
+      width:87%;
+      height:auto;
+    }
+    .holdings-card-body{
+      display: flex;
+      flex-direction: column;
+    }
+    .holdings-card-body img{
+      display: flex;
+      align-items: center;
+      padding:30px 0px;
+    }
+    .homeNoText{
+      padding-top: 50px;
+    }
   }
   @media (max-width:350px) {
     .card-header{
@@ -321,19 +359,19 @@
       font-weight: 500;
       padding: 12px 0;
     }
-.equity-container{
-  width: 87%;
-  height: 197px;
-}
-.wallet-container{
-  width: 87%;
-}
-.homeNoText{
-  padding-top: 25px
-}
-.wallet-row img{
-  width: 100px;
-  height:80px;
-  padding:10px 0px;
-}
+    .equity-container{
+      width: 87%;
+      height: 197px;
+    }
+    .wallet-container{
+      width: 87%;
+    }
+    .homeNoText{
+      padding-top: 25px
+    }
+    .wallet-row img{
+      width: 100px;
+      height:80px;
+      padding:10px 0px;
+    }
   }

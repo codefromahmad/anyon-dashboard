@@ -24,10 +24,10 @@ const Home = () => {
 
   return (
     <div className="rounded-card">
-      <div className="card-header ph-l">
+      <div className="card-header">
         <h2>Hi, Ademola</h2>
       </div>
-      <div className="card-body ph-l">
+      <div className="card-body">
         <div className="cards-container">
           <div className="equity-container">
             <div className="equity-card-header">
@@ -36,9 +36,16 @@ const Home = () => {
                 Opening balance <span className="balance">0</span>
               </p>
             </div>
-            <div className="equity-card-body">
-              <p>NO</p>
-            </div>
+            <div className="homeNoText">
+            <div className="no-text">
+                <div className="n-text">
+                  <p>N</p>
+                </div>
+                <div className="o-text">
+                  <p>O</p>
+                </div>
+              </div>
+              </div>
           </div>
           <div className="wallet-container">
             <div className="wallet-card-header">

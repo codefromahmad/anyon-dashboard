@@ -44,7 +44,7 @@ const PopupSidebar = ({handleOpenMenu}) => {
       name: "Wallet",
       img: wallet,
       activeImage: walletActive,
-      active: pathname === "/wallet/*",
+      active: pathname === "/wallet",
       path: "/wallet",
     },
     {

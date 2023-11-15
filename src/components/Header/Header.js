@@ -7,13 +7,16 @@ import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
 
 const Header = ({ toggleMenu }) => {
+  const pathname = "/wallet";
   return (
     <div className="header">
       <div className="left-header">
         <button className="menu-button" onClick={toggleMenu}>
           <IoIosMenu className="menu-icon" />
         </button>
+        <p>Wallet</p>
       </div>
+      <div className="left-side">{pathname && <p>Wallet</p>}</div>
       <div className="right-header">
         {/* <div className="bell-icon">
           <img src={bellIcon} />

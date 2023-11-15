@@ -41,6 +41,10 @@ function App() {
     // };
   }, [openMenu]);
 
+  const handleOpenMenu = () => {
+    setOpenMenu(false);
+  }
+
 
   return (
     <Router>
@@ -49,7 +53,7 @@ function App() {
           <div className="overlay" onClick={() => setOpenMenu(false)}></div>
         )}
         <div className={`popup-sidebar ${openMenu ? "open" : ""}`}>
-          <PopupSidebar />
+          <PopupSidebar handleOpenMenu={handleOpenMenu} />
         </div>
         <div className="sidebar">
           <Sidebar />

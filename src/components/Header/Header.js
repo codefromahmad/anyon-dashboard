@@ -14,7 +14,7 @@ const Header = ({ toggleMenu }) => {
         <button className="menu-button" onClick={toggleMenu}>
           <IoIosMenu className="menu-icon" />
         </button>
-        <p>Wallet</p>
+        {pathname && <p>Wallet</p>}
       </div>
       <div className="left-side">{pathname && <p>Wallet</p>}</div>
       <div className="right-header">
@@ -24,11 +24,7 @@ const Header = ({ toggleMenu }) => {
         <GoBell className="bell-icon" />
         <div className="profile-dropdown">
           <div className="profile-imageContainer">
-            <img
-              src={profilePicture}
-              alt="Profile"
-              className="profile-image"
-            />
+            <img src={profilePicture} alt="Profile" className="profile-image" />
             <FaChevronDown className="dropdown-icon" />
           </div>
           <div className="dropdown-content">

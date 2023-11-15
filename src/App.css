@@ -43,6 +43,8 @@
   color: white;
   appearance: none;
   -webkit-appearance: none;
+  display: flex;
+  align-items: center;
 }
 
 .menu-button:focus {

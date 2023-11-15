@@ -53,7 +53,7 @@ const ColumnGraph = ({ data }) => {
     };
   }, [data]);
 
-  return <div ref={chartContainer} />;
+  return <div style={{position:'sticky'}} ref={chartContainer} />;
 };
 
 export default ColumnGraph;

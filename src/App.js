@@ -1,7 +1,7 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, Sidebar } from "./components";
+import { Header, PopupSidebar, Sidebar } from "./components";
 import { Alert, Apps, Holdings, Home, Markets, Wallet } from "./pages";
 import AddFunds from "./pages/addfunds/AddFunds";
 import BankTransfer from "./pages/banktransfer/BankTransfer";
@@ -12,19 +12,49 @@ import DurationSelection from "./pages/durationselection/DurationSelection";
 import DaysLock from "./pages/dayslock/DaysLock";
 
 function App() {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
   return (
     <Router>
       <div className="app">
-        <div classNmae="sidebar">
+        {openMenu && (
+          <div className="overlay" onClick={() => setOpenMenu(false)}></div>
+        )}
+        <div className={`popup-sidebar ${openMenu ? "open" : ""}`}>
+          <PopupSidebar />
+        </div>
+        <div className="sidebar">
           <Sidebar />
         </div>
         <div className="content">
-          <Header />
+          <Header toggleMenu={toggleMenu} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/markets" element={<Markets />} />
             <Route path="/holdings" element={<Holdings />} />
-            <Route path="/wallet/*" element={<Wallet />}>
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/wallet/withdraw" element={<Withdraw />} />
+            <Route path="/wallet/otp" element={<WithdrawOTP />} />
+            <Route path="/wallet/addfunds" element={<AddFunds />} />
+            <Route
+              path="/wallet/addfunds/banktransfer"
+              element={<BankTransfer />}
+            />
+
+            <Route path="/wallet/savinglock" element={<SavingLock />} />
+            <Route
+              path="/wallet/savinglock/durationselection"
+              element={<DurationSelection />}
+            />
+            <Route
+              path="/wallet/savinglock/durationselection/dayslock"
+              element={<DaysLock />}
+            />
+
+            {/* <Route path="/wallet" element={<Wallet />}>
               <Route path="withdraw" element={<Withdraw />}>
                 <Route path="otp" element={<WithdrawOTP />} />
               </Route>
@@ -36,7 +66,7 @@ function App() {
                   <Route path="dayslock" element={<DaysLock />} />
                 </Route>
               </Route>
-            </Route>
+            </Route> */}
 
             <Route path="/alert" element={<Alert />} />
             <Route path="/apps" element={<Apps />} />

@@ -1,12 +1,20 @@
 .header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-  }
-  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+}
+.left-header{
+  display:none
+}
+.right-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
   .bell-icon img {
     font-size: 18px;
     margin-right: 20px;
@@ -24,7 +32,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    gap:5px;
+    gap:2px;
   }
   
   .profile-image {
@@ -37,6 +45,16 @@
   .dropdown-icon{
     font-size: 12px;
     margin-left: 5px;
+  }
+
+  .menu-icon{
+    font-size: 30px;
+    color: #00BA77;
+  }
+
+  .bell-icon{
+    font-size: 20px;
+    margin-right: 15px;
   }
   
   .dropdown-content {
@@ -67,4 +85,17 @@
   .dropdown-content li:hover {
     background-color: #f0f0f0;
   }
+
+  @media (max-width:600px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 15px;
+    }
+    .left-header{
+      display:flex
+    }
+}
   

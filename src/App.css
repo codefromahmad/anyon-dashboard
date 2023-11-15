@@ -5,6 +5,50 @@
   height: 100vh;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #15151580;
+  z-index: 1;
+}
+
+.popup-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #02915D;
+  width: 75px;
+  padding: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 4;
+  position: absolute;
+  top:0;
+  left:0;
+  height:calc(100vh - 40px)
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 24px;
+  color: white;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.menu-button:focus {
+  outline: none;
+}
+
 .content {
   /* flex: 1;
   overflow: auto; */

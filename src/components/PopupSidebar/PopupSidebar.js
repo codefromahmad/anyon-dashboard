@@ -7,7 +7,7 @@ import holdings from "../../assets/images/holdings.svg";
 import wallet from "../../assets/images/wallet.svg";
 import alert from "../../assets/images/alert.svg";
 import apps from "../../assets/images/apps.svg";
-import profilePicture from "../../assets/images/profile-picture.jpeg";
+import logo from "../../assets/images/logo.svg";
 
 const PopupSidebar = () => {
   const sidebarItems = [
@@ -46,7 +46,7 @@ const PopupSidebar = () => {
   return (
     <div className="popupsidebar-container">
       <div className="user-profile-container">
-        <img className="user-profile" src={profilePicture} alt="Profile Picture" />
+        <img className="user-profile" src={logo} alt="Profile Picture" />
       </div>
       <div className="item-list">
         {sidebarItems.map((item, index) => (

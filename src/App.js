@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, PopupSidebar, Sidebar } from "./components";
 import { Alert, Apps, Holdings, Home, Markets, Wallet } from "./pages";
@@ -17,6 +17,31 @@ function App() {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+  useEffect(() => {
+    // Add event listener to handle scroll lock
+    // const handleScroll = (event) => {
+    //   if (openMenu) {
+    //     event.preventDefault();
+    //   }
+    // };
+
+    if (openMenu) {
+      document.body.style.overflow = 'hidden';
+      // document.addEventListener('scroll', handleScroll, { passive: false });
+    } else {
+      document.body.style.overflow = 'visible';
+      // document.removeEventListener('scroll', handleScroll);
+    }
+
+    // Cleanup: remove event listener when component unmounts
+    // return () => {
+    //   document.body.style.overflow = 'visible';
+    //   document.removeEventListener('scroll', handleScroll);
+    // };
+  }, [openMenu]);
+
+
   return (
     <Router>
       <div className="app">

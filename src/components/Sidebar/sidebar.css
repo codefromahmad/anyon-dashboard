@@ -2,7 +2,7 @@
     width: 73px;
     height: calc(100vh - 40px);
     background-color: #02915D;
-    padding:20px;
+    padding:20px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -14,14 +14,14 @@ const AddFunds = () => {
       <div className="addFundsBottom">
         <div className="bankTransferCard">
           <img src={BankTransferImg} alt="BankTransfer" />
-          <Link to="/wallet/addfunds/banktransfer"><a>Bank Transfer</a></Link>
+          <Link to="/wallet/addfunds/banktransfer"><a href="#">Bank Transfer</a></Link>
           <p>
             Lorem ipsum dolor sit amet consectetur. Cursus amet leo eget lacus.
             Etiam mauris.
           </p>
         </div>
         <div className="payStackCard">
-          <img src={PayStackImg} />
+          <img src={PayStackImg} alt="Pay stack"/>
           <p>
             Lorem ipsum dolor sit amet consectetur. Cursus amet leo eget lacus.
             Etiam mauris.

@@ -55,7 +55,7 @@ const Home = () => {
             </div>
             <div className="wallet-card-body">
               <div className="wallet-row">
-                <img src={walletImage} alt="wallet image" />
+                <img src={walletImage} alt="wallet" />
                 <div className="right-item">
                   <p>Wallet</p>
                   <p className="info">
@@ -99,7 +99,7 @@ const Home = () => {
               </div>
             </div>
             {selectedValue === "Current Value" ? (
-              <img src={currentValues} alt="wallet image" />
+              <img src={currentValues} alt="current" />
             ) : (
               <div className="profit-loss-container">
                 <ColumnGraph data={data} />
@@ -113,7 +113,7 @@ const Home = () => {
             <div className="holdings-left-header">
               <p className="heading">Market Overview</p>
             </div>
-            <p>something else</p>
+            <p>portfolio</p>
           </div>
           <div className="market-card-body">
             <MarketOverview />

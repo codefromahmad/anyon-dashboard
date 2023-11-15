@@ -16,12 +16,12 @@ const Wallet = () => {
               <div className="wallet-balance-card-buttons">
                 <div className="withdraw">
                   <Link to="/wallet/withdraw">
-                    <a>Withdraw</a>
+                    <a href="#">Withdraw</a>
                   </Link>
                 </div>
                 <div className="add-funds">
                   <Link to="/wallet/addfunds">
-                    <a>Add funds</a>
+                    <a href="#">Add funds</a>
                   </Link>
                 </div>
               </div>
@@ -90,7 +90,7 @@ const Wallet = () => {
               </div>
               <div className="investButton">
                 <Link to="/wallet/savinglock">
-                  <a>Invest</a>
+                  <a href="#">Invest</a>
                 </Link>
               </div>
             </div>

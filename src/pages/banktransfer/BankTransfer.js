@@ -20,21 +20,21 @@ const BankTransfer = () => {
             <p>Bank name</p>
             <div className="bankName">
               <p>AccessBank PLC</p>
-              <img src={Icon} />
+              <img src={Icon} alt="copy icon 1"/>
             </div>
           </div>
           <div className="accountNoCard">
             <p>Account Number</p>
             <div className="accountNo">
               <p>4563214587</p>
-              <img src={Icon} />
+              <img src={Icon} alt="copy icon 2"/>
             </div>
           </div>
           <div className="accountNameCard">
             <p>Account name</p>
             <div className="accountName">
               <p>9ja Stocks</p>
-              <img src={Icon} />
+              <img src={Icon} alt="copy icon 3"/>
             </div>
           </div>
         </div>

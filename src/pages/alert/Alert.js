@@ -37,7 +37,7 @@ const Alert = () => {
           </div>
           <div className="alertColumn4">
             <h4>HELLO</h4>
-            <img src={AlertIcon} />
+            <img src={AlertIcon} alt="Alert" />
           </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ const Alert = () => {
         </div>
         <div className="messageHere">
           <p>Type message here</p>
-          <img src={MessageIcon} />
+          <img src={MessageIcon} alt="Message icon" />
         </div>
       </div>
     </div>

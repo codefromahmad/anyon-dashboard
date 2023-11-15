@@ -30,14 +30,14 @@ const DaysLock = () => {
           <p>Source of funding</p>
           <div className="funding">
             <p>Wallet</p>
-            <img src={Vector} />
+            <img src={Vector} alt="funding"/>
           </div>
         </div>
         <div className="paybackDate">
           <p>Payback date</p>
           <div className="payback">
             <p></p>
-            <img src={Calendar} />
+            <img src={Calendar} alt="pay back"/>
           </div>
         </div>
         <div className="daysLockButton">

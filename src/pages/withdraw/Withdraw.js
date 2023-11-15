@@ -39,7 +39,7 @@ const Withdraw = () => {
           <p>Enter amount</p>
           <div className="enterAmount">
             <div className="enterAmountLeft">
-              <img src={WithdrawImg} />
+              <img src={WithdrawImg} alt="enter amount"/>
               <p>NGN</p>
             </div>
             <div className="enterAmountRight">
@@ -48,7 +48,7 @@ const Withdraw = () => {
           </div>
         </div>
           <div className="withdrawButton">
-            <Link to="/wallet/withdraw/otp"><a>Withdraw</a></Link>
+            <Link to="/wallet/withdraw/otp"><a href="#">Withdraw</a></Link>
           </div>
         <div className="changeDetail">
           <p>+ Change Payment details</p>

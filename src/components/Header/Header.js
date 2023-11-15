@@ -7,7 +7,7 @@ import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
 
 const Header = ({ toggleMenu }) => {
-  const pathname = "/wallet";
+  const pathname = "";
   return (
     <div className="header">
       <div className="left-header">
@@ -26,7 +26,7 @@ const Header = ({ toggleMenu }) => {
           <div className="profile-imageContainer">
             <img
               src={profilePicture}
-              alt="Profile Picture"
+              alt="Profile"
               className="profile-image"
             />
             <FaChevronDown className="dropdown-icon" />

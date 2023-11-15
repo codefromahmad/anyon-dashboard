@@ -10,11 +10,11 @@ const SavingLock = () => {
       <div className="savingLockCard">
         <div className="savingLockTop">
           <div className="savingLockHeading">
-            <img src={SavingLockImg} />
+            <img src={SavingLockImg} alt="saving lock" />
             <h4>Saving lock</h4>
           </div>
           <div className="createButton">
-            <Link to="/wallet/savinglock/durationselection"><a>+Create</a></Link>
+            <Link to="/wallet/savinglock/durationselection"><a href="#">+Create</a></Link>
           </div>
         </div>
         <div className="savingLockBottom">

@@ -66,7 +66,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar-container">
       <div className="user-profile-container">
-        <img className="user-profile" src={logo} alt="Profile Picture" />
+        <img className="user-profile" src={logo} alt="Logo" />
       </div>
       <div className="item-list">
         {sidebarItems.map((item, index) => (

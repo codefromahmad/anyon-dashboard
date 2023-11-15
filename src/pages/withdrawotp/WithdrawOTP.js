@@ -19,7 +19,7 @@ const WithdrawOTP = () => {
           <div className="card1"></div>
         </div>
         <div className="confirmButton">
-          <a>Confirm</a>
+          <a href="#">Confirm</a>
         </div>
         <div className="otpCardBottom">
           <p>Didn't recieve pin? </p>

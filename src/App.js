@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, PopupSidebar, Sidebar } from "./components";
-import { Alert, Apps, Holdings, Home, Markets, Wallet } from "./pages";
+import { Alert, Apps, Holdings, Home, Markets, Wallet, Profile } from "./pages";
 import AddFunds from "./pages/addfunds/AddFunds";
 import BankTransfer from "./pages/banktransfer/BankTransfer";
 import Withdraw from "./pages/withdraw/Withdraw";
@@ -98,6 +98,7 @@ function App() {
             </Route> */}
 
             <Route path="/alert" element={<Alert />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/apps" element={<Apps />} />
           </Routes>
         </div>

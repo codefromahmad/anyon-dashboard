@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import { FaChevronDown } from "react-icons/fa";
 import profilePicture from "../../assets/images/profile-picture.jpeg";
 // import bellIcon from "../../assets/images/bellicon.svg";
 import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
+import { useLocation } from "react-router-dom";
 
 const Header = ({ toggleMenu }) => {
-  const pathname = "";
+  const [headerTitle, setHeaderTitle] = useState("");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname === "/wallet") {
+      setHeaderTitle("Wallet");
+    } else if (pathname.startsWith("/wallet/addfunds")) {
+      setHeaderTitle("Add Funds");
+    } else if (pathname.startsWith("/wallet/withdraw")) {
+      setHeaderTitle("Withdraw");
+    } else if (pathname.startsWith("/wallet/savinglock")) {
+      setHeaderTitle("Invest");
+    }
+  }, [pathname]);
+
   return (
     <div className="header">
       <div className="left-header">
         <button className="menu-button" onClick={toggleMenu}>
           <IoIosMenu className="menu-icon" />
         </button>
-        {pathname && <p>Wallet</p>}
+        {headerTitle && <p>{headerTitle}</p>}
       </div>
-      <div className="left-side">{pathname && <p>Wallet</p>}</div>
+      <div className="left-side">{headerTitle && <p>{headerTitle}</p>}</div>
       <div className="right-header">
         {/* <div className="bell-icon">
           <img src={bellIcon} />

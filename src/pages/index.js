@@ -4,6 +4,7 @@ import Holdings from "./holdings/Holdings"
 import Wallet from "./wallet/Wallet"
 import Alert from "./alert/Alert"
 import Apps from "./apps/Apps"
+import Profile from "./profile/profile"
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Holdings,
     Wallet,
     Alert,
-    Apps
+    Apps,
+    Profile
 }

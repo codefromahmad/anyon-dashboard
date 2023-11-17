@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./privacysecurity.css";
 
 const PrivacySecurity = () => {
+  const [textMessage, setTextMessage] = useState(true);
+  const [authentication, setAuthentication] = useState(true);
+
+  const handleTextMessage = () => {
+    setTextMessage(!textMessage);
+  }
+
+  const handleAuthentication = () => {
+    setAuthentication(!authentication);
+  }
   return (
     <div className="rounded-card">
       <div className="privacySecurityCard">
@@ -19,9 +29,15 @@ const PrivacySecurity = () => {
               protection.
             </p>
           </div>
-          <div className="greenDiv">
-            <div className="whiteDiv"></div>
-          </div>
+          {textMessage ? (
+            <div onClick={handleTextMessage} className="greenDiv">
+              <div className="whiteDiv"></div>
+            </div>
+          ) : (
+            <div onClick={handleTextMessage} className="greyDiv">
+              <div className="greyWhiteDiv"></div>
+            </div>
+          )}
         </div>
         <div className="privacySecurityMidDiv">
           <div className="textMessageDiv">
@@ -31,9 +47,15 @@ const PrivacySecurity = () => {
               login
             </p>
           </div>
-          <div className="greyDiv">
-            <div className="greyWhiteDiv"></div>
-          </div>
+          {authentication ? (
+            <div onClick={handleAuthentication} className="greyDiv">
+              <div className="greyWhiteDiv"></div>
+            </div>
+          ) : (
+            <div onClick={handleAuthentication} className="greenDiv">
+              <div className="whiteDiv"></div>
+            </div>
+          )}
         </div>
         <div className="changePasswordDiv">
           <h3>Change password</h3>

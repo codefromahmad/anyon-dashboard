@@ -9,7 +9,7 @@ const MyAccount = () => {
         <div className="accountCard">
           <div className="accountCardLeft">
             <div className="circleDiv">
-              <div className="circle">.</div>
+              <div className="circle"></div>
               <div className="circleText">
                 <p>Eidt</p>
               </div>

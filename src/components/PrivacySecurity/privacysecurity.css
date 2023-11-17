@@ -37,6 +37,7 @@
     height: 22px;
     border-radius: 3px;
     margin-top: 15px;
+    cursor: pointer;
 }
 .greyDiv{
     background-color: #DFDFDF;
@@ -44,6 +45,7 @@
     height: 22px;
     border-radius: 3px;
     margin-top: 15px;
+    cursor: pointer;
 }
 .whiteDiv{
     background-color: #FFFFFF;

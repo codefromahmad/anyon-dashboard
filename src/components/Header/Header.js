@@ -10,10 +10,10 @@ import profileIcon from "../../assets/images/menu/profile-icon.svg";
 import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
 
-const Header = ({ toggleMenu }) => {
+const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const [headerTitle, setHeaderTitle] = useState("");
-  const [dropdownMenu, setDropdownMenu] = useState(false);
   const { pathname } = useLocation();
+  console.log("dropdownMenu", dropdownMenu);
 
   useEffect(() => {
     if (pathname === "/wallet") {
@@ -60,22 +60,25 @@ const Header = ({ toggleMenu }) => {
         </div> */}
         <GoBell className="bell-icon" />
         <div className="profile-dropdown">
-          <div onClick={() => setDropdownMenu(!dropdownMenu)} className="profile-imageContainer">
+          <div
+            onClick={() => setDropdownMenu(true)}
+            className="profile-imageContainer"
+          >
             <img src={profilePicture} alt="Profile" className="profile-image" />
             <FaChevronDown className="dropdown-icon" />
           </div>
-          {dropdownMenu && (
-            <div className="dropdown-content">
-              {dropdown.map((item, index) => (
-                <div key={index} className="dropdown-item">
-                  <img src={item.img} alt="Profile" className="dropdown-img" />
-                  <p>{item.name}</p>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
+      {dropdownMenu && (
+        <div className="dropdown-content">
+          {dropdown.map((item, index) => (
+            <div key={index} className="dropdown-item">
+              <img src={item.img} alt="Profile" className="dropdown-img" />
+              <p>{item.name}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

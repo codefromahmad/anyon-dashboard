@@ -13,6 +13,7 @@ import DaysLock from "./pages/dayslock/DaysLock";
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [dropdownMenu, setDropdownMenu] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -27,10 +28,10 @@ function App() {
     // };
 
     if (openMenu) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
       // document.addEventListener('scroll', handleScroll, { passive: false });
     } else {
-      document.body.style.overflow = 'visible';
+      document.body.style.overflow = "visible";
       // document.removeEventListener('scroll', handleScroll);
     }
 
@@ -42,9 +43,13 @@ function App() {
   }, [openMenu]);
 
   const handleOpenMenu = () => {
+    setDropdownMenu(false);
     setOpenMenu(false);
-  }
+  };
 
+  const closeDropDownMenu = () => {
+    setDropdownMenu(false);
+  };
 
   return (
     <Router>
@@ -52,38 +57,46 @@ function App() {
         {openMenu && (
           <div className="overlay" onClick={() => setOpenMenu(false)}></div>
         )}
-        <div className={`popup-sidebar ${openMenu ? "open" : ""}`}>
+        <div
+          onClick={closeDropDownMenu}
+          className={`popup-sidebar ${openMenu ? "open" : ""}`}
+        >
           <PopupSidebar handleOpenMenu={handleOpenMenu} />
         </div>
-        <div className="sidebar">
+        <div onClick={closeDropDownMenu} className="sidebar">
           <Sidebar />
         </div>
         <div className="content">
-          <Header toggleMenu={toggleMenu} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/markets" element={<Markets />} />
-            <Route path="/holdings" element={<Holdings />} />
-            <Route path="/wallet" element={<Wallet />} />
-            <Route path="/wallet/withdraw" element={<Withdraw />} />
-            <Route path="/wallet/withdraw/otp" element={<WithdrawOTP />} />
-            <Route path="/wallet/addfunds" element={<AddFunds />} />
-            <Route
-              path="/wallet/addfunds/banktransfer"
-              element={<BankTransfer />}
-            />
+          <Header
+            toggleMenu={toggleMenu}
+            dropdownMenu={dropdownMenu}
+            setDropdownMenu={setDropdownMenu}
+          />
+          <div onClick={closeDropDownMenu}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/markets" element={<Markets />} />
+              <Route path="/holdings" element={<Holdings />} />
+              <Route path="/wallet" element={<Wallet />} />
+              <Route path="/wallet/withdraw" element={<Withdraw />} />
+              <Route path="/wallet/withdraw/otp" element={<WithdrawOTP />} />
+              <Route path="/wallet/addfunds" element={<AddFunds />} />
+              <Route
+                path="/wallet/addfunds/banktransfer"
+                element={<BankTransfer />}
+              />
 
-            <Route path="/wallet/savinglock" element={<SavingLock />} />
-            <Route
-              path="/wallet/savinglock/durationselection"
-              element={<DurationSelection />}
-            />
-            <Route
-              path="/wallet/savinglock/durationselection/dayslock"
-              element={<DaysLock />}
-            />
+              <Route path="/wallet/savinglock" element={<SavingLock />} />
+              <Route
+                path="/wallet/savinglock/durationselection"
+                element={<DurationSelection />}
+              />
+              <Route
+                path="/wallet/savinglock/durationselection/dayslock"
+                element={<DaysLock />}
+              />
 
-            {/* <Route path="/wallet" element={<Wallet />}>
+              {/* <Route path="/wallet" element={<Wallet />}>
               <Route path="withdraw" element={<Withdraw />}>
                 <Route path="otp" element={<WithdrawOTP />} />
               </Route>
@@ -97,10 +110,11 @@ function App() {
               </Route>
             </Route> */}
 
-            <Route path="/alert" element={<Alert />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/apps" element={<Apps />} />
-          </Routes>
+              <Route path="/alert" element={<Alert />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/apps" element={<Apps />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </Router>

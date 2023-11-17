@@ -15,7 +15,7 @@ import alertActive from "../../assets/images/menu/alert-active.svg";
 import appsActive from "../../assets/images/menu/apps-active.svg";
 import logo from "../../assets/images/logo.svg";
 
-const PopupSidebar = ({handleOpenMenu}) => {
+const PopupSidebar = ({ handleOpenMenu }) => {
   const { pathname } = useLocation();
   console.log("pathname", pathname);
   const sidebarItems = [
@@ -66,7 +66,9 @@ const PopupSidebar = ({handleOpenMenu}) => {
   return (
     <div className="popupsidebar-container">
       <div className="user-profile-container">
-        <img className="user-profile" src={logo} alt="Logo" />
+        <Link to="/profile" onClick={handleOpenMenu} className="logo">
+          <img className="user-profile" src={logo} alt="Logo" />
+        </Link>
       </div>
       <div className="item-list">
         {sidebarItems.map((item, index) => (
@@ -76,7 +78,9 @@ const PopupSidebar = ({handleOpenMenu}) => {
                 src={item.active ? item.activeImage : item.img}
                 alt={`${item.name} Logo`}
               />
-              <span className="item-name">{item.name}</span>
+              <span className={`item-name ${item.active ? "white" : "grey"}`}>
+                {item.name}
+              </span>
             </Link>
           </div>
         ))}

@@ -26,8 +26,15 @@
     font-size: 12px;
     font-weight: 600;
     margin-top: 10px;
-    color:white
 }
+
+.grey{
+    color:#dddddd;
+  }
+
+  .white{
+    color: white
+  }
 
 .item-list{
     padding:0px

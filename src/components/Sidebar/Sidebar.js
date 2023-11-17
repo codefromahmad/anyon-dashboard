@@ -78,7 +78,9 @@ const Sidebar = () => {
                 src={item.active ? item.activeImage : item.img}
                 alt={`${item.name} Logo`}
               />
-              <span className="item-name">{item.name}</span>
+              <span className={`item-name ${item.active ? "white" : "grey"}`}>
+                {item.name}
+              </span>
             </Link>
           </div>
         ))}

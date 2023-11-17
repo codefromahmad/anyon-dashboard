@@ -197,11 +197,14 @@ padding-right: 170px;
 .bankInformationMid{
     display: grid;
     grid-template-columns: 1fr;
-    width: 270px;
+    width: 260px;
 }
 .buttonSave{
     padding: 20px 0;
     display: flex;
     justify-content: center;
+}
+.account-no{
+    padding-right: 6px;
 }
             }

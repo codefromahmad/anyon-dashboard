@@ -37,7 +37,7 @@ const PrivacySecurity = () => {
         </div>
         <div className="changePasswordDiv">
           <h3>Change password</h3>
-          <p>Change your password here</p>
+          <a>Change your password here</a>
         </div>
       </div>
     </div>

@@ -71,11 +71,12 @@ font-weight: 500;
 font-size: 20px;
 margin-top: 5px;
 }
-.changePasswordDiv p{
+.changePasswordDiv a{
     font-size: 13px;
     font-weight: 400;
     color: #00BA77;
     text-decoration: underline;
+    margin-top: 20px;
 }
 @media (max-width:800px){
     .privacySecurityCard{
@@ -113,7 +114,7 @@ margin-top: 5px;
     margin-bottom: 0;
     font-size: 14px;
 }
-.changePasswordDiv p{
+.changePasswordDiv a{
     font-size: 13px;
 }
 .greenDiv{

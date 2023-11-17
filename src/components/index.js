@@ -6,6 +6,7 @@ import MarketOverview from "./Charts/MarketOverview/MarketOverview";
 import AccountInformation from "./AccountInformation/AccountInformation";
 import MyAccount from "./MyAccount/MyAccount";
 import PrivacySecurity from "./PrivacySecurity/PrivacySecurity";
+import TabsComponent from "./TabsComponent/TabsComponent";
 
 export {
   Sidebar,
@@ -16,4 +17,5 @@ export {
   AccountInformation,
   MyAccount,
   PrivacySecurity,
+  TabsComponent
 };

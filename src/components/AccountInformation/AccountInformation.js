@@ -7,8 +7,8 @@ import { FaChevronRight } from "react-icons/fa";
 
 const AccountInformation = () => {
   return (
-    <div className="rounded-card">
-      <div className="accountInformationCards">
+    <div className="accountInformationContainer">
+      <div>
         <div className="accountInformationCard">
           <a>Personal information</a>
           <div className="accountRight">
@@ -36,7 +36,7 @@ const AccountInformation = () => {
               <img src={Information} />
               <p>Incomplete</p>
             </div>
-              <FaChevronRight />
+            <FaChevronRight />
           </div>
         </div>
         <div className="accountInformationCard">
@@ -46,7 +46,7 @@ const AccountInformation = () => {
               <img src={Information} />
               <p>Incomplete</p>
             </div>
-              <FaChevronRight />
+            <FaChevronRight />
           </div>
         </div>
         <div className="completeAccountInformation">

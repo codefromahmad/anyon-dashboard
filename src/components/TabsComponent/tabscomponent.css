@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+  list-style: none;
+  border-bottom: 1px solid #d3d3d3;
+  padding:0px 20px;
+}
+
+.grid-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.grid-active {
+  border-bottom: 2px solid #02915d;
+  padding-bottom: 4px;
+}
+
+.item-name {
+  text-align: center;
+  margin: 15px;
+}
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}

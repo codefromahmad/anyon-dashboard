@@ -1,118 +1,116 @@
-.accountInformationCards{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 200px;
-    row-gap: 30px;
+.accountInformationContainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
-.accountInformationCard{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 800px;
-    border: 0.5px solid #80808080;
-    border-radius: 5px;
-    padding: 20px 30px;
+.accountInformationCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin: 15px 0px;
+  cursor: pointer;
 }
-.accountInformationCard a{
-    font-size: 16px;
-    font-weight: 400;
+.accountInformationCard a {
+  font-size: 16px;
+  font-weight: 400;
 }
-.accountRight{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 25px;
-    align-items: center;
+.accountRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 25px;
+  align-items: center;
 }
-.completeText{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 5px;
+.completeText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5px;
 }
-.completeText p{
-    font-weight: 400;
-    font-size: 13px;
-    color: #00BA77;
+.completeText p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #00ba77;
 }
-.incompleteText{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 5px;
+.incompleteText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5px;
 }
-.incompleteText p{
-    font-weight: 400;
-    font-size: 13px;
-    color: #FF5348;
+.incompleteText p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #ff5348;
 }
-.completeAccountInformation{
-    background-color: #02915D1A;
-    width: 863px;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    border-radius: 5px;
+.completeAccountInformation {
+  background-color: #02915d1a;
+  width: 863px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-radius: 5px;
 }
 .completeAccountInformation p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.arrowIcon FaChevronRight {
+  font-weight: 100;
+}
+@media (max-width: 800px) {
+  .accountInformationCard {
+    width: 550px;
+  }
+  .completeAccountInformation {
+    width: 610px;
+  }
+}
+@media (max-width: 330px) {
+  .accountInformationCard {
+    width: 260px;
+    padding: 3px 7px;
+  }
+  .accountInformationCard a {
     font-weight: 400;
     font-size: 14px;
-}
-.arrowIcon FaChevronRight{
-    font-weight: 100;
-}
-@media (max-width:800px) {
-    .accountInformationCard{
-        width: 550px;
-    }
-    .completeAccountInformation{
-        width: 610px;
-    }
-}
-@media (max-width:330px) {
-    .accountInformationCard{
-        width: 260px;
-        padding: 3px 7px;
-    }
-    .accountInformationCard a{
-        font-weight: 400;
-        font-size: 14px;
-    }
-    .completeAccountInformation{
-        width: 610px;
-    }
-    .accountRight{
-        column-gap: 3px;
-    }
-    .completeText{
-        column-gap: 2px;
-    }
-    .completeText p{
-        font-size: 12px;
-    }
-    .completeText img{
-        width: 15px;
-        height:15px;
-    }
-    .incompleteText img{
-        width: 15px;
-        height:15px;
-    }
-    .incompleteText p{
-        font-size: 12px;
-    }
-    .incompleteText{
-        column-gap: 2px;
-    }
-    .completeAccountInformation{
-        width: 280px;
-        padding: 0;
-    }
-    .completeAccountInformation p{
-        text-align: center;
-        
-    }
+  }
+  .completeAccountInformation {
+    width: 610px;
+  }
+  .accountRight {
+    column-gap: 3px;
+  }
+  .completeText {
+    column-gap: 2px;
+  }
+  .completeText p {
+    font-size: 12px;
+  }
+  .completeText img {
+    width: 15px;
+    height: 15px;
+  }
+  .incompleteText img {
+    width: 15px;
+    height: 15px;
+  }
+  .incompleteText p {
+    font-size: 12px;
+  }
+  .incompleteText {
+    column-gap: 2px;
+  }
+  .completeAccountInformation {
+    width: 280px;
+    padding: 0;
+  }
+  .completeAccountInformation p {
+    text-align: center;
+  }
 }

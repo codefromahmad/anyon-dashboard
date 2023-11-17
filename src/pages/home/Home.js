@@ -11,15 +11,6 @@ const Home = () => {
   const handleSelectChange = (e) => {
     setSelectedValue(e.target.value);
   };
-  const data = [
-    { time: "2023-09-03", value: 12 },
-    { time: "2023-10-02", value: -15 },
-    { time: "2023-10-11", value: 5 },
-    { time: "2023-11-01", value: 50 },
-    { time: "2023-11-07", value: -12 },
-    { time: "2023-11-21", value: -30 },
-    { time: "2023-11-22", value: 30 },
-  ];
 
   return (
     <div className="rounded-card">
@@ -102,7 +93,7 @@ const Home = () => {
               <img src={currentValues} alt="current" />
             ) : (
               <div className="profit-loss-container">
-                <ColumnGraph data={data} />
+                <ColumnGraph/>
               </div>
             )}
           </div>

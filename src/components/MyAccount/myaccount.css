@@ -1,210 +1,211 @@
-.myAccountCard{
+/* .myAccountCard{
     display: flex;
     flex-direction: column;
-    padding: 40px 0 300px;
+    padding: 40px 0px;
+} */
+.accountCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 0.5px solid #d3d3d3;
+  column-gap: 50px;
+  padding: 40px 70px 100px;
+}
+.accountCardHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  width: 600px;
+}
+.circleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: #d9d9d9;
+  border-radius: 100%;
+}
+.circleText p {
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 3px;
+  color: #00ba77;
+}
+.firstName input {
+  width: 100%;
+  height: 50px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+}
+.firstName p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.lastName input {
+  width: 100%;
+  height: 50px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+}
+.lastName p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.accountCardMid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  margin-top: 30px;
+}
+.emailDiv input {
+  width: 100%;
+  height: 50px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+}
+.emailDiv p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.phoneNo input {
+  width: 100%;
+  height: 50px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+}
+.phoneNo p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.accountCardBottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 30px;
+}
+.address input {
+  width: 100%;
+  height: 93px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+}
+.address p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.bankInformationCard {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 170px 40px;
+}
+.bankInformationHeading h3 {
+  font-weight: 500;
+  font-size: 22px;
+}
+.bankInformationMid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
 
-
+.bank-name p {
+  font-size: 14px;
+  font-weight: 400;
 }
-.accountCard{
-   display: flex;
-   flex-direction: row;
-   justify-content: center; 
-  border-bottom: 0.5px solid #D3D3D3 ;
-   column-gap: 50px;
-   padding:40px 70px 100px;
+.selectDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 53px;
 }
-.accountCardHeader{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    width: 600px;
+.selectDiv select {
+  padding-right: 273px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  padding-left: 10px;
 }
-.circleDiv{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding-top: 10px;
+.selectDiv option {
+  padding-right: 10px;
 }
-.circle{
-    width: 80px;
-    height: 80px;
-    background-color: #D9D9D9;
-    border-radius: 100%;
+.account-no p {
+  font-size: 14px;
+  font-weight: 400;
 }
-.circleText p   {
-    font-weight: 400;
-    font-size: 12px;
-    margin-top: 3px;
-    color: #00BA77;
+.account-no input {
+  width: 100%;
+  height: 50px;
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
 }
-.firstName input{
-    width: 100%;
-    height: 50px;
-border: 0.5px solid #80808080;
-border-radius: 5px;
+.buttonSave {
+  padding-top: 50px;
+  cursor: pointer;
 }
-.firstName p{
-    font-weight: 400;
-    font-size: 14px;
+.buttonSave p {
+  color: white;
+  background: #02915d;
+  width: max-content;
+  padding: 15px 50px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
 }
-.lastName input{
-width: 100%;
-height: 50px;
-    border: 0.5px solid #80808080;
-    border-radius: 5px;
-    }
-    .lastName p{
-        font-weight: 400;
-        font-size: 14px;
-    }
-    .accountCardMid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 40px;
-        margin-top: 30px;
-    }
-    .emailDiv input{
-        width: 100%;
-        height: 50px;
-        border: 0.5px solid #80808080;
-        border-radius: 5px;
-        }
-        .emailDiv p{
-            font-weight: 400;
-            font-size: 14px;
-        }
-        .phoneNo input{
-            width: 100%;
-          height: 50px;
-            border: 0.5px solid #80808080;
-            border-radius: 5px;
-            }
-            .phoneNo p{
-                font-weight: 400;
-                font-size: 14px;
-            }
-            .accountCardBottom{
-                display: grid;
-                grid-template-columns: 1fr;
-                padding-top: 30px;
-            }
-            .address input{
-                width: 100%;
-             height: 93px;
-                border: 0.5px solid #80808080;
-                border-radius: 5px;
-            }
-            .address p{
-                font-weight: 400;
-                font-size: 14px;   
-            }
-            .bankInformationCard{
-                display: flex;
-                flex-direction: column;
-                padding: 40px 170px 40px;
-            }
-            .bankInformationHeading h3{
-                font-weight: 500;
-                font-size: 22px;
-            }
-            .bankInformationMid{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 40px;
-            }
-         
-            .bank-name p{
-             font-size: 14px;
-             font-weight: 400;
-            }
-            .selectDiv{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 100%;
-                height: 53px;
-            }
-            .selectDiv select{
-                padding-right: 273px;
-                border: 0.5px solid #80808080;
-                border-radius: 5px;
-                padding-left: 10px;
-
-            }
-            .selectDiv option{
-                padding-right: 10px;
-            }
-            .account-no p{
-                font-size: 14px;
-             font-weight: 400; 
-            }
-            .account-no input{
-                width: 100%;
-                height: 50px;
-                border: 0.5px solid #80808080;
-                border-radius: 5px;
-            }
-            .buttonSave{
-                padding-top: 50px;
-                cursor: pointer;
-            }
-            .buttonSave p{
-                color: white;
-                background: #02915D;
-                width: max-content;
-                padding: 15px 50px;
-                border-radius: 5px;
-                font-weight: 400;
-                font-size: 16px;
-                color: #FFFFFF;
-            }
-            @media (max-width:850px) {
-                .accountCardHeader{
-                    width: 480px;
-                }
-                .bankInformationCard{
-             padding: 40px 30px 40px;
-                }
-                .selectDiv select{
-padding-right: 170px;
-                }
-            }
-            @media (max-width:380px) {
-.accountCard{
+.textarea {
+  border: 0.5px solid #80808080;
+  border-radius: 5px;
+  width: 100%;
+}
+@media (max-width: 850px) {
+  .accountCardHeader {
+    width: 480px;
+  }
+  .bankInformationCard {
+    padding: 40px 30px 40px;
+  }
+  .selectDiv select {
+    padding-right: 160px;
+  }
+}
+@media (max-width: 380px) {
+  .accountCard {
     display: flex;
     flex-direction: column;
     padding: 15px 15px 40px;
-}
-.accountCardHeader{
+  }
+  .accountCardHeader {
     display: grid;
     grid-template-columns: 1fr;
     width: 270px;
-}
-.accountCardMid{
+  }
+  .accountCardMid {
     display: grid;
     grid-template-columns: 1fr;
     width: 270px;
-   margin-top: 10px;
-}
-.accountCardBottom{
+    margin-top: 10px;
+  }
+  .accountCardBottom {
     width: 270px;
-}
-.bankInformationCard{
-
-    padding: 30px 15px 40px;
-}
-.bankInformationMid{
+  }
+  .bankInformationCard {
+    padding: 30px 15px 20px;
+  }
+  .bankInformationMid {
     display: grid;
     grid-template-columns: 1fr;
     width: 260px;
-}
-.buttonSave{
+  }
+  .buttonSave {
     padding: 20px 0;
     display: flex;
     justify-content: center;
-}
-.account-no{
+  }
+  .account-no {
     padding-right: 6px;
+  }
 }
-            }

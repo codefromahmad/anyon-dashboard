@@ -1,8 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { createChart } from "lightweight-charts";
 
-const ColumnGraph = ({ data }) => {
+const ColumnGraph = () => {
   const chartContainer = useRef(null);
+
+  const data = [
+    { time: "2023-09-03", value: 12 },
+    { time: "2023-10-02", value: -15 },
+    { time: "2023-10-11", value: 5 },
+    { time: "2023-11-01", value: 50 },
+    { time: "2023-11-07", value: -12 },
+    { time: "2023-11-21", value: -30 },
+    { time: "2023-11-22", value: 30 },
+  ];
 
   useEffect(() => {
     if (!chartContainer.current) return;
@@ -29,15 +39,22 @@ const ColumnGraph = ({ data }) => {
     }));
 
     chart.applyOptions({
+      leftPriceScale: {
+        visible: true,
+      },
+      rightPriceScale: {
+        visible: false,
+      },
       timeScale: {
-        rightOffset: 0,
+        // rightOffset: 0,
+        position: "top",
         barSpacing: 30, // Decrease this value to increase the width
-        lockVisibleTimeRange: {
-          left: true,
-          right: true,
-        },
-        timeVisible: true, // Make sure time labels are visible
-        timeFormat: "DD/MM", // Format for time labels (DD/MM)
+        // lockVisibleTimeRange: {
+        //   left: true,
+        //   right: true,
+        // },
+        // timeVisible: true, // Make sure time labels are visible
+        // timeFormat: "DD/MM", // Format for time labels (DD/MM)
       },
       priceScale: {
         mode: 0,
@@ -45,8 +62,16 @@ const ColumnGraph = ({ data }) => {
           top: true,
           bottom: true,
         },
-        priceAxisVisible: false, // Show the price axis at the left side
+        priceAxisVisible: true, // Show the price axis
       },
+
+      grid: {
+        vertLines: false, // Hide vertical grid lines
+        horzLines: false, // Hide horizontal grid lines
+      },
+      handleScroll: false, // Disable horizontal and vertical panning
+      handleScale: false, // Disable scaling
+      crosshair: false, // Disable the crosshair
     });
 
     series.setData(formattedData);
@@ -54,9 +79,9 @@ const ColumnGraph = ({ data }) => {
     return () => {
       chart.remove();
     };
-  }, [data]);
+  }, []);
 
-  return <div style={{ position: "sticky" }} ref={chartContainer} />;
+  return <div ref={chartContainer} />;
 };
 
 export default ColumnGraph;

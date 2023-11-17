@@ -66,7 +66,7 @@ function App() {
             <Route path="/holdings" element={<Holdings />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/wallet/withdraw" element={<Withdraw />} />
-            <Route path="/wallet/otp" element={<WithdrawOTP />} />
+            <Route path="/wallet/withdraw/otp" element={<WithdrawOTP />} />
             <Route path="/wallet/addfunds" element={<AddFunds />} />
             <Route
               path="/wallet/addfunds/banktransfer"

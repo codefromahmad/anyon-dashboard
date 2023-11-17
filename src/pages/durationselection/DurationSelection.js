@@ -11,25 +11,25 @@ const DurationSelection = () => {
         </div>
         <div className="durationCards">
           <div className="durationCard">
-            <Link to="/wallet/savinglock/durationselection/dayslock"><a href="#">30 days</a></Link>
+            <a>30 days</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
           </div>
           <div className="durationCard">
-            <p>60 days</p>
+            <a>60 days</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
           </div>
           <div className="durationCard">
-            <p>120 days</p>
+            <a>120 days</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
           </div>
           <div className="durationCard">
-            <p>1 year</p>
+            <a>1 year</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>

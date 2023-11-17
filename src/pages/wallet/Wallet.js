@@ -27,7 +27,7 @@ const Wallet = () => {
               </div>
             </div>
             <div className="wallet-balance-card-bottom">
-            <div className="no-text">
+              <div className="no-text">
                 <div className="n-text">
                   <p>N</p>
                 </div>
@@ -40,39 +40,41 @@ const Wallet = () => {
               </div>
             </div>
           </div>
-          <div className="totalReturnCard">
-            <div className="totalReturnText">
-              <p>Total return</p>
-            </div>
-            <div className="totalReturnBottom">
-              <div className="no-text">
-                <div className="n-text">
-                  <p>N</p>
+          <div className="walletTwoCards">
+            <div className="totalReturnCard">
+              <div className="totalReturnText">
+                <p>Total return</p>
+              </div>
+              <div className="totalReturnBottom">
+                <div className="no-text">
+                  <div className="n-text">
+                    <p>N</p>
+                  </div>
+                  <div className="o-text">
+                    <p>O</p>
+                  </div>
                 </div>
-                <div className="o-text">
-                  <p>O</p>
+                <div className="smallText">
+                  <p>(+5.0%)</p>
                 </div>
               </div>
-              <div className="smallText">
-                <p>(+5.0%)</p>
-              </div>
             </div>
-          </div>
-          <div className="todaysReturnCard">
-            <div className="todaysReturnText">
-              <p>Today's return</p>
-            </div>
-            <div className="todaysReturnBottom">
-            <div className="no-text">
-                <div className="n-text">
-                  <p>N</p>
-                </div>
-                <div className="o-text">
-                  <p>O</p>
-                </div>
+            <div className="todaysReturnCard">
+              <div className="todaysReturnText">
+                <p>Today's return</p>
               </div>
-              <div className="smallText">
-                <p>(+5.0%)</p>
+              <div className="todaysReturnBottom">
+                <div className="no-text">
+                  <div className="n-text">
+                    <p>N</p>
+                  </div>
+                  <div className="o-text">
+                    <p>O</p>
+                  </div>
+                </div>
+                <div className="smallText">
+                  <p>(+5.0%)</p>
+                </div>
               </div>
             </div>
           </div>
@@ -85,8 +87,24 @@ const Wallet = () => {
             <div className="investCardRight">
               <h3>Grow leftover funds</h3>
               <div className="investCardText">
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p>Augue aliquet gravida commodo faucibus</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur.Augue aliquet gravida
+                  commodo faucibus
+                </p>
+              </div>
+              <div className="investButton">
+                <Link to="/wallet/savinglock">
+                  <a href="#">Invest</a>
+                </Link>
+              </div>
+            </div>
+            <div className="investCardBottom">
+              <h3>Invest and save with 9ja stocks</h3>
+              <div className="investCardBottomText">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur.Augue aliquet gravida
+                  commodo faucibus
+                </p>
               </div>
               <div className="investButton">
                 <Link to="/wallet/savinglock">
@@ -95,6 +113,7 @@ const Wallet = () => {
               </div>
             </div>
           </div>
+          {/* <div>Invest</div> */}
           <div className="walletGraph">Graph</div>
         </div>
       </div>

@@ -15,6 +15,10 @@
   z-index: 1;
 }
 
+.sidebar{
+  background: #03915d;
+}
+
 .popup-sidebar {
   display: flex;
   flex-direction: column;

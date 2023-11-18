@@ -41,6 +41,7 @@
   height: 50px;
   border: 0.5px solid #80808080;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .firstName p {
   font-weight: 400;
@@ -51,6 +52,7 @@
   height: 50px;
   border: 0.5px solid #80808080;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .lastName p {
   font-weight: 400;
@@ -67,6 +69,7 @@
   height: 50px;
   border: 0.5px solid #80808080;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .emailDiv p {
   font-weight: 400;
@@ -77,6 +80,7 @@
   height: 50px;
   border: 0.5px solid #80808080;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .phoneNo p {
   font-weight: 400;
@@ -92,6 +96,7 @@
   height: 93px;
   border: 0.5px solid #80808080;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .address p {
   font-weight: 400;
@@ -141,6 +146,7 @@
   height: 50px;
   border: 0.5px solid #80808080;
   border-radius: 5px;
+  padding: 0 10px;
 }
 .buttonSave {
   padding-top: 50px;
@@ -160,6 +166,7 @@
   border: 0.5px solid #80808080;
   border-radius: 5px;
   width: 100%;
+  padding: 5px 10px;
 }
 @media (max-width: 850px) {
   .accountCardHeader {
@@ -181,16 +188,19 @@
   .accountCardHeader {
     display: grid;
     grid-template-columns: 1fr;
-    width: 270px;
+    width: 255px;
+  }
+  .selectDiv select {
+    padding-right: 172px;
   }
   .accountCardMid {
     display: grid;
     grid-template-columns: 1fr;
-    width: 270px;
+    width: 255px;
     margin-top: 10px;
   }
   .accountCardBottom {
-    width: 270px;
+    width: 255px;
   }
   .bankInformationCard {
     padding: 30px 15px 20px;
@@ -207,5 +217,6 @@
   }
   .account-no {
     padding-right: 6px;
+    width: 255px;
   }
 }

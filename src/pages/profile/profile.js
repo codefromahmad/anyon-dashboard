@@ -9,6 +9,11 @@ import {
 import ChangePassword from "../../components/ChangePassword/ChangePassword";
 import ProofOfID from "../../components/ProofOfID/ProofOfID";
 import ProofOfAddress from "../../components/ProofOfAddres/ProofOfAddress";
+import UploadPhotograph from "../../components/UploadPhotograph/UploadPhotograph";
+import HelpSupport from "../../components/HelpSupport/HelpSupport";
+import Payment from "../../components/Payment/Payment";
+import AddBankDetail from "../../components/AddBankDetail/AddBankDetail";
+import AccountSetting from "../../components/AccountSetting/AccountSetting";
 
 const Profile = () => {
   const data = [
@@ -30,12 +35,12 @@ const Profile = () => {
     {
       id: 4,
       name: "Help & Support",
-      content: <AccountInformation />,
+      content: <HelpSupport />,
     },
     {
       id: 5,
       name: "Payment",
-      content: <AccountInformation />,
+      content: <Payment />,
     },
   ];
   return (
@@ -45,6 +50,11 @@ const Profile = () => {
           <TabsComponent links={data} />
         </div>
       </div>
+      <UploadPhotograph />
+      <HelpSupport />
+      <Payment />
+      <AddBankDetail />
+      {/* <AccountSetting /> */}
 
       {/* <MyAccount />
       <AccountInformation />

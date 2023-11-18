@@ -1,0 +1,49 @@
+.helpSupportCard {
+  padding: 70px 150px 200px;
+}
+.helpSupport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #d3d3d3;
+  padding-bottom: 15px;
+}
+.helpSupportLeft h3 {
+  font-weight: 500;
+  font-size: 14px;
+}
+.helpSupportLeft p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #676e7e;
+}
+.speakToUs a{
+  font-weight: 400;
+  font-size: 14px;
+  color: #00ba77;
+  margin-top: 0;
+}
+@media (max-width:780px) {
+    .helpSupportCard{
+        padding: 70px 70px 200px;
+    }
+}
+@media (max-width:330px) {
+    .helpSupportCard{
+        padding: 20px 13px 200px;
+    }
+    .helpSupportLeft{
+        width: 160px;
+    }
+    .helpSupportLeft p{
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .speakToUs a{
+        font-size: 12px;
+        font-weight: 400;
+        width: max-content;
+    }
+}
+

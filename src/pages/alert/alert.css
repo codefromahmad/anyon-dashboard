@@ -13,7 +13,7 @@
   justify-content: space-between;
   background-color: white;
   border-radius: 5px;
-  margin: 2px 2px ;
+  margin: 2px 2px;
   padding: 7px 20px;
   align-items: center;
 }
@@ -48,8 +48,9 @@
 .alertLeftBottom {
   display: flex;
   flex-direction: column;
-  padding: 7px 0 150px;
-  justify-content: space-between;
+  padding: 7px 0 50px;
+  position: fixed;
+  bottom: 0;
   background-color: white;
   border-radius: 5px;
   margin: 0px 2px;
@@ -133,49 +134,59 @@
   font-weight: 400;
   font-size: 12px;
 }
-.alertColumn4 img{
+.alertColumn4 img {
   padding: 10px 0;
 }
-.alertRight{
-    background-color: white;
-    border-radius: 5px;
-    margin: 2px 0;
-    width: 72%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.alertRight {
+  background-color: white;
+  border-radius: 5px;
+  margin: 2px 0;
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.aiPromptHeading h4{
-font-weight: 500;
-font-size: 25px;
-margin-bottom: 0;
+.aiPromptHeading h4 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 0;
 }
-.aiPromptText p{
-    font-weight: 400;
-    font-size: 16px;
-    padding-bottom: 200px;
+.aiPromptText p {
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 200px;
 }
-.alertRightTextCard{
-width: 452px;
-padding-bottom: 70px;
+.alertRightTextCard {
+  width: 452px;
+  padding-bottom: 70px;
 }
-.alertRightText p{
-background: #CCCCCC1A;
-font-weight: 400;
-font-size: 13px;
-padding: 15px 25px;
+.alertRightText p {
+  background: #cccccc1a;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 15px 25px;
 }
-.messageHere{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 648px;
-    border: 0.3px solid #CCCCCC;
-    padding: 3px 23px;
-    border-radius: 5px;
+.aiBottom{
+  background-color: white;
+  padding: 0 60px 20px;
+  position: fixed;
+  bottom: 0;
 }
-.messageHere p{
-    font-weight: 400;
-    font-size: 14px;
+.messageHere {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 648px;
+  border: 0.3px solid #cccccc;
+  padding: 3px 23px;
+  margin-bottom: 50px;
+  /* background-color: black; */
+  border-radius: 5px;
 }
+.messageHere p {
+  font-weight: 400;
+  font-size: 14px;
+}
+

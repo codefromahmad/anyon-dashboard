@@ -75,9 +75,11 @@ const Alert = () => {
             </p>
           </div>
         </div>
+        <div className="aiBottom">
         <div className="messageHere">
           <p>Type message here</p>
           <img src={MessageIcon} alt="Message icon" />
+        </div>
         </div>
       </div>
     </div>

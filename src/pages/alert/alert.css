@@ -82,8 +82,9 @@
 .alertLeftBottom h4 {
   padding-left: 15px;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
   color: #515151;
+  margin: 10px 0px;
 }
 /* .alertRow {
   display: flex;
@@ -177,11 +178,8 @@
   text-align: center;
 }
 .alertRightTextCard {
-  /* width: 452px; */
   width: 100%;
   overflow-y: auto;
-  /* background: red; */
-  /* padding-bottom: 70px; */
 }
 .alertRightText p {
   font-weight: 400;

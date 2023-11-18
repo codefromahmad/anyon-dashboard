@@ -70,10 +70,10 @@ const Sidebar = () => {
           <img className="user-profile" src={logo} alt="Logo" />
         </Link>
       </div>
-      <div className="item-list">
+      <div className="sidebar-item-list">
         {sidebarItems.map((item, index) => (
           <div key={index}>
-            <Link to={item.path} className="menu-item">
+            <Link to={item.path} className="sidebar-menu-item">
               <img
                 src={item.active ? item.activeImage : item.img}
                 alt={`${item.name} Logo`}

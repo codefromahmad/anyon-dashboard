@@ -7,6 +7,7 @@ import AccountInformation from "./AccountInformation/AccountInformation";
 import MyAccount from "./MyAccount/MyAccount";
 import PrivacySecurity from "./PrivacySecurity/PrivacySecurity";
 import TabsComponent from "./TabsComponent/TabsComponent";
+import ChatInput from "./ChatInput/ChatInput";
 
 export {
   Sidebar,
@@ -17,5 +18,6 @@ export {
   AccountInformation,
   MyAccount,
   PrivacySecurity,
-  TabsComponent
+  TabsComponent,
+  ChatInput
 };

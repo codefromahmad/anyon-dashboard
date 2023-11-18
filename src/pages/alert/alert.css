@@ -5,7 +5,22 @@
 .alertLeft {
   display: flex;
   flex-direction: column;
-  width: 28%;
+  width: 25%;
+  height: calc(100vh - 60px);
+}
+.alertRight {
+  width: 75%;
+  display: flex;
+  height: calc(100vh - 60px);
+}
+.alertRightCard {
+  flex: 1;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+  height: 100%;
 }
 .historyCard {
   display: flex;
@@ -13,8 +28,8 @@
   justify-content: space-between;
   background-color: white;
   border-radius: 5px;
-  margin: 2px 2px;
-  padding: 7px 20px;
+  margin: 2px;
+  padding: 5px 20px;
   align-items: center;
 }
 .historyCard p {
@@ -29,31 +44,40 @@
   background: #00ba77;
   padding: 8px 15px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.alertLeftTop {
+  overflow-y: auto;
+  height: 70%;
 }
 .timeRemaining {
   background-color: white;
   border-radius: 5px;
-  margin: 0px 2px 2px;
-  padding: 7px 20px 320px;
+  margin: 5px 2px;
 }
-.timeRemaining h4 {
+.timeRemaining .date {
   font-size: 16px;
   font-weight: 500;
   color: #cccccccc;
+  margin: 5px 0px;
 }
-.timeRemaining p {
+.timeRemaining {
   font-size: 14px;
   font-weight: 400;
+  padding: 10px;
+}
+
+.timeRemaining .item {
+  padding: 5px 0px;
+  cursor: pointer;
 }
 .alertLeftBottom {
-  display: flex;
-  flex-direction: column;
-  padding: 7px 0 50px;
-  position: fixed;
-  bottom: 0;
   background-color: white;
   border-radius: 5px;
-  margin: 0px 2px;
+  overflow-y: auto;
+  height: 26%;
+  padding: 10px;
+  margin: 5px 2px;
 }
 .alertLeftBottom h4 {
   padding-left: 15px;
@@ -61,7 +85,7 @@
   font-size: 13px;
   color: #515151;
 }
-.alertRow {
+/* .alertRow {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -136,57 +160,73 @@
 }
 .alertColumn4 img {
   padding: 10px 0;
-}
-.alertRight {
-  background-color: white;
-  border-radius: 5px;
-  margin: 2px 0;
-  width: 72%;
+} */
+.alertRightText {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.aiPromptHeading h4 {
+.alertRightHeader h4 {
   font-weight: 500;
   font-size: 25px;
   margin-bottom: 0;
+  text-align: center;
 }
-.aiPromptText p {
+.alertRightHeader p {
   font-weight: 400;
   font-size: 16px;
-  padding-bottom: 200px;
+  text-align: center;
 }
 .alertRightTextCard {
-  width: 452px;
-  padding-bottom: 70px;
+  /* width: 452px; */
+  width: 100%;
+  overflow-y: auto;
+  /* background: red; */
+  /* padding-bottom: 70px; */
 }
 .alertRightText p {
-  background: #cccccc1a;
   font-weight: 400;
   font-size: 13px;
   padding: 15px 25px;
+  max-width: 400px;
+  background: #f0f0f0;
 }
-.aiBottom{
-  background-color: white;
-  padding: 0 60px 20px;
-  position: fixed;
-  bottom: 0;
-}
-.messageHere {
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 648px;
-  border: 0.3px solid #cccccc;
-  padding: 3px 23px;
-  margin-bottom: 50px;
-  /* background-color: black; */
-  border-radius: 5px;
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.messageHere p {
+
+.custom-table th {
+  background-color: #f5f5f5;
+  color: black;
+  padding: 10px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 }
 
+.custom-table td,
+.custom-table th {
+  border: 0.5px solid #f0f0f0;
+  padding: 8px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.custom-table img {
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .alertLeft {
+    width: 35%;
+  }
+
+  .alertRight {
+    width: 65%;
+  }
+
+  .alertRightText p {
+    max-width: 300px;
+  }
+}

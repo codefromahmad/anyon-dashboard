@@ -50,10 +50,10 @@ const Profile = () => {
           <TabsComponent links={data} />
         </div>
       </div>
-      <UploadPhotograph />
+      {/* <UploadPhotograph />
       <HelpSupport />
       <Payment />
-      <AddBankDetail />
+      <AddBankDetail /> */}
       {/* <AccountSetting /> */}
 
       {/* <MyAccount />

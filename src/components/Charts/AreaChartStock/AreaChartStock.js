@@ -1,29 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createChart, LineStyle } from "lightweight-charts";
 
-const AreaChart = ({ data }) => {
+const AreaChart = ({ data, trend }) => {
   const chartContainer = useRef(null);
-  const [overallTrend, setOverallTrend] = useState("");
+  // const [overallTrend, setOverallTrend] = useState("");
 
-  useEffect(() => {
-    let overall = ""; // 'positive', 'negative', or 'neutral'
+  // useEffect(() => {
+  //   let overall = ""; // 'positive', 'negative', or 'neutral'
 
-    for (let i = 1; i < data.length; i++) {
-      if (data[i].value > data[i - 1].value) {
-        overall = "positive";
-      } else if (data[i].value < data[i - 1].value) {
-        overall = "negative";
-      }
-    }
+  //   for (let i = 1; i < data.length; i++) {
+  //     if (data[i].value > data[i - 1].value) {
+  //       overall = "positive";
+  //     } else if (data[i].value < data[i - 1].value) {
+  //       overall = "negative";
+  //     }
+  //   }
 
-    setOverallTrend(overall);
-  }, [data]);
+  //   setOverallTrend(overall);
+  // }, [data]);
 
   useEffect(() => {
     if (!chartContainer.current) return;
 
     const chart = createChart(chartContainer.current, {
-      width: 120,
+      width: 105,
       height: 40,
       crosshair: {
         vertLine: {
@@ -35,12 +35,11 @@ const AreaChart = ({ data }) => {
       },
     });
 
-    console.log("overallTrend", overallTrend);
 
     const positiveColor = "#09CB09";
     const negativeColor = "#FF0000";
     const areaColor =
-      overallTrend === "positive" ? positiveColor : negativeColor;
+      trend === "up" ? positiveColor : negativeColor;
 
     const areaSeries = chart.addAreaSeries({
       lineColor: areaColor,
@@ -75,7 +74,7 @@ const AreaChart = ({ data }) => {
         horzLines: false,
       },
       handleScroll: false,
-      // bottomColor: "#f0f0f0",
+      handleScale: false, // Disable scaling
     });
 
     return () => {

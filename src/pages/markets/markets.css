@@ -9,6 +9,7 @@
 .leftMarket {
   width: 25%;
   background: white;
+  overflow-y: auto;
 }
 
 .middleMarket {

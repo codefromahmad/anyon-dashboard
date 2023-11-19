@@ -49,71 +49,85 @@ const stocks = [
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "CADBRY",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "CADBRY",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
   {
     name: "CADBRY",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
   {
     name: "CADBRY",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "CADBRY",
     price: "N10.50 (+5.0%)",
     data: pData,
+    trend: "up",
   },
   {
     name: "CADBRY",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
   {
     name: "BLS",
     price: "N10.50 (+5.0%)",
     data: nData,
+    trend: "dn",
   },
 ];
 
@@ -128,7 +142,7 @@ const Markets = () => {
               <p className="pprice">{stock.price}</p>
             </div>
             <div>
-              <AreaChartStock data={stock.data} />
+              <AreaChartStock data={stock.data} trend={stock.trend} />
             </div>
           </div>
         ))}

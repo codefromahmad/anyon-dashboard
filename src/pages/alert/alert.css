@@ -5,7 +5,7 @@
 .alertLeft {
   display: flex;
   flex-direction: column;
-  width: 28%;
+  width: 323px;
 }
 .historyCard {
   display: flex;
@@ -34,7 +34,7 @@
   background-color: white;
   border-radius: 5px;
   margin: 0px 2px 2px;
-  padding: 7px 20px 320px;
+  padding: 7px 20px 10px;
 }
 .timeRemaining h4 {
   font-size: 16px;
@@ -48,18 +48,20 @@
 .alertLeftBottom {
   display: flex;
   flex-direction: column;
-  padding: 7px 0 50px;
+padding-top: 7px;
   position: fixed;
   bottom: 0;
   background-color: white;
   border-radius: 5px;
   margin: 0px 2px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .alertLeftBottom h4 {
   padding-left: 15px;
   font-weight: 500;
   font-size: 13px;
   color: #515151;
+  margin: 10px 0;
 }
 .alertRow {
   display: flex;
@@ -95,15 +97,7 @@
   font-size: 12px;
   color: black;
   background: #f5f5f5;
-  padding: 10px 15px;
-  margin: 0;
-}
-.alertColumn2 h4 {
-  font-weight: 400;
-  font-size: 12px;
-  color: black;
-  background: #f5f5f5;
-  padding: 10px 41px;
+  padding: 10px 35px;
   margin: 0;
 }
 .alertColumn3 h4 {
@@ -111,7 +105,7 @@
   font-size: 12px;
   color: black;
   background: #f5f5f5;
-  padding: 10px 15px;
+  padding: 10px 34px;
   margin: 0;
 }
 .alertColumn4 h4 {
@@ -119,7 +113,7 @@
   font-size: 12px;
   color: black;
   background: #f5f5f5;
-  padding: 10px 17px;
+  padding: 10px 34px;
   margin: 0;
 }
 .alertColumn1 p {
@@ -141,7 +135,7 @@
   background-color: white;
   border-radius: 5px;
   margin: 2px 0;
-  width: 72%;
+  width: 850px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +148,7 @@
 .aiPromptText p {
   font-weight: 400;
   font-size: 16px;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
 }
 .alertRightTextCard {
   width: 452px;
@@ -166,14 +160,13 @@
   font-size: 13px;
   padding: 15px 25px;
 }
-.aiBottom{
+.aiBottom {
   background-color: white;
-  padding: 0 60px 20px;
+  padding: 10px 60px 20px;
   position: fixed;
   bottom: 0;
 }
 .messageHere {
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -185,8 +178,66 @@
   /* background-color: black; */
   border-radius: 5px;
 }
+.messageHere input {
+  border: none;
+  height: 50px;
+}
 .messageHere p {
   font-weight: 400;
   font-size: 14px;
 }
-
+.alertCard {
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.alertRight {
+  max-height: calc(100vh - 40px); /* Adjust the height as needed */
+  overflow-y: auto;
+}
+.alertLeftTop {
+  max-height: calc(100vh - 40px); /* Adjust the height as needed */
+  overflow-y: auto;
+}
+@media (max-width:780px){
+  .messageHere{
+    width: 350px;
+    margin-bottom: 10px;
+  }
+  .aiBottom{
+    padding: 10px 10px 20px;
+  }
+  .alertRightTextCard{
+    width: 330px;
+  }
+  .alertLeft{
+    width: 250px;
+  }
+  .alertRight{
+    width: 500px;
+  }
+  .alertColumn1 h4 {
+    padding: 10px 20px;
+  }
+  .alertColumn3 h4 {
+    padding: 10px 20px;
+  }
+  .alertColumn4 h4 {
+    padding: 10px 17px;
+  }
+  .historyCard p{
+    font-size: 20px;
+  }
+  .newChatButton p{
+    font-size: 13px;
+  }
+  .timeRemaining{
+    padding: 7px 10px 10px;
+  }
+  .aiPromptHeading h4{
+    font-size: 22px;
+  }
+  .aiPromptText p{
+    font-size: 15px;
+  }
+}

@@ -7,38 +7,46 @@ const Alert = () => {
   return (
     <div className="alertCard">
       <div className="alertLeft">
-        <div className="historyCard">
-          <p>History</p>
-          <div className="newChatButton">
-            <p>New Chat</p>
+        <div className="alertLeftTop">
+          <div className="historyCard">
+            <p>History</p>
+            <div className="newChatButton">
+              <p>New Chat</p>
+            </div>
           </div>
-        </div>
-        <div className="timeRemaining">
-          <h4>Last 7 days</h4>
-          <p>Place a buy trade on Cadbury at 12.7</p>
-          <p>Place a buy trade on Cadbury at 12.7</p>
-          <h4>Last 30 days</h4>
-          <p>Place a buy trade on Cadbury at 12.7</p>
+          <div className="timeRemaining">
+            <h4>Last 7 days</h4>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <h4>Last 30 days</h4>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <h4>Last 7 days</h4>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <h4>Last 30 days</h4>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <h4>Last 7 days</h4>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+            <h4>Last 30 days</h4>
+            <p>Place a buy trade on Cadbury at 12.7</p>
+          </div>
         </div>
         <div className="alertLeftBottom">
           <h4>Alert</h4>
           <div className="alertRow">
-          <div className="alertColumn1">
-            <h4>Symbol</h4>
-            <p>CAD</p>
-          </div>
-          <div className="alertColumn2">
-            <h4>Name</h4>
-            <p>Alert cadbury</p>
-          </div>
-          <div className="alertColumn3">
-            <h4>Time</h4>
-            <p>5:00 pm</p>
-          </div>
-          <div className="alertColumn4">
-            <h4>HELLO</h4>
-            <img src={AlertIcon} alt="Alert" />
-          </div>
+            <div className="alertColumn1">
+              <h4>Symbol</h4>
+              <p>CAD</p>
+            </div>
+            <div className="alertColumn3">
+              <h4>Time</h4>
+              <p>5:00 pm</p>
+            </div>
+            <div className="alertColumn4">
+              <h4>HELLO</h4>
+              <img src={AlertIcon} alt="Alert" />
+            </div>
           </div>
         </div>
       </div>
@@ -74,12 +82,30 @@ const Alert = () => {
               semper id era.{" "}
             </p>
           </div>
+          <div className="alertRightText">
+            <p>
+              4. Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum
+              semper id era.{" "}
+            </p>
+          </div>
+          <div className="alertRightText">
+            <p>
+              4. Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum
+              semper id era.{" "}
+            </p>
+          </div>
+          <div className="alertRightText">
+            <p>
+              4. Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum
+              semper id era.{" "}
+            </p>
+          </div>
         </div>
         <div className="aiBottom">
-        <div className="messageHere">
-          <p>Type message here</p>
-          <img src={MessageIcon} alt="Message icon" />
-        </div>
+          <div className="messageHere">
+            <input type="text" placeholder="Type message here..." />
+            <img src={MessageIcon} alt="Message icon" />
+          </div>
         </div>
       </div>
     </div>

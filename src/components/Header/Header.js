@@ -18,7 +18,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   useEffect(() => {
     if (pathname === "/wallet") {
       setHeaderTitle("Wallet");
-    } else if (pathname === "/alert") {
+    } else if (pathname === "/alert" || pathname === "/alertmanual") {
       setHeaderTitle("Alert");
     } else if (pathname.startsWith("/wallet/addfunds")) {
       setHeaderTitle("Add Funds");
@@ -56,14 +56,28 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         {headerTitle && <p>{headerTitle}</p>}
       </div>
       <div className="left-side">{headerTitle && <p>{headerTitle}</p>}</div>
-      {pathname === "/alert" && (
+      {(pathname === "/alert" || pathname === "/alertmanual") && (
         <div className="middle-header">
-          <div className="active-middle-item">
+          <Link
+            to="/alert"
+            className={`${
+              pathname === "/alert"
+                ? "active-middle-item"
+                : "nonactive-middle-item"
+            }`}
+          >
             <p>AI Prompt</p>
-          </div>
-          <div className="nonactive-middle-item">
+          </Link>
+          <Link
+            to="/alertmanual"
+            className={`${
+              pathname === "/alertmanual"
+                ? "active-middle-item"
+                : "nonactive-middle-item"
+            }`}
+          >
             <p>Manual</p>
-          </div>
+          </Link>
         </div>
       )}
       <div className="right-header">

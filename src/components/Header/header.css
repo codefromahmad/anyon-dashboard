@@ -24,6 +24,10 @@
   gap: 10px;
 }
 
+.middle-header a{
+  text-decoration: none;
+}
+
 .active-middle-item {
   display: flex;
   align-items: center;

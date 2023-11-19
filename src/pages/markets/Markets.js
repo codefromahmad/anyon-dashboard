@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./markets.css";
 import { AreaChartStock } from "../../components";
+import stock from "../../assets/images/stock.png";
 
 const pData = [
   { time: "2023-01-01", value: 90 },
@@ -132,6 +133,22 @@ const stocks = [
 ];
 
 const Markets = () => {
+  const [value, setValue] = useState(1);
+  const [popup, setPopup] = useState(false);
+
+  const handleIncrement = () => {
+    setValue(value + 1);
+  };
+
+  const handleDecrement = () => {
+    if (value === 0) return;
+    setValue(value - 1);
+  };
+
+  const showPopup = () => {
+    setPopup(true);
+  };
+
   return (
     <div className="marketContainer">
       <div className="leftMarket">
@@ -147,8 +164,55 @@ const Markets = () => {
           </div>
         ))}
       </div>
-      <div className="middleMarket"></div>
+      <div className="middleMarket">
+        <div className="stockInfo">
+          <div className="stockDetail">
+            <img src={stock} alt="stock" />
+            <div className="nameAndDesc">
+              <p className="name">BLS</p>
+              <p className="description">Bilingual system</p>
+            </div>
+          </div>
+          <div>
+            <div className="marketsNoTextEquity">
+              <div className="no-text">
+                <div className="n-text">
+                  <p>N</p>
+                </div>
+                <div className="o-text">
+                  <p>10.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="middle-header">
+          <div onClick={showPopup} className="buyButton">
+            <p>Buy</p>
+          </div>
+          <div className="lotCalculation">
+            <p>Lot</p>
+            <div>
+              <button onClick={handleIncrement}>+</button>
+              <input type="text" value={value} readOnly />
+              <button onClick={handleDecrement}>-</button>
+            </div>
+          </div>
+          <div onClick={showPopup} className="sellButton">
+            <p>Sell</p>
+          </div>
+        </div>
+      </div>
       <div className="rightMarket"></div>
+      {/* {popup && <div className="overlay"></div>} */}
+      {popup && (
+        <>
+          <div className="overlay"></div>
+          <div onClick={() => setPopup(false)} className="popup">
+            <p>Confirm</p>
+          </div>
+        </>
+      )}
     </div>
   );
 };

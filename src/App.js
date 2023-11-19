@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, PopupSidebar, Sidebar } from "./components";
-import { Alert, Apps, Holdings, Home, Markets, Wallet, Profile, AlertManual } from "./pages";
+import { Alert, Apps, Holdings, Home, Markets, Wallet, Profile, AlertManual, MarketsAi } from "./pages";
 import AddFunds from "./pages/addfunds/AddFunds";
 import BankTransfer from "./pages/banktransfer/BankTransfer";
 import Withdraw from "./pages/withdraw/Withdraw";
@@ -55,7 +55,7 @@ function App() {
     <Router>
       <div className="app">
         {openMenu && (
-          <div className="overlay" onClick={() => setOpenMenu(false)}></div>
+          <div className="overlay" onClick={() => setOpenMenu(false)} />
         )}
         <div
           onClick={closeDropDownMenu}
@@ -76,6 +76,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/markets" element={<Markets />} />
+              <Route path="/marketsai" element={<MarketsAi />} />
               <Route path="/holdings" element={<Holdings />} />
               <Route path="/wallet" element={<Wallet />} />
               <Route path="/wallet/withdraw" element={<Withdraw />} />

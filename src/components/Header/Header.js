@@ -9,6 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 import profileIcon from "../../assets/images/menu/profile-icon.svg";
 import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
+import { FiSearch } from "react-icons/fi";
 
 const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const [headerTitle, setHeaderTitle] = useState("");
@@ -26,6 +27,8 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
       setHeaderTitle("Withdraw");
     } else if (pathname.startsWith("/wallet/savinglock")) {
       setHeaderTitle("Invest");
+    } else {
+      setHeaderTitle("");
     }
   }, [pathname]);
 
@@ -55,7 +58,15 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         </button>
         {headerTitle && <p>{headerTitle}</p>}
       </div>
-      <div className="left-side">{headerTitle && <p>{headerTitle}</p>}</div>
+      <div className="left-side">
+        {headerTitle && <p>{headerTitle}</p>}
+        {(pathname === "/markets" || pathname === "/technicals") && (
+          <div className="search-bar">
+            <FiSearch color="#C3C3C3" />
+            <input placeholder="Search" />
+          </div>
+        )}
+      </div>
       {(pathname === "/alert" || pathname === "/alertmanual") && (
         <div className="middle-header">
           <Link
@@ -77,6 +88,40 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
             }`}
           >
             <p>Manual</p>
+          </Link>
+        </div>
+      )}
+      {(pathname === "/markets" || pathname === "/marketsai") && (
+        <div className="middle-header">
+          <Link
+            to="/technicals"
+            className={`${
+              pathname === "/technicals"
+                ? "active-middle-item"
+                : "nonactive-middle-item"
+            }`}
+          >
+            <p>Technicals</p>
+          </Link>
+          <Link
+            to="/markets"
+            className={`${
+              pathname === "/markets"
+                ? "active-middle-item"
+                : "nonactive-middle-item"
+            }`}
+          >
+            <p>Simple</p>
+          </Link>
+          <Link
+            to="/marketsai"
+            className={`${
+              pathname === "/marketsai"
+                ? "active-middle-item"
+                : "nonactive-middle-item"
+            }`}
+          >
+            <p>AI</p>
           </Link>
         </div>
       )}

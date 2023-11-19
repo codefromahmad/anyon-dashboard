@@ -30,7 +30,10 @@ const Sidebar = () => {
       name: "Markets",
       img: markets,
       activeImage: marketsActive,
-      active: pathname === "/markets",
+      active:
+        pathname === "/markets" ||
+        pathname === "/marketsai" ||
+        pathname === "/technicals",
       path: "/markets",
     },
     {
@@ -51,7 +54,7 @@ const Sidebar = () => {
       name: "Alert",
       img: alert,
       activeImage: alertActive,
-      active: pathname === "/alert",
+      active: pathname === "/alert" || pathname === "/alertmanual",
       path: "/alert",
     },
     {

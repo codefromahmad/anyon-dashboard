@@ -1,0 +1,56 @@
+.marketContainer {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 58px);
+  width: 100%;
+  background: red;
+}
+
+.leftMarket {
+  width: 25%;
+  background: white;
+}
+
+.middleMarket {
+  width: 50%;
+  background: yellow;
+}
+
+.rightMarket {
+  width: 25%;
+  background: green;
+}
+
+.stockItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 15px;
+}
+
+.stockName {
+  display: flex;
+  flex-direction: column;
+}
+
+.stockName .name {
+  font-weight: 400;
+  font-size: 14px;
+  color: #151515;
+  margin: 0px;
+}
+
+.stockName .pprice {
+  color: #00ba77;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.stockName .nprice {
+    color: #FF5348;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }

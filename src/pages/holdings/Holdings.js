@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import { HoldingsTable } from "../../components";
 const Holdings = () => {
   return (
-    <div>Holdings</div>
-  )
-}
+    <div>
+      <HoldingsTable />
+    </div>
+  );
+};
 
-export default Holdings
+export default Holdings;

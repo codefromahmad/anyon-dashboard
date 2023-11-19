@@ -4,6 +4,40 @@ import editIcon from "../../assets/images/edit.svg";
 import deleteIcon from "../../assets/images/delete.svg";
 import { ChatInput } from "../../components";
 
+const alerts = [
+  {
+    symbol: "CAD",
+    time: "5:00 PM",
+  },
+  {
+    symbol: "USD",
+    time: "3:00 PM",
+  },
+  {
+    symbol: "CHF",
+    time: "2:20 PM",
+  },
+  {
+    symbol: "NGN",
+    time: "6:00 PM",
+  },
+];
+
+const aiIntro = [
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+];
+
 const Alert = () => {
   return (
     <div className="alertCard">
@@ -59,43 +93,21 @@ const Alert = () => {
             <thead>
               <tr>
                 <th>Symbol</th>
-                <th>Name</th>
+                <th>Time</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>CAD</td>
-                <td>5:00 PM</td>
-                <td>
-                  <img src={editIcon} alt="Alert" />
-                  <img src={deleteIcon} alt="Alert" />
-                </td>
-              </tr>
-              <tr>
-                <td>CAD</td>
-                <td>5:00 PM</td>
-                <td>
-                  <img src={editIcon} alt="Alert" />
-                  <img src={deleteIcon} alt="Alert" />
-                </td>
-              </tr>
-              <tr>
-                <td>CAD</td>
-                <td>5:00 PM</td>
-                <td>
-                  <img src={editIcon} alt="Alert" />
-                  <img src={deleteIcon} alt="Alert" />
-                </td>
-              </tr>
-              <tr>
-                <td>CAD</td>
-                <td>5:00 PM</td>
-                <td>
-                  <img src={editIcon} alt="Alert" />
-                  <img src={deleteIcon} alt="Alert" />
-                </td>
-              </tr>
+              {alerts.map((alert, index) => (
+                <tr key={index}>
+                  <td>{alert.symbol}</td>
+                  <td>{alert.time}</td>
+                  <td>
+                    <img src={editIcon} alt="Alert" />
+                    <img src={deleteIcon} alt="Alert" />
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -107,102 +119,16 @@ const Alert = () => {
               <h4>AI Prompt</h4>
               <p>Create an alert using our powerful Ai tool</p>
             </div>
-            <div className="alertRightText">
-              <p>
-                1. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                2. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                3. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                4. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                1. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                2. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                3. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                4. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                1. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                2. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                3. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                4. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                1. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                2. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                3. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
-            <div className="alertRightText">
-              <p>
-                4. Lorem ipsum dolor sit amet consectetur. Ullamcorper
-                vestibulum semper id era.{" "}
-              </p>
-            </div>
+            <ol>
+              {aiIntro.map((ai, index) => (
+                <li key={index} className="alertRightText">
+                  <p>
+                    <span className="custom-number">{index + 1}. </span>
+                    {ai.text}
+                  </p>
+                </li>
+              ))}
+            </ol>
           </div>
           <ChatInput />
         </div>

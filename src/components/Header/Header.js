@@ -5,7 +5,7 @@ import profilePicture from "../../assets/images/profile-picture.jpeg";
 // import bellIcon from "../../assets/images/bellicon.svg";
 import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import profileIcon from "../../assets/images/menu/profile-icon.svg";
 import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
@@ -18,6 +18,8 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   useEffect(() => {
     if (pathname === "/wallet") {
       setHeaderTitle("Wallet");
+    } else if (pathname === "/alert") {
+      setHeaderTitle("Alert");
     } else if (pathname.startsWith("/wallet/addfunds")) {
       setHeaderTitle("Add Funds");
     } else if (pathname.startsWith("/wallet/withdraw")) {
@@ -54,6 +56,16 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         {headerTitle && <p>{headerTitle}</p>}
       </div>
       <div className="left-side">{headerTitle && <p>{headerTitle}</p>}</div>
+      {pathname === "/alert" && (
+        <div className="middle-header">
+          <div className="active-middle-item">
+            <p>AI Prompt</p>
+          </div>
+          <div className="nonactive-middle-item">
+            <p>Manual</p>
+          </div>
+        </div>
+      )}
       <div className="right-header">
         {/* <div className="bell-icon">
           <img src={bellIcon} />
@@ -72,10 +84,15 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
       {dropdownMenu && (
         <div className="dropdown-content">
           {dropdown.map((item, index) => (
-            <div key={index} className="dropdown-item">
-              <img src={item.img} alt="Profile" className="dropdown-img" />
+            <Link
+              to={item.path}
+              onClick={() => setDropdownMenu(false)}
+              key={index}
+              className="dropdown-item"
+            >
+              <img src={item.img} alt={item.name} className="dropdown-img" />
               <p>{item.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
       )}

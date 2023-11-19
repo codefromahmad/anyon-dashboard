@@ -1,0 +1,43 @@
+/* Add these styles to your CSS file or component */
+
+/* ChatInput.css */
+
+/* Container styling */
+.chatInputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+.chatinput {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  margin-bottom: 80px;
+  padding: 10px;
+  border: 0.3px solid #cccccc;
+  border-radius: 5px;
+  min-width: 650px;
+  background: white;
+}
+
+.chatinput input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+.chatinput img {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .chatinput {
+    min-width: 400px;
+    margin-bottom: 30px;
+  }
+}

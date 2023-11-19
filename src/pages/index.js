@@ -5,7 +5,6 @@ import Wallet from "./wallet/Wallet"
 import Alert from "./alert/Alert"
 import Apps from "./apps/Apps"
 import Profile from "./profile/profile"
-
 export {
     Home,
     Markets,
@@ -13,5 +12,5 @@ export {
     Wallet,
     Alert,
     Apps,
-    Profile
+    Profile,
 }

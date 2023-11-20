@@ -1,5 +1,6 @@
 import React from "react";
 import "./profile.css";
+import { IoIosArrowForward } from "react-icons/io";
 import {
   AccountInformation,
   MyAccount,
@@ -13,7 +14,6 @@ import UploadPhotograph from "../../components/UploadPhotograph/UploadPhotograph
 import HelpSupport from "../../components/HelpSupport/HelpSupport";
 import Payment from "../../components/Payment/Payment";
 import AddBankDetail from "../../components/AddBankDetail/AddBankDetail";
-import AccountSetting from "../../components/AccountSetting/AccountSetting";
 
 const Profile = () => {
   const data = [
@@ -46,10 +46,38 @@ const Profile = () => {
   return (
     <div>
       <div className="rounded-card">
-        <div className="">
+        <div className="laptop-query">
           <TabsComponent links={data} />
         </div>
+        <div className="accountSettingDiv">
+        <div className="accountSettingHeading">
+          <h3>Account Setting</h3>
+        </div>
+        <div className="accountSettingCards">
+          <div className="accountSettingCard">
+            <p>Profile</p>
+            <IoIosArrowForward />
+          </div>
+          <div className="accountSettingCard">
+            <p>Account Information</p>
+            <IoIosArrowForward />
+          </div>
+          <div className="accountSettingCard">
+            <p>Privacy & Security</p>
+            <IoIosArrowForward />
+          </div>
+          <div className="accountSettingCard">
+            <p>Help & Support</p>
+            <IoIosArrowForward />
+          </div>
+          <div className="accountSettingCard">
+            <p>Payment</p>
+            <IoIosArrowForward />
+          </div>
+        </div>
       </div>
+      </div>
+      
       {/* <UploadPhotograph />
       <HelpSupport />
       <Payment />

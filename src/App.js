@@ -2,7 +2,17 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, PopupSidebar, Sidebar } from "./components";
-import { Alert, Apps, Holdings, Home, Markets, Wallet, Profile, AlertManual, MarketsAi } from "./pages";
+import {
+  Alert,
+  Apps,
+  Holdings,
+  Home,
+  Markets,
+  Wallet,
+  Profile,
+  AlertManual,
+  MarketsAi,
+} from "./pages";
 import AddFunds from "./pages/addfunds/AddFunds";
 import BankTransfer from "./pages/banktransfer/BankTransfer";
 import Withdraw from "./pages/withdraw/Withdraw";
@@ -18,6 +28,111 @@ function App() {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+  const pData = [
+    { time: "2023-01-01", value: 90 },
+    { time: "2023-02-01", value: 120 },
+    { time: "2023-03-01", value: 250 },
+    { time: "2023-04-01", value: 130 },
+    { time: "2023-05-01", value: 160 },
+    { time: "2023-06-01", value: 170 },
+    { time: "2023-07-01", value: 190 },
+    { time: "2023-08-01", value: 250 },
+    { time: "2023-09-01", value: 330 },
+    { time: "2023-10-12", value: 460 },
+    { time: "2023-11-12", value: 500 },
+    { time: "2023-12-12", value: 620 },
+    { time: "2024-01-12", value: 730 },
+    { time: "2024-02-12", value: 560 },
+    { time: "2024-03-12", value: 770 },
+    { time: "2024-04-12", value: 800 },
+    { time: "2024-05-12", value: 850 },
+    { time: "2024-06-12", value: 930 },
+  ];
+
+  const nData = [
+    { time: "2023-01-01", value: 930 },
+    { time: "2023-02-01", value: 850 },
+    { time: "2023-03-01", value: 800 },
+    { time: "2023-04-01", value: 770 },
+    { time: "2023-05-01", value: 560 },
+    { time: "2023-06-01", value: 730 },
+    { time: "2023-07-01", value: 620 },
+    { time: "2023-08-01", value: 500 },
+    { time: "2023-09-01", value: 460 },
+    { time: "2023-10-12", value: 300 },
+    { time: "2023-11-12", value: 250 },
+    { time: "2023-12-12", value: 190 },
+    { time: "2024-01-12", value: 170 },
+    { time: "2024-02-12", value: 160 },
+    { time: "2024-03-12", value: 130 },
+    { time: "2024-04-12", value: 250 },
+    { time: "2024-05-12", value: 120 },
+    { time: "2024-06-12", value: 90 },
+  ];
+
+  const stocks = [
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+  ];
 
   useEffect(() => {
     // Add event listener to handle scroll lock
@@ -75,8 +190,11 @@ function App() {
           <div onClick={closeDropDownMenu}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/markets" element={<Markets />} />
-              <Route path="/marketsai" element={<MarketsAi />} />
+              <Route path="/markets" element={<Markets stocks={stocks} />} />
+              <Route
+                path="/marketsai"
+                element={<MarketsAi stocks={stocks} />}
+              />
               <Route path="/holdings" element={<Holdings />} />
               <Route path="/wallet" element={<Wallet />} />
               <Route path="/wallet/withdraw" element={<Withdraw />} />

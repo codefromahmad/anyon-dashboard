@@ -4,7 +4,6 @@
   align-items: center;
   align-items: center;
   background-color: white;
-  padding: 0px 20px;
   height: 58px;
 }
 .left-header {
@@ -12,7 +11,8 @@
 }
 
 .left-side {
-  width: calc(25% - 20px);
+  width: calc(25% - 10px);
+  padding: 5px;
 }
 
 .left-side p {
@@ -69,6 +69,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  padding-right: 20px;
 }
 .bell-icon img {
   font-size: 18px;

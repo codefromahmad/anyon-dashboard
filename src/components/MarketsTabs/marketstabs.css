@@ -1,0 +1,49 @@
+.gridMarkets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+  list-style: none;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0px 20px;
+}
+
+.gridItem {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.gridActive {
+  border-bottom: 2px solid #02915d;
+  padding-bottom: 4px;
+}
+
+.itemName {
+  text-align: center;
+  margin: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.expandLi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.expandLi .expandContainer {
+  background: #e6fff6;
+  padding: 3px 10px 0px 10px;
+  cursor: pointer;
+}
+.expand {
+  font-size: 20px;
+}

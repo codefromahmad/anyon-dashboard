@@ -10,6 +10,8 @@ import PrivacySecurity from "./PrivacySecurity/PrivacySecurity";
 import TabsComponent from "./TabsComponent/TabsComponent";
 import ChatInput from "./ChatInput/ChatInput";
 import HoldingsTable from "./HoldingsTable/HoldingsTable";
+import MarketsTabs from "./MarketsTabs/MarketsTabs";
+import MainAreaChart from "./Charts/MainAreaChart/MainAreaChart";
 
 export {
   Sidebar,
@@ -23,5 +25,7 @@ export {
   TabsComponent,
   ChatInput,
   HoldingsTable,
-  AreaChartStock
+  AreaChartStock,
+  MarketsTabs,
+  MainAreaChart,
 };

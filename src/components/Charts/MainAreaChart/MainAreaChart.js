@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createChart, LineStyle } from "lightweight-charts";
-import { format, parse } from "date-fns";
+// import { format, parse } from "date-fns";
 import "./mainareachart.css";
 
 const MainAreaChart = ({ data, trend }) => {

@@ -67,7 +67,7 @@
   font-size: 16px;
   color: #ffffff;
 }
-@media (max-width: 330px) {
+@media (max-width: 426px) {
   .addBankDetailCard {
     padding: 40px 15px 200px;
   }
@@ -75,15 +75,23 @@
     padding:5px 15px 15px;
   }
   .chooseBank select {
-    width: 252px;
+    width: 100%;
   }
   .chooseAccountNo input {
-    width: 230px;
+    width: 94%;
   }
   .buttonToSave{
     margin-top: 20px;
   }
   .buttonToSave p {
-    padding: 15px 108px;
+    padding: 15px 120px;
+  }
+}
+@media (max-width: 340px) {
+  .buttonToSave p {
+    padding: 15px 100px;
+  }
+  .chooseAccountNo input {
+    width: 92%;
   }
 }

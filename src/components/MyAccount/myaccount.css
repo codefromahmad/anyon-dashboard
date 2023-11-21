@@ -168,7 +168,7 @@
   width: 100%;
   padding: 5px 10px;
 }
-@media (max-width: 850px) {
+@media (max-width: 850px) and (min-width:430px) {
   .accountCardHeader {
     width: 450px;
   }
@@ -179,7 +179,7 @@
     padding-right: 170px;
   }
 }
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
   .accountCard {
     display: flex;
     flex-direction: column;
@@ -219,4 +219,47 @@
     padding-right: 6px;
     width: 255px;
   }
+} */
+@media (max-width: 426px) {
+  .accountCard {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 40px;
+  }
+  .accountCardHeader {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 93%;
+  }
+  .selectDiv select {
+    padding-right: 20px;
+    width: 100%;
+  }
+  .accountCardMid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 93%;
+    margin-top: 10px;
+  }
+  .accountCardBottom {
+    width: 93%;
+  }
+  .bankInformationCard {
+    padding: 30px 20px 20px;
+  }
+  .bankInformationMid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 99%;
+  }
+  .buttonSave {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .account-no {
+    padding-right: 6px;
+    width: 94%;
+  }
 }
+

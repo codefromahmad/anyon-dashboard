@@ -58,12 +58,12 @@
     font-weight: 400;
     font-size: 16px;
 }
-@media (max-width:780px) {
+@media (max-width:768px) {
     .profilePaymentCard{
         padding: 40px 70px 200px;
     }
 }
-@media (max-width:330px) {
+@media (max-width:426px) {
     .profilePaymentCard{
         padding: 40px 12px 200px;
     }

@@ -35,12 +35,12 @@
   font-weight: 400;
 }
 
-@media (max-width:1440px) and (min-width:330px) {
+@media (max-width:1440px) and (min-width:427px) {
   .accountSettingDiv{
       display: none;
   }
 }
-@media (max-width:330px) {
+@media (max-width:426px) {
   .laptop-query{
     display: none;
   }

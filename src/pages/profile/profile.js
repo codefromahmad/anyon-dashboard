@@ -77,18 +77,18 @@ const Profile = () => {
         </div>
       </div>
       </div>
-      
-      {/* <UploadPhotograph />
-      <HelpSupport />
-      <Payment />
-      <AddBankDetail /> */}
+
+      {/* <UploadPhotograph /> */}
+      {/* <HelpSupport />
+      <Payment /> */}
+      {/* <AddBankDetail /> */}
       {/* <AccountSetting /> */}
 
       {/* <MyAccount />
       <AccountInformation />
-      <PrivacySecurity />
-      <ChangePassword />
-      <ProofOfID />
+      <PrivacySecurity /> */}
+      {/* <ChangePassword /> */}
+      {/* <ProofOfID />
       <ProofOfAddress /> */}
     </div>
   );

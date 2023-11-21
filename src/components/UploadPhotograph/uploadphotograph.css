@@ -1,84 +1,83 @@
-.proofIdCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 0 200px;
-  
+.proofIdCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 200px;
 }
-.proofCard{
-    border: 0.5px solid #CCCCCC;
-    padding: 20px 30px 50px;
-    border-radius: 5px;
-    width: 580px;
+.proofCard {
+  border: 0.5px solid #cccccc;
+  padding: 20px 30px 50px;
+  border-radius: 5px;
+  width: 580px;
 }
-.proofIdHeading{
-    display: flex;
-    justify-content: center;
+.proofIdHeading {
+  display: flex;
+  justify-content: center;
 }
-.proofIdHeading h3{
+.proofIdHeading h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.uploadText h4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+.proofIdMid p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+.uploadBrowser {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border: 0.5px solid #80808080;
+  padding: 0px 15px;
+  border-radius: 5px;
+}
+.uploadBrowser p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.proofIdBottom {
+  margin-top: 40px;
+}
+.proofIdBottom h3 {
+  font-weight: 400;
+  font-size: 14px;
+}
+.proofIdBottom p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+@media (max-width: 800px) {
+  .proofCard {
+    width: 500px;
+  }
+}
+@media (max-width: 426px) {
+  .proofIdCard {
+    padding: 70px 15px 100px;
+  }
+  .proofCard {
+    padding: 10px 10px 30px;
+    width: 90%;
+  }
+  .proofIdHeading h3 {
     font-weight: 500;
-    font-size: 20px;
-}
-.uploadText h4{
-font-weight: 400;
-font-size: 14px;
-}
-.proofIdMid p{
-    font-weight: 400;
-    font-size: 12px;
-    color: #AAAAAA;
-}
-.uploadBrowser{
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    border: 0.5px solid #80808080;
-    padding: 0px 15px;
-    border-radius: 5px;
-}
-.uploadBrowser p{
-    font-weight: 400;
     font-size: 16px;
-}
-.proofIdBottom{
-    margin-top: 40px;
-}
-.proofIdBottom h3{
-    font-weight:400;
-    font-size: 14px;
-}
-.proofIdBottom p{
+  }
+  .uploadBrowser p {
     font-weight: 400;
-    font-size: 12px;
-    color: #AAAAAA;
-}
-@media (max-width:800px) {
-    .proofCard{
-        width: 500px;
-    }
-}
-@media (max-width:330px) {
-    .proofIdCard{
-        padding: 70px 15px 100px ;
-    }
-    .proofCard{
-        padding: 10px 10px 30px;
-        width: 250px;
-    }
-    .proofIdHeading h3{
-font-weight: 500;
-font-size: 16px;
-    }
-    .uploadBrowser p{
-        font-weight: 400;
-        font-size: 14px;
-    }
-    .proofIdBottom{
-        margin-top: 30px;
-    }
-    .proofIdBottom p{
-        margin-bottom: 0;
-        margin-top: 3px;
-    }
+    font-size: 14px;
+  }
+  .proofIdBottom {
+    margin-top: 30px;
+  }
+  .proofIdBottom p {
+    margin-bottom: 0;
+    margin-top: 3px;
+  }
 }

@@ -29,7 +29,7 @@
         padding: 70px 70px 200px;
     }
 }
-@media (max-width:330px) {
+@media (max-width:426px) {
     .helpSupportCard{
         padding: 20px 13px 200px;
     }

@@ -87,7 +87,7 @@
     padding: 40px 70px 200px;
   }
 }
-@media (max-width: 330px) {
+@media (max-width: 426px) {
   .privacySecurityCard {
     display: flex;
     flex-direction: column;
@@ -119,16 +119,22 @@
   .changePasswordDiv a {
     font-size: 13px;
   }
-  .greenDiv {
+  .greenDiv{
+    width: 34px;
   }
   .whiteDiv {
     width: 15px;
     margin-left: 16px;
   }
   .greyDiv {
-    padding-right: 13px;
+   width: 34px;
   }
   .greyWhiteDiv {
-    width: 17px;
+    width: 16px;
   }
+}
+@media (max-width: 330px) {
+.greyWhiteDiv{
+  margin-right: 15px;
+}
 }

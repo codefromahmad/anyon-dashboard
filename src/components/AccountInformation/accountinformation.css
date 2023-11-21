@@ -1,6 +1,7 @@
 .accountInformationContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-bottom: 20px;
 }
 .accountInformationCard {
@@ -63,25 +64,22 @@
 .arrowIcon FaChevronRight {
   font-weight: 100;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .accountInformationCard {
     width: 550px;
   }
   .completeAccountInformation {
-    width: 610px;
+    width: 612px;
   }
 }
-@media (max-width: 330px) {
+@media (max-width: 426px) {
   .accountInformationCard {
-    width: 260px;
+    width: 340px;
     padding: 3px 7px;
   }
   .accountInformationCard a {
     font-weight: 400;
     font-size: 14px;
-  }
-  .completeAccountInformation {
-    width: 610px;
   }
   .accountRight {
     column-gap: 3px;
@@ -107,10 +105,32 @@
     column-gap: 2px;
   }
   .completeAccountInformation {
-    width: 280px;
+    width: 355px;
     padding: 0;
   }
   .completeAccountInformation p {
     text-align: center;
+  }
+}
+@media (max-width: 385px) {
+  .accountInformationCard {
+    width: 280px;
+  }
+  .accountInformationContainer {
+    padding: 0 15px 100px;
+  }
+  .completeAccountInformation {
+    width: 300px;
+  }
+}
+@media (max-width: 340px) {
+  .accountInformationCard {
+    width: 255px;
+  }
+  .accountInformationContainer {
+    padding: 0 15px 100px;
+  }
+  .completeAccountInformation {
+    width: 270px;
   }
 }

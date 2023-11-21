@@ -104,6 +104,9 @@ const MainAreaChart = ({ data, trend }) => {
       localization: {
         dateFormat: "Mon dd",
       },
+      // localization: {
+      //   timeFormatter: (timestamp) => format(timestamp, "yyyy-MM-dd HH:mm"),
+      // },
     });
 
     // Ensure the chart updates its size when the container is resized

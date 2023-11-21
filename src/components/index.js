@@ -12,6 +12,7 @@ import ChatInput from "./ChatInput/ChatInput";
 import HoldingsTable from "./HoldingsTable/HoldingsTable";
 import MarketsTabs from "./MarketsTabs/MarketsTabs";
 import MainAreaChart from "./Charts/MainAreaChart/MainAreaChart";
+import OrderBookChart from "./Charts/OrderBookChart/OrderBookChart";
 
 export {
   Sidebar,
@@ -28,4 +29,5 @@ export {
   AreaChartStock,
   MarketsTabs,
   MainAreaChart,
+  OrderBookChart
 };

@@ -22,7 +22,7 @@
 
 .rightMarket {
   width: 30%;
-  background: #00ba77;
+  /* background: #00ba77; */
 }
 
 .stockItem {
@@ -255,4 +255,20 @@
 
 .redColor {
   color: #ff5348;
+}
+
+.orderBook {
+  margin: 2px;
+  background: white;
+  border-radius: 5px;
+}
+
+.orderBookHeader {
+  border-bottom: 1px solid #ccc;
+}
+
+.orderBookHeader p {
+  margin: 0px;
+  font-weight: 400;
+  padding: 10px 5px;
 }

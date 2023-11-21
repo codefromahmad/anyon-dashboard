@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./markets.css";
-import { AreaChartStock, MainAreaChart, MarketsTabs } from "../../components";
+import { AreaChartStock, MainAreaChart, MarketsTabs, OrderBookChart } from "../../components";
 import stock from "../../assets/images/stock.png";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -25,32 +25,32 @@ const Markets = ({ stocks }) => {
     {
       id: 1,
       name: "1D",
-      content: '',
+      content: "",
     },
     {
       id: 2,
       name: "7D",
-      content: '',
+      content: "",
     },
     {
       id: 3,
       name: "1M",
-      content: '',
+      content: "",
     },
     {
       id: 4,
       name: "3M",
-      content: '',
+      content: "",
     },
     {
       id: 5,
       name: "6M",
-      content: '',
+      content: "",
     },
     {
       id: 6,
       name: "1Y",
-      content: '',
+      content: "",
     },
   ];
 
@@ -104,6 +104,23 @@ const Markets = ({ stocks }) => {
     { time: "2024-05-12", value: 120 },
     { time: "2024-06-12", value: 90 },
   ];
+
+  const orderBookData = {
+    bids: [
+      { price: 100, quantity: 5, time: "2023-11-15T12:00:00" },
+      { price: 99.5, quantity: 10, time: "2023-11-15T12:05:00" },
+      { price: 99, quantity: 8, time: "2023-11-15T12:10:00" },
+      // ... more bids
+    ],
+    asks: [
+      { price: 101, quantity: 7, time: "2023-11-15T12:15:00" },
+      { price: 102, quantity: 15, time: "2023-11-15T12:20:00" },
+      { price: 103, quantity: 20, time: "2023-11-15T12:25:00" },
+      // ... more asks
+    ],
+  };
+  
+  
 
   return (
     <div className="marketContainer">
@@ -160,9 +177,8 @@ const Markets = ({ stocks }) => {
           </div>
         </div>
         <MarketsTabs links={data} />
-        <MainAreaChart data={pData} trend={'up'}/>
+        <MainAreaChart data={pData} trend={"up"} />
       </div>
-      <div className="rightMarket"></div>
       {popup && <div className="overlayMarkets"></div>}
       {popup && (
         <>
@@ -186,6 +202,16 @@ const Markets = ({ stocks }) => {
           </div>
         </>
       )}
+      <div className="rightMarket">
+        <div className="orderBook">
+          <div className="orderBookHeader">
+            <p className="heading">Order Book</p>
+          </div>
+          <div>
+          {/* <OrderBookChart orderBookData={orderBookData} /> */}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

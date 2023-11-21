@@ -6,7 +6,12 @@
   grid-template-areas: ". . .";
   list-style: none;
   border-bottom: 1px solid #d3d3d3;
-  padding:0px 20px;
+  padding: 0px 20px;
+}
+
+.grid a {
+  text-decoration: none;
+  color: black;
 }
 
 .grid-item {
@@ -15,14 +20,19 @@
   justify-content: center;
 }
 
+.grid-item a {
+  text-decoration: none;
+  color: black;
+}
+
 .grid-active {
   border-bottom: 2px solid #02915d;
-  padding-bottom: 4px;
+  padding-bottom: 15px;
 }
 
 .item-name {
   text-align: center;
-  margin: 15px;
+  /* margin: 15px; */
 }
 
 .block {

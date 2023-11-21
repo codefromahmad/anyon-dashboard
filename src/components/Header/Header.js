@@ -21,16 +21,43 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
       setHeaderTitle("Wallet");
     } else if (pathname === "/alert" || pathname === "/alertmanual") {
       setHeaderTitle("Alert");
-    } else if (pathname.startsWith("/wallet/addfunds")) {
+    } else if (pathname === "/wallet/addfunds") {
       setHeaderTitle("Add Funds");
-    } else if (pathname.startsWith("/wallet/withdraw")) {
+    } else if (pathname === "/wallet/withdraw") {
       setHeaderTitle("Withdraw");
     } else if (pathname.startsWith("/wallet/savinglock")) {
       setHeaderTitle("Invest");
+    } else if (pathname === "/profile") {
+      setHeaderTitle("My Account");
+    } else if (pathname === "/accountinformation") {
+      setHeaderTitle("Account Information");
+    } else if (pathname === "/accountinformation/proofofid") {
+      setHeaderTitle("Proof of ID");
+    } else if (pathname === "/accountinformation/proofofaddress") {
+      setHeaderTitle("Proof of Address");
+    } else if (pathname === "/accountinformation/uploadphotograph") {
+      setHeaderTitle("Upload Photograph");
+    } else if (pathname === "/privacysecurity") {
+      setHeaderTitle("Privacy Security");
+    } else if (pathname === "/helpsupport") {
+      setHeaderTitle("Help Support");
+    } else if (pathname === "/payment") {
+      setHeaderTitle("Payment");
+    } else if (pathname === "/apps") {
+      setHeaderTitle("Apps");
     } else {
       setHeaderTitle("");
     }
   }, [pathname]);
+
+  const pathsToCheck = [
+    "/accountinformation/proofofid",
+    "/accountinformation/proofofaddress",
+    "/accountinformation/uploadphotograph",
+  ];
+
+  // Check if the current pathname contains any of the specified paths
+  const shouldShowBackArrow = pathsToCheck.some((path) => pathname.includes(path));
 
   const dropdown = [
     {
@@ -58,7 +85,15 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         </button>
         {headerTitle && <p>{headerTitle}</p>}
       </div>
-      <div className="left-side">
+      <div
+        className={`left-side ${
+          pathname === "/markets" ||
+          pathname === "marketsai" ||
+          pathname === "technicals"
+            ? "width-25"
+            : "pl"
+        }`}
+      >
         {headerTitle && <p>{headerTitle}</p>}
         {(pathname === "/markets" || pathname === "/technicals") && (
           <div className="search-bar">

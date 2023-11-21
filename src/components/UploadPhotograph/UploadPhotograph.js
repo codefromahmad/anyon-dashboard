@@ -4,7 +4,7 @@ import DocumentUpload from "../../assets/images/document-upload.svg";
 
 const UploadPhotograph = () => {
   return (
-    <div className="rounded-card">
+    // <div className="rounded-card">
       <div className="proofIdCard">
         <div className="proofCard">
           <div className="proofIdHeading">
@@ -24,7 +24,7 @@ const UploadPhotograph = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   )
 }
 

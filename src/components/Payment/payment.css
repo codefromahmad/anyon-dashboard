@@ -1,101 +1,108 @@
-.profilePaymentCard{
-    display: flex;
-    flex-direction: column;
-    padding: 50px 150px 200px;
-    row-gap: 30px;
+.profilePaymentCard {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 150px 200px;
+  row-gap: 30px;
 }
-.addressForPayment{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 0.5px solid #80808080;
-    padding: 10px 30px;
-    border-radius: 5px;
+.profilePaymentCard a {
+  text-decoration: none;
+  color: black;
 }
-.bankAddressLeft{
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    align-items: center;
+.addressForPayment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid #80808080;
+  padding: 10px 30px;
+  border-radius: 5px;
 }
-.bankAddressLeft p{
-    font-weight: 400;
-    font-size: 16px;
+.bankAddressLeft {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
 }
-.bankAddressLeft img{
-    height: 24px;
-    width: 24px;
+.bankAddressLeft p {
+  font-weight: 400;
+  font-size: 16px;
 }
-.bankAddressRight{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 30px;
+.bankAddressLeft img {
+  height: 24px;
+  width: 24px;
 }
-.bankAddressRight p{
-    font-weight: 400;
-    font-size: 16px;
-    color: #808080CC;
+.bankAddressRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 30px;
 }
-.bankAccountDetailCard{
+.bankAddressRight img{
     cursor: pointer;
+}
+.bankAddressRight p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #808080cc;
+}
+.bankAccountDetailCard {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid #80808080;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+.bankAccountDetailLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+.bankAccountDetailLeft p {
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .profilePaymentCard {
+    padding: 40px 70px 200px;
+  }
+}
+@media (max-width: 426px) {
+  .profilePaymentCard {
+    padding: 40px 12px 200px;
+  }
+  .addressForPayment {
+    padding: 5px 10px;
+  }
+  .bankAddressRight {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 0.5px solid #80808080;
-    padding: 10px 30px;
-    border-radius: 5px;
-}
-.bankAccountDetailLeft{
+    column-gap: 5px;
+  }
+  .bankAddressLeft {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 10px;
-}
-.bankAccountDetailLeft p{
-    font-weight: 400;
-    font-size: 16px;
-}
-@media (max-width:768px) {
-    .profilePaymentCard{
-        padding: 40px 70px 200px;
-    }
-}
-@media (max-width:426px) {
-    .profilePaymentCard{
-        padding: 40px 12px 200px;
-    }
-    .addressForPayment{
-        padding: 5px 10px;
-    }
-    .bankAddressRight{
-        display: flex;
-        column-gap: 5px;
-    }
-    .bankAddressLeft{
-        display: flex;
-        column-gap: 5px;
-    }
-    .bankAddressLeft p{
-        font-size: 13px;
-    }
-    .bankAddressLeft img{
-        width: 20px;
-        height: 20px;
-    }
-    .bankAddressRight p{
-        font-size: 13px;
-    }
-    .bankAccountDetailCard{
-        padding: 5px 10px;
-    }
-    .bankAccountDetailLeft img{
-        width: 20px;
-        height: 20px;
-    }
-    .bankAccountDetailLeft p{
-        font-size: 13px;
-    }
+    column-gap: 5px;
+  }
+  .bankAddressLeft p {
+    font-size: 13px;
+  }
+  .bankAddressLeft img {
+    width: 20px;
+    height: 20px;
+  }
+  .bankAddressRight p {
+    font-size: 13px;
+  }
+  .bankAccountDetailCard {
+    padding: 5px 10px;
+  }
+  .bankAccountDetailLeft img {
+    width: 20px;
+    height: 20px;
+  }
+  .bankAccountDetailLeft p {
+    font-size: 13px;
+  }
 }

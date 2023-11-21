@@ -3,7 +3,7 @@ import "./addbankdetail.css";
 
 const AddBankDetail = () => {
   return (
-    <div className="rounded-card">
+    // <div className="rounded-card">
       <div className="addBankDetailCard">
       <div className="addBankDetail">
         <div className="bankDetailHeader">
@@ -25,7 +25,7 @@ const AddBankDetail = () => {
         </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

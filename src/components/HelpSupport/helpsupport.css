@@ -23,6 +23,7 @@
   font-size: 14px;
   color: #00ba77;
   margin-top: 0;
+  cursor: pointer;
 }
 @media (max-width:780px) {
     .helpSupportCard{

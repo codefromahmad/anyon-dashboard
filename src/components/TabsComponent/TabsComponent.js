@@ -1,33 +1,42 @@
 import { useState } from "react";
 import "./tabscomponent.css";
+import { Link, useLocation } from "react-router-dom";
 
-export default function TabsComponent({ links }) {
-  const [openTab, setOpenTab] = useState(links[0].name);
-
+export default function TabsComponent({
+  setAccountInformation,
+  setChangePassword,
+  setAddBank,
+  openTab,
+  setOpenTab,
+  data,
+}) {
+  const handleTabClick = (path) => {
+    setOpenTab(path);
+    setChangePassword(false);
+    setAddBank(false);
+    setAccountInformation("");
+  };
   return (
     <div>
       <div className="grid-container">
         <ul className="grid">
-          {links.map((tab) => (
-            <li
-              className={`grid-item ${
-                tab.name === openTab ? "grid-active" : "grid-nonactive"
+          {data.map((tab) => (
+            <Link
+              to={tab.path}
+              onClick={() => handleTabClick(tab.path)}
+              className={`item-name ${
+                tab.path === openTab ? "grid-active" : "grid-nonactive"
               }`}
             >
-              <span
-                onClick={() => setOpenTab(tab.name)}
-                className={`item-name `}
-              >
-                {tab.name}
-              </span>
-            </li>
+              <li className={`grid-item `}>{tab.name}</li>
+            </Link>
           ))}
         </ul>
       </div>
-      {links.map((tab) => (
+      {data.map((tab) => (
         <div
           key={tab.name}
-          className={tab.name === openTab ? "block" : "hidden"}
+          className={tab.path === openTab ? "block" : "hidden"}
         >
           {tab.content}
         </div>

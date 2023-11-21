@@ -3,7 +3,7 @@ import "./changepassword.css";
 
 const ChangePassword = () => {
   return (
-    <div className="rounded-card">
+    // <div className="rounded-card">
       <div className="changePasswordCard">
         <div className="changePasswordHeading">
           <h3>Change password</h3>
@@ -26,7 +26,7 @@ const ChangePassword = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

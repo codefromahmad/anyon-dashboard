@@ -79,6 +79,7 @@
   color: #00ba77;
   text-decoration: underline;
   margin-top: 20px;
+  cursor: pointer;
 }
 @media (max-width: 800px) {
   .privacySecurityCard {

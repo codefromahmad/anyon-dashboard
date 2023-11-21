@@ -1,7 +1,17 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, PopupSidebar, Sidebar } from "./components";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import {
+  AccountInformation,
+  Header,
+  PopupSidebar,
+  Sidebar,
+} from "./components";
 import {
   Alert,
   Apps,
@@ -24,6 +34,22 @@ import DaysLock from "./pages/dayslock/DaysLock";
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [dropdownMenu, setDropdownMenu] = useState(false);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      // This function will be called whenever the pathname changes
+      // or when the user navigates back/forward in the browser.
+      window.location.reload();
+    };
+
+    // Add event listener for popstate event (browser back/forward)
+    window.addEventListener("popstate", handleLocationChange);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+    };
+  }, []); // The empty dependency array ensures that the effect runs only once
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
@@ -232,6 +258,27 @@ function App() {
               <Route path="/alert" element={<Alert />} />
               <Route path="/alertmanual" element={<AlertManual />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/accountinformation" element={<Profile />} />
+              <Route
+                path="/accountinformation/proofofid"
+                element={<Profile />}
+              />
+              <Route
+                path="/accountinformation/proofofaddress"
+                element={<Profile />}
+              />
+              <Route
+                path="/accountinformation/uploadphotograph"
+                element={<Profile />}
+              />
+              <Route path="/privacysecurity" element={<Profile />} />
+              <Route
+                path="/privacysecurity/changepassword"
+                element={<Profile />}
+              />
+              <Route path="/helpsupport" element={<Profile />} />
+              <Route path="/payment" element={<Profile />} />
+              <Route path="/payment/addbank" element={<Profile />} />
               <Route path="/apps" element={<Apps />} />
             </Routes>
           </div>

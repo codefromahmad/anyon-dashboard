@@ -10,30 +10,30 @@ const DurationSelection = () => {
           <p>How long do you want to lock savings?</p>
         </div>
         <div className="durationCards">
-          <div className="durationCard">
+          <Link to={'/wallet/savinglock/durationselection/dayslock'} className="durationCard">
             <a>30 days</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
-          </div>
-          <div className="durationCard">
+          </Link>
+          <Link className="durationCard">
             <a>60 days</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
-          </div>
-          <div className="durationCard">
+          </Link>
+          <Link className="durationCard">
             <a>120 days</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
-          </div>
-          <div className="durationCard">
+          </Link>
+          <Link className="durationCard">
             <a>1 year</a>
             <div className="percentage">
               <p>5% p/a</p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

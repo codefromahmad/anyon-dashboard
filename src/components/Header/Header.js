@@ -5,14 +5,16 @@ import profilePicture from "../../assets/images/profile-picture.jpeg";
 // import bellIcon from "../../assets/images/bellicon.svg";
 import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
-import { Link, useLocation } from "react-router-dom";
+import { Link, unstable_HistoryRouter, useLocation, useNavigate } from "react-router-dom";
 import profileIcon from "../../assets/images/menu/profile-icon.svg";
 import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
 import { FiSearch } from "react-icons/fi";
+import { MdKeyboardBackspace } from "react-icons/md";
 
 const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const [headerTitle, setHeaderTitle] = useState("");
+  const [backButton, setBackButton] = useState(false);
   const { pathname } = useLocation();
   console.log("dropdownMenu", dropdownMenu);
 
@@ -20,17 +22,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth > 425) {
-        if (pathname === "/wallet") {
-          setHeaderTitle("Wallet");
-        } else if (pathname === "/alert" || pathname === "/alertmanual") {
-          setHeaderTitle("Alert");
-        } else if (pathname === "/wallet/addfunds") {
-          setHeaderTitle("Add Funds");
-        } else if (pathname === "/wallet/withdraw") {
-          setHeaderTitle("Withdraw");
-        } else if (pathname.startsWith("/wallet/savinglock")) {
-          setHeaderTitle("Invest");
-        } else if (pathname === "/profile") {
+        if (pathname === "/profile") {
           setHeaderTitle("My Account");
         } else if (pathname === "/accountinformation") {
           setHeaderTitle("Account Information");
@@ -46,13 +38,33 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
           setHeaderTitle("Help Support");
         } else if (pathname === "/payment") {
           setHeaderTitle("Payment");
-        } else if (pathname === "/apps") {
-          setHeaderTitle("Apps");
-        } else {
-          setHeaderTitle("");
         }
       } else {
         setHeaderTitle("Its mobile scree");
+      }
+      if (pathname === "/wallet") {
+        setHeaderTitle("Wallet");
+      } else if (pathname === "/alert" || pathname === "/alertmanual") {
+        setHeaderTitle("Alert");
+      } else if (pathname === "/wallet/addfunds") {
+        setBackButton(true);
+        setHeaderTitle("Add Funds");
+      } else if (pathname === "/wallet/withdraw") {
+        setBackButton(true);
+        setHeaderTitle("Withdraw");
+      } else if (pathname.startsWith("/wallet/savinglock")) {
+        setBackButton(true);
+        setHeaderTitle("Invest");
+      } else if (pathname.startsWith("/wallet/addfunds/banktransfer")) {
+        setBackButton(true);
+        setHeaderTitle("Bank Transfer");
+      } else if (pathname.startsWith("/wallet/withdraw/otp")) {
+        setBackButton(true);
+        setHeaderTitle("Enter OTP");
+      } else if (pathname === "/apps") {
+        setHeaderTitle("Apps");
+      } else {
+        setHeaderTitle("");
       }
     };
     handleResize();
@@ -95,13 +107,24 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="header">
       <div className="left-header">
         <button className="menu-button" onClick={toggleMenu}>
           <IoIosMenu className="menu-icon" />
         </button>
-        {headerTitle && <p>{headerTitle}</p>}
+        <div className="backAndHeader">
+          {backButton && (
+            <MdKeyboardBackspace className="back" onClick={handleBackButtonClick} size={20} />
+          )}
+          {headerTitle && <p>{headerTitle}</p>}
+        </div>
       </div>
       <div
         className={`left-side ${

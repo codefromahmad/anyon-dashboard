@@ -8,7 +8,7 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.walletCard{
+.walletCard {
   padding: 20px 30px 150px;
 }
 .walletCardHeader {
@@ -19,7 +19,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
 }
-.walletTwoCards{
+.walletTwoCards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
@@ -66,7 +66,7 @@
   border-radius: 5px;
   background-color: #02915d;
 }
-.add-funds a{
+.add-funds a {
   margin: 0;
   font-size: 14px;
   color: white;
@@ -84,7 +84,7 @@
   flex-direction: row;
   column-gap: 10px;
 }
-.n-text p{
+.n-text p {
   margin: 0;
   font-size: 50px;
   color: black;
@@ -92,7 +92,7 @@
   line-height: 76.56px;
   font-family: "Space Grotesk", sans-serif;
 }
-.o-text p{
+.o-text p {
   margin: 0;
   font-size: 50px;
   color: #00ba77;
@@ -184,12 +184,12 @@
   color: white;
   margin-bottom: 10px;
 }
-.investCardText{
+.investCardText {
   margin-bottom: 25px;
 }
 .investCardText p {
   font-size: 13px;
-  color: #F9F9F9;
+  color: #f9f9f9;
   /* width: max-content; */
   font-weight: 300;
   margin: 0;
@@ -206,8 +206,8 @@
   text-decoration: none;
   color: black;
 }
-@media (max-width:1440px) and (min-width:427px) {
-  .investCardBottom{
+@media (max-width: 1440px) and (min-width: 427px) {
+  .investCardBottom {
     display: none;
   }
 }
@@ -227,7 +227,7 @@
     justify-content: center;
     align-items: center;
   }
-  .investCardImg img{
+  .investCardImg img {
     padding-top: 20px;
   }
   .investCardRight {
@@ -242,86 +242,86 @@
 @media (max-width: 600px) {
   .walletCardHeader {
     padding: 10px;
-    
   }
-  .walletTwoCards{
+  .walletTwoCards {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
   }
-  .walletCardFooter{
+  .walletCardFooter {
     padding: 10px;
   }
   .walletBalanceDiv {
     padding: 10px;
   }
- 
 }
 @media (max-width: 426px) {
-  .rounded-card{
+  .rounded-card {
     margin: 3px 8px 0;
   }
-  .walletCard{
+  .walletCard {
     padding: 10px 5px 130px;
   }
-.text p{
+  .text p {
     font-size: 13px;
-}
-.totalReturnText{
+  }
+  .totalReturnText {
     font-size: 13px;
-}
-.todaysReturnText{
+  }
+  .todaysReturnText {
     font-size: 13px;
-}
-.wallet-balance-card-buttons{
+  }
+  .wallet-balance-card-buttons {
     column-gap: 5px;
-}
-.withdraw{
+  }
+  .withdraw {
     padding: 4px 7px;
-}
-.withdraw a{
-  display: flex;
-  align-items: center;
+  }
+  .withdraw a {
+    display: flex;
+    align-items: center;
     font-size: 12px;
-}
-.add-funds{
+  }
+  .add-funds {
     padding: 5px 7px;
-}
-.add-funds a{
-  display: flex;
-  align-items: center;
+  }
+  .add-funds a {
+    display: flex;
+    align-items: center;
     font-size: 12px;
-}
-.investButton a{
-  padding: 12px 20px;
-}
-.investCardRight{
-  display: none;
-}
-.investCardBottom{
-  display: flex;
-  flex-direction: column;
-  padding:0 20px 40px;
-}
-.investCardBottom h3{
-  display: flex;
-  text-align: left;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 18px;
-}
-.investCardBottomText{
-  margin-bottom: 25px;
-}
-.investCardBottomText p {
-  font-size: 13px;
-  color: #F9F9F9;
-  font-weight: 300;
-  margin: 0;
-  line-height: 16.59px;
-}
-.investCard{
-  padding:10px 0 0 ;
-}
+  }
+  .investButton a {
+    padding: 12px 20px;
+  }
+  .investCardRight {
+    display: none;
+  }
+  .investCardBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 40px;
+  }
+  .investCardBottom h3 {
+    display: flex;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .investCardBottomText {
+    margin-bottom: 25px;
+  }
+  .investCardBottomText p {
+    font-size: 13px;
+    color: #f9f9f9;
+    font-weight: 300;
+    margin: 0;
+    line-height: 16.59px;
+  }
+  .investCard {
+    padding: 10px 0 0;
+  }
 }

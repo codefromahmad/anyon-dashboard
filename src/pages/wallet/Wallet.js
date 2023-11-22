@@ -99,12 +99,14 @@ const Wallet = () => {
               </div>
             </div>
             <div className="investCardBottom">
-              <h3>Invest and save with 9ja stocks</h3>
+            <div className="investBottomTop">
+            <h3>Invest and save with 9ja stocks</h3>
               <div className="investCardBottomText">
                 <p>
                   Lorem ipsum dolor sit amet consectetur.Augue aliquet gravida
                   commodo faucibus
                 </p>
+                </div>
               </div>
               <div className="investButton">
                 <Link to="/wallet/savinglock">

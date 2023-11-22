@@ -65,7 +65,13 @@
     font-size: 18px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 426px) {
+  .durationCard {
+    width: 250px;
+    padding: 0px 15px;
+  }
+}
+@media (max-width: 340px) {
   .durationCard {
     width: 225px;
     padding: 0px 15px;

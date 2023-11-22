@@ -24,7 +24,7 @@ const Withdraw = () => {
           <p>Bank name</p>
           <div className="branchName">
             <p>First City Bank</p>
-          </div>
+        </div>
         </div>
         <div className="accountNumberCard">
           <p>Account number</p>

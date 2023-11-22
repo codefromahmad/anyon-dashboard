@@ -44,7 +44,7 @@
   margin-bottom: 0;
   color: #151515;
 }
-.branchName p {
+.branchName  p{
   color: #484848;
   border: 0.5px solid #80808080;
   border-radius: 5px;
@@ -108,12 +108,12 @@
 .enterAmountLeft p {
   margin-top: 0;
 }
-.enterAmountRight p {
+.enterAmountRight{
   margin-top: 0;
   border: 0.5px solid #80808080;
   border-radius: 5px;
   padding: 15px 12px;
-  width: 315px;
+  width: 75%;
 }
 .withdrawButton {
   border: 0.5px solid #80808080;
@@ -140,16 +140,16 @@
     display: none;
   }
   .bankNameCard {
-    width: 300px;
+    width: 87%;
   }
   .accountNumberCard {
-    width: 300px;
+    width:87%;
   }
   .enterAmountCard {
-    width: 300px;
+    width: 87%;
   }
-  .enterAmountRight p {
-    width: 177px;
+  .enterAmountRight{
+    width: 80%;
   }
   .koredeText {
     margin-left: 200px;
@@ -158,26 +158,30 @@
     padding: 15px 120px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 426px) {
   .withdrawText {
     display: none;
   }
   .bankNameCard {
-    width: 280px;
+    width: 87%;
   }
   .accountNumberCard {
-    width: 280px;
+    width: 87%;
   }
   .enterAmountCard {
-    width: 280px;
+    width: 87%;
   }
-  .enterAmountRight p {
-    width: 150px;
+  .enterAmountRight {
+    width: 80%;
   }
   .koredeText {
     margin-left: 178px;
   }
   .withdrawButton {
-    padding: 13px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 0px;
+    width: 87%;
   }
 }

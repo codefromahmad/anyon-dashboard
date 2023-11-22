@@ -1,17 +1,26 @@
 .bankTransferContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 90px 0;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 90px 223px 150px;
 }
 .bankTransferHeading h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 25px;
   margin-bottom: 0;
 }
+.bankTransferText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bankTransferText p {
   width: 318px;
+
   text-align: center;
   font-weight: 300;
   font-size: 13px;
@@ -34,7 +43,7 @@
   justify-content: space-between;
   border: 0.5px solid #cccccce5;
   border-radius: 5px;
-  width: 430px;
+  width: 92%;
   padding: 0 18px;
 }
 .bankName p {
@@ -56,7 +65,7 @@
   justify-content: space-between;
   border: 0.5px solid #cccccce5;
   border-radius: 5px;
-  width: 430px;
+  width: 92%;
   padding: 0 18px;
 }
 .accountNo p {
@@ -78,7 +87,7 @@
   justify-content: space-between;
   border: 0.5px solid #cccccce5;
   border-radius: 5px;
-  width: 430px;
+  width: 92%;
   padding: 0 18px;
 }
 .accountName p {
@@ -87,12 +96,20 @@
   color: #151515;
 }
 .paymentButton p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
   border: 0.5px solid #cccccce5;
   color: white;
   background: #00ba77;
   margin-top: 25px;
-  padding: 13px 162px;
+  padding: 13px 50px;
+}
+@media (max-width: 768px) {
+.bankTransferContainer{
+  padding:90px 80px 150px ;
+}
 }
 @media (max-width: 600px) {
   .bankTransferHeading {
@@ -100,21 +117,21 @@
     font-size: 18px;
   }
   .bankName {
-    width: 298px;
+    width: 92%;
   }
   .accountNo {
-    width: 298px;
+    width: 92%;
   }
   .accountName {
-    width: 298px;
+    width: 92%;
   }
   .paymentButton p {
-    padding: 10px 90px;
+    padding: 13px 20px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 426px) {
   .bankTransferContainer {
-    padding: 30px 0;
+    padding: 30px 10px 100px;
   }
   .bankTransferText p {
     width: 260px;
@@ -129,15 +146,15 @@
     padding-top: 3px;
   }
   .bankName {
-    width: 230px;
+    width: 89%;
   }
   .accountNo {
-    width: 230px;
+    width: 89%;
   }
   .accountName {
-    width: 230px;
+    width: 89%;
   }
   .paymentButton p {
-    padding: 10px 45px;
+    padding: 13px 10px;
   }
 }

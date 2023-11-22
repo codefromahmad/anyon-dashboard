@@ -12,11 +12,11 @@ const WithdrawOTP = () => {
           <p>Lorem ipsum dolor sit amet consectetur. Arcu.</p>
         </div>
         <div className="otpCards">
-          <div className="card1"></div>
-          <div className="card1"></div>
-          <div className="card1"></div>
-          <div className="card1"></div>
-          <div className="card1"></div>
+          <div className="card1"><input type="text" placeholder=""/></div>
+          <div className="card1"><input type="text" placeholder=""/></div>
+          <div className="card1"><input type="text" placeholder=""/></div>
+          <div className="card1"><input type="text" placeholder=""/></div>
+          <div className="card1"><input type="text" placeholder=""/></div>
         </div>
         <div className="confirmButton">
           <a href="#">Confirm</a>

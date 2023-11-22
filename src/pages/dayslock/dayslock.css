@@ -31,7 +31,6 @@
 .amountValue {
   border: 0.5px solid #cccccce5;
   border-radius: 5px;
-
   padding: 0 18px;
 }
 .amountValue p {
@@ -120,8 +119,42 @@
     font-size: 18px;
   }
   .dayslockText {
-    width: 299px;
+    width: 295px;
   }
+  .titleToLock{
+    width: 320px;
+  }
+  .amountToLock{
+    width: 320px;
+  }
+  .sourceOfFunding{
+    width: 320px;
+  }
+  .paybackDate{
+    width: 320px;
+  }
+  .daysLockButton p{
+    padding: 18px 120px;
+  }
+}
+@media (max-width: 426px) {
+  .titleToLock{
+    width: 300px;
+  }
+  .amountToLock{
+    width: 300px;
+  }
+  .sourceOfFunding{
+    width: 300px;
+  }
+  .paybackDate{
+    width: 300px;
+  }
+  .daysLockButton p{
+    padding: 18px 100px;
+  }
+}
+@media (max-width: 335px) {
   .titleToLock{
     width: 280px;
   }
@@ -135,6 +168,6 @@
     width: 280px;
   }
   .daysLockButton p{
-    padding: 18px 110px;
+    padding: 18px 100px;
   }
 }

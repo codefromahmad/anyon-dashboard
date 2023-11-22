@@ -36,20 +36,29 @@ function App() {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
   useEffect(() => {
+    // Define the event handler function
     const handleLocationChange = () => {
       // This function will be called whenever the pathname changes
       // or when the user navigates back/forward in the browser.
       window.location.reload();
     };
-
-    // Add event listener for popstate event (browser back/forward)
-    window.addEventListener("popstate", handleLocationChange);
-
+  
+    // Check if the pathname starts with "/wallet"
+    const isWalletPage = window.location.pathname.startsWith("/wallet");
+  
+    // Conditionally add or remove the event listener
+    if (!isWalletPage) {
+      window.addEventListener("popstate", handleLocationChange);
+    }
+  
     // Cleanup the event listener when the component unmounts
     return () => {
-      window.removeEventListener("popstate", handleLocationChange);
+      // Remove the event listener only if it was added
+      if (!isWalletPage) {
+        window.removeEventListener("popstate", handleLocationChange);
+      }
     };
-  }, []); // The empty dependency array ensures that the effect runs only once
+  }, []); 
 
   const toggleMenu = () => {
     setOpenMenu(!openMenu);

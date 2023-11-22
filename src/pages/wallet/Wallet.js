@@ -99,13 +99,13 @@ const Wallet = () => {
               </div>
             </div>
             <div className="investCardBottom">
-            <div className="investBottomTop">
-            <h3>Invest and save with 9ja stocks</h3>
-              <div className="investCardBottomText">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur.Augue aliquet gravida
-                  commodo faucibus
-                </p>
+              <div className="investBottomTop">
+                <h3>Invest and save with 9ja stocks</h3>
+                <div className="investCardBottomText">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur.Augue aliquet gravida
+                    commodo faucibus
+                  </p>
                 </div>
               </div>
               <div className="investButton">
@@ -116,7 +116,38 @@ const Wallet = () => {
             </div>
           </div>
           {/* <div>Invest</div> */}
-          <div className="walletGraph">Graph</div>
+          <div className="walletGraph">
+            <div className="walletBalanceDiv">
+              <div className="wallet-balance-card-top">
+                <div className="text">
+                  <p>Earnings</p>
+                </div>
+                <div className="wallet-balance-card-buttons">
+                  <div className="selectOption">
+                    <select id="Daily">
+                      <option value="Daily">Daily</option>
+                      <option value="Weekly">Weekly</option>
+                      <option value="Monthly">Monthly</option>
+                      <option value="Yearly">Yearly</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="wallet-balance-card-bottom">
+              <div className="no-text">
+                <div className="n-text">
+                  <p>N</p>
+                </div>
+                <div className="o-text">
+                  <p>O</p>
+                </div>
+              </div>
+              <div className="contentDiv">
+                <p>+5.0% in the last 30 days</p>
+              </div>
+            </div> */}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -206,6 +206,21 @@
   text-decoration: none;
   color: black;
 }
+
+.selectOption {
+  width: 100px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.selectOption select{
+  border:none;
+  outline: none;
+}
 @media (max-width: 1440px) and (min-width: 427px) {
   .investCardBottom {
     display: none;

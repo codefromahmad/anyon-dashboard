@@ -85,12 +85,87 @@
   font-size: 12px;
   color: #00ba77;
 }
+
+.savingOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 30px;
+}
+
 .savingLockRight {
   border: 0.5px solid #cccccce5;
   border-radius: 5px;
-  padding: 7px 20px;
+  padding: 7px 0px;
   width: 49%;
 }
+
+.savingHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.active-middle-item {
+  display: flex;
+  align-items: center;
+  background: #00ba77;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nonactive-middle-item {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 0px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active-middle-item p {
+  margin: 0px;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+  font-size: 13px;
+}
+
+.nonactive-middle-item p {
+  margin: 0px;
+  text-align: center;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+}
+
+.lock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lock-table th {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  border-right: none;
+}
+
+.lock-table td,
+.lock-table th {
+  border: 0.5px solid #f0f0f0;
+  padding: 8px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .savingLockLeft {
     width: 100%;
@@ -100,7 +175,7 @@
     flex-direction: column;
   }
   .savingLockRight {
-    width: 91%;
+    width: 100%;
   }
   .interestRateText h4 {
     font-size: 16px;
@@ -115,11 +190,11 @@
     font-weight: 500;
     font-size: 16px;
   }
-  .savingLockHeading img{
+  .savingLockHeading img {
     height: 20px;
     width: 20px;
   }
-  .createButton a{
+  .createButton a {
     font-size: 12px;
     font-weight: 400;
   }

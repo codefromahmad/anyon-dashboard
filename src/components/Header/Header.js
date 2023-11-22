@@ -5,7 +5,12 @@ import profilePicture from "../../assets/images/profile-picture.jpeg";
 // import bellIcon from "../../assets/images/bellicon.svg";
 import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
-import { Link, unstable_HistoryRouter, useLocation, useNavigate } from "react-router-dom";
+import {
+  Link,
+  unstable_HistoryRouter,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import profileIcon from "../../assets/images/menu/profile-icon.svg";
 import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
@@ -19,6 +24,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   console.log("dropdownMenu", dropdownMenu);
 
   useEffect(() => {
+    setBackButton(false)
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth > 425) {
@@ -43,6 +49,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         setHeaderTitle("Its mobile scree");
       }
       if (pathname === "/wallet") {
+        setBackButton(false);
         setHeaderTitle("Wallet");
       } else if (pathname === "/alert" || pathname === "/alertmanual") {
         setHeaderTitle("Alert");
@@ -121,7 +128,11 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         </button>
         <div className="backAndHeader">
           {backButton && (
-            <MdKeyboardBackspace className="back" onClick={handleBackButtonClick} size={20} />
+            <MdKeyboardBackspace
+              className="back"
+              onClick={handleBackButtonClick}
+              size={20}
+            />
           )}
           {headerTitle && <p>{headerTitle}</p>}
         </div>

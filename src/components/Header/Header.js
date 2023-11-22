@@ -17,37 +17,53 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   console.log("dropdownMenu", dropdownMenu);
 
   useEffect(() => {
-    if (pathname === "/wallet") {
-      setHeaderTitle("Wallet");
-    } else if (pathname === "/alert" || pathname === "/alertmanual") {
-      setHeaderTitle("Alert");
-    } else if (pathname === "/wallet/addfunds") {
-      setHeaderTitle("Add Funds");
-    } else if (pathname === "/wallet/withdraw") {
-      setHeaderTitle("Withdraw");
-    } else if (pathname.startsWith("/wallet/savinglock")) {
-      setHeaderTitle("Invest");
-    } else if (pathname === "/profile") {
-      setHeaderTitle("My Account");
-    } else if (pathname === "/accountinformation") {
-      setHeaderTitle("Account Information");
-    } else if (pathname === "/accountinformation/proofofid") {
-      setHeaderTitle("Proof of ID");
-    } else if (pathname === "/accountinformation/proofofaddress") {
-      setHeaderTitle("Proof of Address");
-    } else if (pathname === "/accountinformation/uploadphotograph") {
-      setHeaderTitle("Upload Photograph");
-    } else if (pathname === "/privacysecurity") {
-      setHeaderTitle("Privacy Security");
-    } else if (pathname === "/helpsupport") {
-      setHeaderTitle("Help Support");
-    } else if (pathname === "/payment") {
-      setHeaderTitle("Payment");
-    } else if (pathname === "/apps") {
-      setHeaderTitle("Apps");
-    } else {
-      setHeaderTitle("");
-    }
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth > 425) {
+        if (pathname === "/wallet") {
+          setHeaderTitle("Wallet");
+        } else if (pathname === "/alert" || pathname === "/alertmanual") {
+          setHeaderTitle("Alert");
+        } else if (pathname === "/wallet/addfunds") {
+          setHeaderTitle("Add Funds");
+        } else if (pathname === "/wallet/withdraw") {
+          setHeaderTitle("Withdraw");
+        } else if (pathname.startsWith("/wallet/savinglock")) {
+          setHeaderTitle("Invest");
+        } else if (pathname === "/profile") {
+          setHeaderTitle("My Account");
+        } else if (pathname === "/accountinformation") {
+          setHeaderTitle("Account Information");
+        } else if (pathname === "/accountinformation/proofofid") {
+          setHeaderTitle("Proof of ID");
+        } else if (pathname === "/accountinformation/proofofaddress") {
+          setHeaderTitle("Proof of Address");
+        } else if (pathname === "/accountinformation/uploadphotograph") {
+          setHeaderTitle("Upload Photograph");
+        } else if (pathname === "/privacysecurity") {
+          setHeaderTitle("Privacy Security");
+        } else if (pathname === "/helpsupport") {
+          setHeaderTitle("Help Support");
+        } else if (pathname === "/payment") {
+          setHeaderTitle("Payment");
+        } else if (pathname === "/apps") {
+          setHeaderTitle("Apps");
+        } else {
+          setHeaderTitle("");
+        }
+      } else {
+        setHeaderTitle("Its mobile scree");
+      }
+    };
+    handleResize();
+
+    // Add event listener for resizing
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup: remove event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [pathname]);
 
   const pathsToCheck = [
@@ -57,7 +73,9 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   ];
 
   // Check if the current pathname contains any of the specified paths
-  const shouldShowBackArrow = pathsToCheck.some((path) => pathname.includes(path));
+  const shouldShowBackArrow = pathsToCheck.some((path) =>
+    pathname.includes(path)
+  );
 
   const dropdown = [
     {

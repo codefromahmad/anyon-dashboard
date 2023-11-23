@@ -19,6 +19,8 @@ import ProofOfAddress from "./ProofOfAddres/ProofOfAddress";
 import ProofOfID from "./ProofOfID/ProofOfID";
 import UploadPhotograph from "./UploadPhotograph/UploadPhotograph";
 import ChangePassword from "./ChangePassword/ChangePassword";
+import EarningsChart from "./Charts/EarningsChart/EarningsChart";
+import ProfitLossChart from "./Charts/ProfitLossChart/ProfitLossChart";
 
 export {
   Sidebar,
@@ -42,4 +44,6 @@ export {
   ProofOfAddress,
   UploadPhotograph,
   ChangePassword,
+  EarningsChart,
+  ProfitLossChart
 };

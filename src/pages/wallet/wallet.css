@@ -172,17 +172,24 @@
   /* padding-left: 0; */
   column-gap: 10px;
 }
+.investCardImg {
+  display: flex;
+  align-items: center;
+}
 .investCardImg img {
   height: 160px;
-  width: 230px;
-  padding-top: 60px;
+  width: 260px;
 }
 .investCardRight {
-  padding-top: 20px;
+  /* padding-top: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .investCardRight h3 {
   color: white;
   margin-bottom: 10px;
+  margin-top: 0px;
 }
 .investCardText {
   margin-bottom: 25px;
@@ -190,10 +197,10 @@
 .investCardText p {
   font-size: 13px;
   color: #f9f9f9;
-  /* width: max-content; */
   font-weight: 300;
   margin: 0;
   line-height: 16.59px;
+  padding: 15px 0px;
 }
 .investButton a {
   padding: 15px 30px;
@@ -207,6 +214,33 @@
   color: black;
 }
 
+.earningBalanceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 25px 30px;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+}
+.earningBalanceCardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.text p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.earningBalanceCardButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 .selectOption {
   width: 100px;
   height: 32px;
@@ -217,9 +251,18 @@
   border-radius: 5px;
 }
 
-.selectOption select{
-  border:none;
+.selectOption select {
+  border: none;
   outline: none;
+}
+
+.earningsChart {
+  width: 100%;
+  padding-top: 15px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 1440px) and (min-width: 427px) {
   .investCardBottom {
@@ -235,6 +278,7 @@
   .walletCardFooter {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   .investCard {
     display: flex;
@@ -265,6 +309,7 @@
   }
   .walletCardFooter {
     padding: 10px;
+    gap: 30px;
   }
   .walletBalanceDiv {
     padding: 10px;

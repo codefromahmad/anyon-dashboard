@@ -239,12 +239,12 @@
 .holdings-card-body {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0px 10px;
 }
 
 .holdings-card-body img {
-  width: 300px;
+  /* width: 300px; */
   height: 120px;
 }
 
@@ -257,18 +257,58 @@
   text-align: center;
 }
 
-.selector {
+.selectorDiv {
   height: 35px;
   width: 122px;
   border: 0.5px solid #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.selector {
   font-size: 12px;
   font-weight: 400;
   border-radius: 5px;
   padding: 0px;
+  border: none;
+  outline: none;
+}
+
+.portfolioMarket {
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolioMarket .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 4px;
+}
+
+.item p {
+  margin-left: 5px;
+}
+.yellow {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background: #ffa500;
+}
+
+.green {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background: #00ba77;
 }
 
 .market-card-body {
-  padding: 0px 10px;
+  height: 250px;
+  width: 100%;
 }
 @media (max-width: 800px) {
   .card-body {
@@ -338,11 +378,15 @@
   .holdings-card-body img {
     display: flex;
     align-items: center;
-    width: 225px;
+    /* width: 225px; */
     padding: 30px 0px;
   }
   .homeNoText {
     padding-top: 50px;
+  }
+  .holdings-card-header .heading {
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 @media (max-width: 350px) {

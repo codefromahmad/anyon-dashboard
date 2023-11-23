@@ -2,6 +2,7 @@ import React from "react";
 import "./wallet.css";
 import investImg from "../../assets/images/Group 282.svg";
 import { Link } from "react-router-dom";
+import { EarningsChart } from "../../components";
 
 const Wallet = () => {
   return (
@@ -117,12 +118,12 @@ const Wallet = () => {
           </div>
           {/* <div>Invest</div> */}
           <div className="walletGraph">
-            <div className="walletBalanceDiv">
-              <div className="wallet-balance-card-top">
+            <div className="earningBalanceDiv">
+              <div className="earningBalanceCardTop">
                 <div className="text">
                   <p>Earnings</p>
                 </div>
-                <div className="wallet-balance-card-buttons">
+                <div className="earningBalanceCardButtons">
                   <div className="selectOption">
                     <select id="Daily">
                       <option value="Daily">Daily</option>
@@ -132,6 +133,9 @@ const Wallet = () => {
                     </select>
                   </div>
                 </div>
+              </div>
+              <div className="earningsChart">
+                <EarningsChart />
               </div>
               {/* <div className="wallet-balance-card-bottom">
               <div className="no-text">

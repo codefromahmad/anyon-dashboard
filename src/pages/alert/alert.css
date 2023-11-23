@@ -50,6 +50,46 @@
   overflow-y: auto;
   height: 70%;
 }
+
+.alertLeftTop.scrolling {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.alertLeftTop.scrolling::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+}
+
+.alertLeftTop.scrolling::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertLeftTop.scrolling::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertLeftTop.notscrolling {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.alertLeftTop.notscrolling::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+  background-color: transparent; /* Change the color as needed */
+}
+
+.alertLeftTop.notscrolling::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertLeftTop.notscrolling::-webkit-scrollbar-track {
+  background-color: transparent; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
 .timeRemaining {
   background-color: white;
   border-radius: 5px;
@@ -79,6 +119,44 @@
   padding: 10px;
   margin: 5px 2px;
 }
+.alertLeftBottom.scrolling {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.alertLeftBottom.scrolling::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+}
+
+.alertLeftBottom.scrolling::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertLeftBottom.scrolling::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertLeftBottom.notscrolling {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.alertLeftBottom.notscrolling::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+  background-color: transparent; /* Change the color as needed */
+}
+
+.alertLeftBottom.notscrolling::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertLeftBottom.notscrolling::-webkit-scrollbar-track {
+  background-color: transparent; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
 .alertLeftBottom h4 {
   padding-left: 15px;
   font-weight: 500;
@@ -105,6 +183,46 @@
   width: 100%;
   overflow-y: auto;
 }
+
+.alertRightTextCard.scrolling {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.alertRightTextCard.scrolling::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+}
+
+.alertRightTextCard.scrolling::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertRightTextCard.scrolling::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertRightTextCard.notscrolling {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.alertRightTextCard.notscrolling::-webkit-scrollbar {
+  width: 4px; /* Adjust the width as needed */
+  background-color: transparent; /* Change the color as needed */
+}
+
+.alertRightTextCard.notscrolling::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
+.alertRightTextCard.notscrolling::-webkit-scrollbar-track {
+  background-color: transparent; /* Change the color as needed */
+  /* border-radius: 4px; */
+}
+
 .alertRightText p {
   font-weight: 400;
   font-size: 13px;

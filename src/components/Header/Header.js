@@ -179,40 +179,41 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
             </Link>
           </div>
         )}
-      {(pathname === "/markets" || pathname === "/marketsai") && (
-        <div className="middle-header">
-          <Link
-            to="/technicals"
-            className={`${
-              pathname === "/technicals"
-                ? "active-middle-item"
-                : "nonactive-middle-item"
-            }`}
-          >
-            <p>Technicals</p>
-          </Link>
-          <Link
-            to="/markets"
-            className={`${
-              pathname === "/markets"
-                ? "active-middle-item"
-                : "nonactive-middle-item"
-            }`}
-          >
-            <p>Simple</p>
-          </Link>
-          <Link
-            to="/marketsai"
-            className={`${
-              pathname === "/marketsai"
-                ? "active-middle-item"
-                : "nonactive-middle-item"
-            }`}
-          >
-            <p>AI</p>
-          </Link>
-        </div>
-      )}
+      {screenWidth > 425 &&
+        (pathname === "/markets" || pathname === "/marketsai") && (
+          <div className="middle-header">
+            <Link
+              to="/technicals"
+              className={`${
+                pathname === "/technicals"
+                  ? "active-middle-item"
+                  : "nonactive-middle-item"
+              }`}
+            >
+              <p>Technicals</p>
+            </Link>
+            <Link
+              to="/markets"
+              className={`${
+                pathname === "/markets"
+                  ? "active-middle-item"
+                  : "nonactive-middle-item"
+              }`}
+            >
+              <p>Simple</p>
+            </Link>
+            <Link
+              to="/marketsai"
+              className={`${
+                pathname === "/marketsai"
+                  ? "active-middle-item"
+                  : "nonactive-middle-item"
+              }`}
+            >
+              <p>AI</p>
+            </Link>
+          </div>
+        )}
       <div className="right-header">
         {/* <div className="bell-icon">
           <img src={bellIcon} />

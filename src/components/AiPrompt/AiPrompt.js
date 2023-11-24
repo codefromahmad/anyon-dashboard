@@ -66,7 +66,7 @@ const AiPrompt = () => {
             ))}
           </ol>
         </div>
-        {/* <ChatInput />  */}
+        <ChatInput /> 
       </div>
     </div>
   );

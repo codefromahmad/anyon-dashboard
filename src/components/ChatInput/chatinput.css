@@ -43,8 +43,6 @@
 
 }
 @media (max-width: 426px) {
-  .chatInputContainer{
-  }
   .chatinput {
     position: relative;
     max-width: 100px;

@@ -4,6 +4,7 @@ import editIcon from "../../assets/images/edit.svg";
 import deleteIcon from "../../assets/images/delete.svg";
 import { ChatInput } from "../../components";
 import AiPrompt from "../../components/AiPrompt/AiPrompt";
+import { LuHistory } from "react-icons/lu";
 
 const alerts = [
   {
@@ -109,104 +110,118 @@ const Alert = () => {
 
   return (
     <>
-    <div className="alertCard">
-      <div className="alertLeft">
-        <div
-          className={`alertLeftTop ${
-            isLeftTopScrolling ? "scrolling" : "notscrolling"
-          }`}
-          ref={alertLeftTopRef}
-        >
-          <div className="historyCard">
-            <p>History</p>
-            <div className="newChatButton">
-              <p>New Chat</p>
-            </div>
-          </div>
-          <div className="timeRemaining">
-            <p className="date">Last 7 days</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="date">Last 30 days</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="date">Last 30 days</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-            <p className="item">Place a buy trade on Cadbury at 12.7</p>
-          </div>
-        </div>
-        <div
-          className={`alertLeftBottom ${
-            isLeftBottomScrolling ? "scrolling" : "notscrolling"
-          }`}
-          ref={alertLeftBottomRef}
-        >
-          <h4>Alert</h4>
-          <table className="custom-table">
-            <thead>
-              <tr>
-                <th>Symbol</th>
-                <th>Time</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {alerts.map((alert, index) => (
-                <tr key={index}>
-                  <td>{alert.symbol}</td>
-                  <td>{alert.time}</td>
-                  <td>
-                    <img src={editIcon} alt="Alert" />
-                    <img src={deleteIcon} alt="Alert" />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div className="alertRight">
-        <div className="alertRightCard">
+      <div className="alertCard">
+        <div className="alertLeft">
           <div
-            className={`alertRightTextCard ${
-              isAlertRight ? "scrolling" : "notscrolling"
+            className={`alertLeftTop ${
+              isLeftTopScrolling ? "scrolling" : "notscrolling"
             }`}
-            ref={alertRightRef}
+            ref={alertLeftTopRef}
           >
-            <div className="alertRightHeader">
-              <h4>AI Prompt</h4>
-              <p>Create an alert using our powerful Ai tool</p>
+            <div className="historyCard">
+              <p>History</p>
+              <div className="newChatButton">
+                <p>New Chat</p>
+              </div>
             </div>
-            <ol>
-              {aiIntro.map((ai, index) => (
-                <li key={index} className="alertRightText">
-                  <p>
-                    <span className="custom-number">{index + 1}. </span>
-                    {ai.text}
-                  </p>
-                </li>
-              ))}
-            </ol>
+            <div className="timeRemaining">
+              <p className="date">Last 7 days</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="date">Last 30 days</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="date">Last 30 days</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+              <p className="item">Place a buy trade on Cadbury at 12.7</p>
+            </div>
           </div>
-          <ChatInput />
+          <div
+            className={`alertLeftBottom ${
+              isLeftBottomScrolling ? "scrolling" : "notscrolling"
+            }`}
+            ref={alertLeftBottomRef}
+          >
+            <h4>Alert</h4>
+            <table className="custom-table">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Time</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {alerts.map((alert, index) => (
+                  <tr key={index}>
+                    <td>{alert.symbol}</td>
+                    <td>{alert.time}</td>
+                    <td>
+                      <img src={editIcon} alt="Alert" />
+                      <img src={deleteIcon} alt="Alert" />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="alertRight">
+          <div className="alertRightCard">
+            <div
+              className={`alertRightTextCard ${
+                isAlertRight ? "scrolling" : "notscrolling"
+              }`}
+              ref={alertRightRef}
+            >
+              <div className="alertRightHeader">
+                <h4>AI Prompt</h4>
+                <p>Create an alert using our powerful Ai tool</p>
+              </div>
+              <ol>
+                {aiIntro.map((ai, index) => (
+                  <li key={index} className="alertRightText">
+                    <p>
+                      <span className="custom-number">{index + 1}. </span>
+                      {ai.text}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <ChatInput />
+          </div>
         </div>
       </div>
-    </div>
-    <div className="mobileAiPrompt">
-      <AiPrompt/>
-    </div>
+      <div className="mobileAiPrompt">
+      <div className="mobileAlertTop">
+      <div className="historyIcon">
+        <LuHistory />
+      </div>
+        <div className="aiPromptButtons">
+          <div className="aiButton">
+            <p>AI</p>
+          </div>
+          <div className="manualButton">
+            <p>Manual</p>
+          </div>
+        </div>
+      </div>
+
+        <AiPrompt />
+      </div>
     </>
   );
 };

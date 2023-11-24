@@ -1,4 +1,4 @@
-.alert-card {
+.alertCard {
   display: flex;
   flex-direction: row;
 }
@@ -316,6 +316,11 @@
   font-weight: 500;
   color: black;
 }
+@media (max-width: 1440px) and (min-width: 426px) {
+  .mobileManual {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .alertLeft {
     width: 35%;
@@ -339,5 +344,54 @@
   }
   .cancel-button p {
     padding: 9px 40px;
+  }
+}
+@media (max-width: 426px) {
+  .alertCard {
+    display: none;
+  }
+
+  .mobileManual {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+  }
+  .mobileAlertTop {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 80px;
+    padding: 10px 20px;
+  }
+  .aiPromptButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+  .aiButton p {
+    background-color: #00ba77;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    padding: 7px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .manualButton p{
+    font-weight: 400;
+    font-size: 13px;
+    padding: 7px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #F5F5F5;
+  }
+  .historyIcon{
+    position: absolute;
+    left: 23px;
   }
 }

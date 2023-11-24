@@ -6,6 +6,8 @@ import { ChatInput } from "../../components";
 import AiPrompt from "../../components/AiPrompt/AiPrompt";
 import { LuHistory } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setHistory } from "../../redux/reducers/pageDetail";
 
 const alerts = [
   {
@@ -48,6 +50,10 @@ const Alert = () => {
   const alertLeftTopRef = useRef(null);
   const alertLeftBottomRef = useRef(null);
   const alertRightRef = useRef(null);
+  const history = useSelector((state) => state.page.history);
+  const dispatch = useDispatch();
+
+  console.log("history", history);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -208,32 +214,41 @@ const Alert = () => {
           </div>
         </div>
       </div>
-      <div className="mobileAiPrompt">
-        <div className="mobileAlertTop">
-          <div className="historyIcon">
-            <LuHistory />
-          </div>
-          <div className="aiPromptButtons">
-            <Link
-              to="/alert"
-              className={
-                pathname === "/alert" ? "active-item" : "nonactive-item"
-              }
+      {history ? (
+        <p onClick={() => dispatch({ type: "setHistory", payload: false })}>
+          History
+        </p>
+      ) : (
+        <div className="mobileAiPrompt">
+          <div className="mobileAlertTop">
+            <div
+              onClick={() => dispatch({ type: "setHistory", payload: true })}
+              className="historyIcon"
             >
-              <p>AI</p>
-            </Link>
-            <Link
-              to="/alertmanual"
-              className={
-                pathname === "/alertmanual" ? "active-item" : "nonactive-item"
-              }
-            >
-              <p>Manual</p>
-            </Link>
+              <LuHistory />
+            </div>
+            <div className="aiPromptButtons">
+              <Link
+                to="/alert"
+                className={
+                  pathname === "/alert" ? "active-item" : "nonactive-item"
+                }
+              >
+                <p>AI</p>
+              </Link>
+              <Link
+                to="/alertmanual"
+                className={
+                  pathname === "/alertmanual" ? "active-item" : "nonactive-item"
+                }
+              >
+                <p>Manual</p>
+              </Link>
+            </div>
           </div>
+          <AiPrompt />
         </div>
-        <AiPrompt />
-      </div>
+      )}
     </>
   );
 };

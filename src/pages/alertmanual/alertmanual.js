@@ -6,6 +6,7 @@ import { ChatInput } from "../../components";
 import MobileAlertManual from "../../components/MobileAlertManual/MobileAlertManual";
 import { LuHistory } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const alerts = [
   {
@@ -20,7 +21,8 @@ const alerts = [
 
 const AlertManual = () => {
   const { pathname } = useLocation();
-  const [history, setHistory] = useState(true);
+  const dispatch = useDispatch();
+  const history = useSelector((state) => state.page.history);
   return (
     <>
       <div className="alertCard">
@@ -149,11 +151,16 @@ const AlertManual = () => {
         </div>
       </div>
       {history ? (
-        <p>History</p>
+        <p onClick={() => dispatch({type: 'setHistory', payload: false})}>
+          History
+        </p>
       ) : (
         <div className="mobileManual">
           <div className="mobileAlertTop">
-            <div className="historyIcon">
+            <div
+              onClick={() => dispatch({type: 'setHistory', payload: true})}
+              className="historyIcon"
+            >
               <LuHistory />
             </div>
             <div className="aiPromptButtons">

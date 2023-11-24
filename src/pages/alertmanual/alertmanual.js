@@ -5,6 +5,7 @@ import deleteIcon from "../../assets/images/delete.svg";
 import { ChatInput } from "../../components";
 import MobileAlertManual from "../../components/MobileAlertManual/MobileAlertManual";
 import { LuHistory } from "react-icons/lu";
+import { Link, useLocation } from "react-router-dom";
 
 const alerts = [
   {
@@ -18,6 +19,8 @@ const alerts = [
 ];
 
 const AlertManual = () => {
+  const { pathname } = useLocation();
+  const [history, setHistory] = useState(true);
   return (
     <>
       <div className="alertCard">
@@ -145,22 +148,40 @@ const AlertManual = () => {
           </div>
         </div>
       </div>
-      <div className="mobileManual">
-      <div className="mobileAlertTop">
-      <div className="historyIcon">
-        <LuHistory />
-      </div>
-        <div className="aiPromptButtons">
-          <div className="aiButton">
-            <p>AI</p>
+      {history ? (
+        <p>History</p>
+      ) : (
+        <div className="mobileManual">
+          <div className="mobileAlertTop">
+            <div className="historyIcon">
+              <LuHistory />
+            </div>
+            <div className="aiPromptButtons">
+              <Link
+                to="/alert"
+                className={
+                  pathname === "/alert"
+                    ? "active-manualitem"
+                    : "nonactive-manualitem"
+                }
+              >
+                <p>AI</p>
+              </Link>
+              <Link
+                to="/alertmanual"
+                className={
+                  pathname === "/alertmanual"
+                    ? "active-manualitem"
+                    : "nonactive-manualitem"
+                }
+              >
+                <p>Manual</p>
+              </Link>
+            </div>
           </div>
-          <div className="manualButton">
-            <p>Manual</p>
-          </div>
+          <MobileAlertManual />
         </div>
-      </div>
-        <MobileAlertManual/>
-      </div>
+      )}
     </>
   );
 };

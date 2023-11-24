@@ -373,24 +373,37 @@
     align-items: center;
     column-gap: 10px;
   }
-  .aiButton p {
+
+  .aiPromptButtons a {
+    text-decoration: none;
+  }
+  .aiPromptButtons p {
+    margin: 0px;
+  }
+  .active-manualitem {
     background-color: #00ba77;
     font-weight: 400;
     font-size: 13px;
     color: white;
-    padding: 7px 40px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .manualButton p{
-    font-weight: 400;
-    font-size: 13px;
     padding: 7px 25px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #F5F5F5;
   }
-  .historyIcon{
+  .active-manualitem p {
+    color: white;
+  }
+  .nonactive-manualitem {
+    font-weight: 400;
+    font-size: 13px;
+    padding: 7px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+  }
+  .nonactive-manualitem p {
+    color: black;
+  }
+  .historyIcon {
     position: absolute;
     left: 23px;
   }

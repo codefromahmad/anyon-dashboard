@@ -5,6 +5,7 @@ import deleteIcon from "../../assets/images/delete.svg";
 import { ChatInput } from "../../components";
 import AiPrompt from "../../components/AiPrompt/AiPrompt";
 import { LuHistory } from "react-icons/lu";
+import { Link, useLocation } from "react-router-dom";
 
 const alerts = [
   {
@@ -108,6 +109,8 @@ const Alert = () => {
     };
   }, []);
 
+  const { pathname } = useLocation();
+
   return (
     <>
       <div className="alertCard">
@@ -206,20 +209,29 @@ const Alert = () => {
         </div>
       </div>
       <div className="mobileAiPrompt">
-      <div className="mobileAlertTop">
-      <div className="historyIcon">
-        <LuHistory />
-      </div>
-        <div className="aiPromptButtons">
-          <div className="aiButton">
-            <p>AI</p>
+        <div className="mobileAlertTop">
+          <div className="historyIcon">
+            <LuHistory />
           </div>
-          <div className="manualButton">
-            <p>Manual</p>
+          <div className="aiPromptButtons">
+            <Link
+              to="/alert"
+              className={
+                pathname === "/alert" ? "active-item" : "nonactive-item"
+              }
+            >
+              <p>AI</p>
+            </Link>
+            <Link
+              to="/alertmanual"
+              className={
+                pathname === "/alertmanual" ? "active-item" : "nonactive-item"
+              }
+            >
+              <p>Manual</p>
+            </Link>
           </div>
         </div>
-      </div>
-
         <AiPrompt />
       </div>
     </>

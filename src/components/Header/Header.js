@@ -30,27 +30,31 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   useEffect(() => {
     setBackButton(false);
     const handleResize = () => {
-      if (screenWidth > 425) {
-        if (pathname === "/profile") {
-          setHeaderTitle("My Account");
-        } else if (pathname === "/accountinformation") {
-          setHeaderTitle("Account Information");
-        } else if (pathname === "/accountinformation/proofofid") {
-          setHeaderTitle("Proof of ID");
-        } else if (pathname === "/accountinformation/proofofaddress") {
-          setHeaderTitle("Proof of Address");
-        } else if (pathname === "/accountinformation/uploadphotograph") {
-          setHeaderTitle("Upload Photograph");
-        } else if (pathname === "/privacysecurity") {
-          setHeaderTitle("Privacy Security");
-        } else if (pathname === "/helpsupport") {
-          setHeaderTitle("Help Support");
-        } else if (pathname === "/payment") {
-          setHeaderTitle("Payment");
-        }
-      } else {
-        setHeaderTitle("Its mobile scree");
-      }
+      // if (window.innerWidth > 425) {
+      // console.log("Its desktop screen", pathname);
+      setHeaderTitle("Desktop screen");
+      // if (pathname === "/profile") {
+      //   setHeaderTitle("My Account");
+      // } else if (pathname === "/accountinformation") {
+      //   setHeaderTitle("Account Information");
+      // } else if (pathname === "/accountinformation/proofofid") {
+      //   setHeaderTitle("Proof of ID");
+      // } else if (pathname === "/accountinformation/proofofaddress") {
+      //   setHeaderTitle("Proof of Address");
+      // } else if (pathname === "/accountinformation/uploadphotograph") {
+      //   setHeaderTitle("Upload Photograph");
+      // } else if (pathname === "/privacysecurity") {
+      //   setHeaderTitle("Privacy Security");
+      // } else if (pathname === "/helpsupport") {
+      //   setHeaderTitle("Help Support");
+      // } else if (pathname === "/payment") {
+      //   setHeaderTitle("Payment");
+      // }
+      // } else {
+      //   console.log("Its mobile screen");
+      //   setHeaderTitle("Mobile screen");
+      // }
+
       if (pathname === "/wallet") {
         setBackButton(false);
         setHeaderTitle("Wallet");
@@ -88,16 +92,16 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
     };
   }, [pathname]);
 
-  const pathsToCheck = [
-    "/accountinformation/proofofid",
-    "/accountinformation/proofofaddress",
-    "/accountinformation/uploadphotograph",
-  ];
+  // const pathsToCheck = [
+  //   "/accountinformation/proofofid",
+  //   "/accountinformation/proofofaddress",
+  //   "/accountinformation/uploadphotograph",
+  // ];
 
-  // Check if the current pathname contains any of the specified paths
-  const shouldShowBackArrow = pathsToCheck.some((path) =>
-    pathname.includes(path)
-  );
+  // // Check if the current pathname contains any of the specified paths
+  // const shouldShowBackArrow = pathsToCheck.some((path) =>
+  //   pathname.includes(path)
+  // );
 
   const dropdown = [
     {
@@ -122,7 +126,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const handleBackButtonClick = () => {
     if (history) {
       dispatch({ type: "setHistory", payload: false });
-      setBackButton(false)
+      setBackButton(false);
       setHeaderTitle("Alert");
     } else {
       navigate(-1);

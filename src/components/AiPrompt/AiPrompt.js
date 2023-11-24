@@ -16,6 +16,21 @@ const aiIntro = [
   {
     text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
   },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet consectetur. Ullamcorper vestibulum semper id era.",
+  },
 ];
 
 const AiPrompt = () => {
@@ -66,7 +81,7 @@ const AiPrompt = () => {
             ))}
           </ol>
         </div>
-        <ChatInput /> 
+        <ChatInput />
       </div>
     </div>
   );

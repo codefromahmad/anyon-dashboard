@@ -16,11 +16,14 @@ import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
 import { FiSearch } from "react-icons/fi";
 import { MdKeyboardBackspace } from "react-icons/md";
+import { useSelector, useDispatch } from "react-redux";
 
 const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const [headerTitle, setHeaderTitle] = useState("");
   const [backButton, setBackButton] = useState(false);
   const { pathname } = useLocation();
+  const dispatch = useDispatch();
+  const history = useSelector((state) => state.page.history);
   console.log("dropdownMenu", dropdownMenu);
   const screenWidth = window.innerWidth;
 
@@ -117,8 +120,21 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const navigate = useNavigate();
 
   const handleBackButtonClick = () => {
-    navigate(-1);
+    if (history) {
+      dispatch({ type: "setHistory", payload: false });
+      setBackButton(false)
+      setHeaderTitle("Alert");
+    } else {
+      navigate(-1);
+    }
   };
+
+  useEffect(() => {
+    if (history) {
+      setHeaderTitle("History");
+      setBackButton(true);
+    }
+  }, [history]);
 
   return (
     <div className="header">

@@ -257,6 +257,11 @@
 .custom-table img {
   padding: 5px;
 }
+@media (max-width: 1440px) and (min-width: 425px) {
+  .mobileAiPrompt {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .alertLeft {
@@ -269,5 +274,14 @@
 
   .alertRightText p {
     max-width: 300px;
+  }
+}
+@media (max-width: 426px) {
+  .alertCard {
+    display: none;
+  }
+  .mobileAiPrompt {
+    display: flex;
+    width: 100%;
   }
 }

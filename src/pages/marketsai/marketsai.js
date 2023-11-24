@@ -32,7 +32,7 @@ const aiIntro = [
 
 const MarketsAi = () => {
   return (
-    <div className="alertCard">
+    <div className="alert-card">
       <div className="alertLeft">
         <div className="alertLeftTop">
           <div className="historyCard">

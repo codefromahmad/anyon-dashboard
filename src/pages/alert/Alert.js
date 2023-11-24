@@ -3,6 +3,7 @@ import "./alert.css";
 import editIcon from "../../assets/images/edit.svg";
 import deleteIcon from "../../assets/images/delete.svg";
 import { ChatInput } from "../../components";
+import AiPrompt from "../../components/AiPrompt/AiPrompt";
 
 const alerts = [
   {
@@ -107,6 +108,7 @@ const Alert = () => {
   }, []);
 
   return (
+    <>
     <div className="alertCard">
       <div className="alertLeft">
         <div
@@ -202,6 +204,10 @@ const Alert = () => {
         </div>
       </div>
     </div>
+    <div className="mobileAiPrompt">
+      <AiPrompt/>
+    </div>
+    </>
   );
 };
 

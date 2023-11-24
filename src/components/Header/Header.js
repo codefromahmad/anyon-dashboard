@@ -22,11 +22,11 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const [backButton, setBackButton] = useState(false);
   const { pathname } = useLocation();
   console.log("dropdownMenu", dropdownMenu);
+  const screenWidth = window.innerWidth;
 
   useEffect(() => {
-    setBackButton(false)
+    setBackButton(false);
     const handleResize = () => {
-      const screenWidth = window.innerWidth;
       if (screenWidth > 425) {
         if (pathname === "/profile") {
           setHeaderTitle("My Account");
@@ -154,30 +154,31 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
           </div>
         )}
       </div>
-      {(pathname === "/alert" || pathname === "/alertmanual") && (
-        <div className="middle-header">
-          <Link
-            to="/alert"
-            className={`${
-              pathname === "/alert"
-                ? "active-middle-item"
-                : "nonactive-middle-item"
-            }`}
-          >
-            <p>AI Prompt</p>
-          </Link>
-          <Link
-            to="/alertmanual"
-            className={`${
-              pathname === "/alertmanual"
-                ? "active-middle-item"
-                : "nonactive-middle-item"
-            }`}
-          >
-            <p>Manual</p>
-          </Link>
-        </div>
-      )}
+      {screenWidth > 425 &&
+        (pathname === "/alert" || pathname === "/alertmanual") && (
+          <div className="middle-header">
+            <Link
+              to="/alert"
+              className={`${
+                pathname === "/alert"
+                  ? "active-middle-item"
+                  : "nonactive-middle-item"
+              }`}
+            >
+              <p>AI Prompt</p>
+            </Link>
+            <Link
+              to="/alertmanual"
+              className={`${
+                pathname === "/alertmanual"
+                  ? "active-middle-item"
+                  : "nonactive-middle-item"
+              }`}
+            >
+              <p>Manual</p>
+            </Link>
+          </div>
+        )}
       {(pathname === "/markets" || pathname === "/marketsai") && (
         <div className="middle-header">
           <Link

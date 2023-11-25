@@ -65,14 +65,14 @@ const MarketsAi = () => {
                   <td>{position.symbol}</td>
                   <td
                     className={`${
-                      position.pnl.includes("+") ? "green" : "red"
+                      position.pnl.includes("+") ? "green-div" : "red"
                     }`}
                   >
                     {position.pnl}
                   </td>
                   <td
                     className={`${
-                      position.pnlp.includes("+") ? "green" : "red"
+                      position.pnlp.includes("+") ? "green-div" : "red"
                     }`}
                   >
                     {position.pnlp}

@@ -7,6 +7,7 @@ import MobileAlertManual from "../../components/MobileAlertManual/MobileAlertMan
 import { LuHistory } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import AlertHistory from "../../components/AlertHistory/AlertHistory";
 
 const alerts = [
   {
@@ -151,14 +152,14 @@ const AlertManual = () => {
         </div>
       </div>
       {history ? (
-        <p onClick={() => dispatch({type: 'setHistory', payload: false})}>
-          History
-        </p>
+        <AlertHistory
+          onClick={() => dispatch({ type: "setHistory", payload: false })}
+        />
       ) : (
         <div className="mobileManual">
           <div className="mobileAlertTop">
             <div
-              onClick={() => dispatch({type: 'setHistory', payload: true})}
+              onClick={() => dispatch({ type: "setHistory", payload: true })}
               className="historyIcon"
             >
               <LuHistory />

@@ -8,6 +8,7 @@ import { LuHistory } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setHistory } from "../../redux/reducers/pageDetail";
+import AlertHistory from "../../components/AlertHistory/AlertHistory";
 
 const alerts = [
   {
@@ -215,9 +216,8 @@ const Alert = () => {
         </div>
       </div>
       {history ? (
-        <p onClick={() => dispatch({ type: "setHistory", payload: false })}>
-          History
-        </p>
+        <AlertHistory onClick={() => dispatch({ type: "setHistory", payload: false })}/>
+       
       ) : (
         <div className="mobileAiPrompt">
           <div className="mobileAlertTop">

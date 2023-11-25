@@ -1,0 +1,106 @@
+.holdingCard{
+    display: flex;
+    flex-direction: column;
+    margin: 1px 20px;
+}
+.holdingCardTop{
+    display: flex;
+    flex-direction: row;
+}
+.holdingCardLeft{
+    width: 33%;
+}
+.holdingCardRight{
+    width: 67%;
+    background-color: white;
+    margin: 2px;
+    border-radius: 5px;
+}
+.portfolioValue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    background-color: #FFFFFF;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+.portfolioValue p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.totalInvested p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.profitLoss p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.totalInvested{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin: 2px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+.profitLoss{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin: 2px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+.n-text p {
+    margin: 0;
+    font-size: 50px;
+    color: black;
+    font-weight: 400;
+    line-height: 76.56px;
+    font-family: "Space Grotesk", sans-serif;
+  }
+  .o-text p {
+    margin: 0;
+    font-size: 50px;
+    color: #00ba77;
+    font-weight: 400;
+    line-height: 76.56px;
+    font-family: "Space Grotesk", sans-serif;
+  }
+@media (max-width:426px) {
+    .holdingCardTop{
+        display: flex;
+        flex-direction: column;
+    }
+    .holdingCardLeft{
+        width: 100%;
+    }
+    .holdingCardRight{
+        width: 100%;
+    }
+    .portfolioValue p{
+        margin-bottom: 10px;
+    }
+    .totalInvested p{
+        margin-bottom: 10px;
+    }
+    .profitLoss p{
+        margin-bottom: 10px;
+    }
+    .portfolioValue{
+        padding-bottom: 10px;
+    }
+    .totalInvested{
+        padding-bottom: 10px;
+    }
+    .profitLoss{
+        padding-bottom: 10px;
+    }
+}

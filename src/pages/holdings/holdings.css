@@ -1,7 +1,7 @@
 .holdingCard{
     display: flex;
     flex-direction: column;
-    margin: 1px 20px;
+    margin: 0px 15px;
 }
 .holdingCardTop{
     display: flex;
@@ -15,6 +15,18 @@
     background-color: white;
     margin: 2px;
     border-radius: 5px;
+}
+.pieContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+.pieChartContainer{
+    height:400px;
+    width:400px;
+    margin:20px;
 }
 .portfolioValue{
     display: flex;

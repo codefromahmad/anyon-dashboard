@@ -1,22 +1,72 @@
 /* holdingstable.css */
+.holdingsTableContainer {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+.instrument{
+  color:#151515;
+  font-size: 15px;
+  font-weight: 500;
+}
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: white;
-  }
-  
-  thead th, tbody td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    font-size: 13px;
-    font-weight: 400;
-  }
-  
-  thead th {
-    /* background-color: #f2f2f2; */
-    font-size: 13px;
-    font-weight: 400;
-    color: #515151CC;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+table thead tr {
+  border-top:none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+table .border {
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid white;
+}
+
+table tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+thead th,
+tbody td {
+  padding: 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  color: #515151cc;
+  text-align: center;
+}
+
+thead th {
+  font-size: 13px;
+  font-weight: 400;
+  color: #515151cc;
+}
+
+.search-bar-holdings {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  /* background: #d9d9d94d; */
+}
+
+.search-bar-holdings input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding-left: 4px;
+  color: #c3c3c3;
+  outline: none;
+}
+
+input::placeholder {
+  color: #c3c3c3;
+}

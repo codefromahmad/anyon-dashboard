@@ -198,6 +198,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
 
   useEffect(() => {
     if (screenWidth < 426) {
+      console.log('history', history)
       if (history) {
         setHeaderTitle('History')
         setBackButton(true)

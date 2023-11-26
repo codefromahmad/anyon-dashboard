@@ -22,6 +22,7 @@ import ChangePassword from './ChangePassword/ChangePassword'
 import EarningsChart from './Charts/EarningsChart/EarningsChart'
 import ProfitLossChart from './Charts/ProfitLossChart/ProfitLossChart'
 import PieChartHoldings from './Charts/PieChartHoldings/PieChartHoldings'
+import Positions from './Positions/Positions'
 
 export {
   Sidebar,
@@ -47,5 +48,6 @@ export {
   ChangePassword,
   EarningsChart,
   ProfitLossChart,
-  PieChartHoldings
+  PieChartHoldings,
+  Positions
 }

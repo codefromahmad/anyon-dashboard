@@ -1,6 +1,6 @@
 import React from 'react'
 import './holdings.css'
-import { HoldingsTable } from '../../components'
+import { HoldingsTable, PieChartHoldings } from '../../components'
 const Holdings = () => {
   return (
     <div className='holdingCard'>
@@ -41,7 +41,11 @@ const Holdings = () => {
           </div>
         </div>
         <div className='holdingCardRight'>
-          <p>Graph</p>
+          <div className='pieContainer'>
+            <div className='pieChartContainer'>
+              <PieChartHoldings />
+            </div>
+          </div>
         </div>
       </div>
       <div className='holdingTable'>

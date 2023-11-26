@@ -27,7 +27,7 @@
   padding: 50px 0 100px;
 }
 
-.alert-manual-card {
+.alertManual-card {
   width: 77%;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
 }
 .nameSelect {
   padding: 15px 20px;
-  width: 86%;
+  width: 88.50%;
   background-color: #fafafa;
   border-radius: 5px;
 }
@@ -71,7 +71,7 @@
 }
 .discription-text {
   padding: 10px 20px;
-  width: 86%;
+  width: 88.50%;
   height: 60px;
   background-color: #fafafa;
   border-radius: 5px;
@@ -94,7 +94,7 @@
 }
 .instrumentSelect {
   padding: 15px 20px;
-  width: 86%;
+  width: 88.50%;
   background-color: #fafafa;
   border-radius: 5px;
 }
@@ -201,7 +201,7 @@
 }
 .scheduleSelect {
   padding: 15px 20px;
-  width: 86%;
+  width: 88.50%;
   background-color: #fafafa;
   border-radius: 5px;
 }
@@ -222,6 +222,9 @@
 }
 .proceedButton {
   cursor: pointer;
+}
+.alertManualButtons{
+  padding: 0;
 }
 .proceedButton p {
   display: flex;
@@ -247,6 +250,40 @@
   font-size: 13px;
   font-weight: 500;
   color: black;
+}
+@media (max-width:768px){
+  .nameSelect{
+    width: 87%;
+  }
+  .instrumentSelect{
+    width: 87%;
+  }
+  .scheduleSelect{
+    width: 87%;
+  }
+  .discription-text{
+    width: 87%;
+  }
+  .alertManualButtons{
+    padding: 0;
+  }
+}
+@media (max-width:426px){
+  .nameSelect{
+    width: 87.70%;
+  }
+  .instrumentSelect{
+    width: 87.70%;
+  }
+  .scheduleSelect{
+    width: 87.70%;
+  }
+  .discription-text{
+    width: 87.70%;
+  }
+  .alertManualButtons{
+    padding: 0;
+  }
 }
 @media (max-width:340px) {
     .aboveSelect select{

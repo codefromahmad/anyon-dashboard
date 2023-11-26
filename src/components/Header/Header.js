@@ -202,6 +202,9 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
       if (history) {
         setHeaderTitle('History')
         setBackButton(true)
+      } else if (!history) {
+        setHeaderTitle('Alert')
+        setBackButton(false)
       } else if (profile) {
         setBackButton(true)
         setHeaderTitle('Profile')

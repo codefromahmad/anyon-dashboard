@@ -23,6 +23,7 @@ import EarningsChart from './Charts/EarningsChart/EarningsChart'
 import ProfitLossChart from './Charts/ProfitLossChart/ProfitLossChart'
 import PieChartHoldings from './Charts/PieChartHoldings/PieChartHoldings'
 import Positions from './Positions/Positions'
+import CreateEditAlert from './CreateEditAlert/CreateEditAlert'
 
 export {
   Sidebar,
@@ -49,5 +50,6 @@ export {
   EarningsChart,
   ProfitLossChart,
   PieChartHoldings,
-  Positions
+  Positions,
+  CreateEditAlert
 }

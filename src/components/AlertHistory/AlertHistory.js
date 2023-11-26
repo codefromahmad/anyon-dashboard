@@ -4,6 +4,7 @@ import editIcon from '../../assets/images/edit.svg'
 import deleteIcon from '../../assets/images/delete.svg'
 import './alerthistory.css'
 import { Positions } from '../../components'
+import { useDispatch } from 'react-redux'
 
 const alerts = [
   {
@@ -24,11 +25,12 @@ const alerts = [
   }
 ]
 
-const AlertHistory = () => {
+const AlertHistory = ({ setTitle }) => {
   const [isLeftTopScrolling, setIsLeftTopScrolling] = useState(false)
   const [isLeftBottomScrolling, setIsLeftBottomScrolling] = useState(false)
   const alertLeftTopRef = useRef(null)
   const alertLeftBottomRef = useRef(null)
+  const dispatch = useDispatch()
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -135,7 +137,14 @@ const AlertHistory = () => {
                     <td>{alert.symbol}</td>
                     <td>{alert.time}</td>
                     <td>
-                      <img src={editIcon} alt='Alert' />
+                      <img
+                        onClick={() => {
+                          dispatch({ type: 'setHistory', payload: false })
+                          setTitle('Edit Alert')
+                        }}
+                        src={editIcon}
+                        alt='Alert'
+                      />
                       <img src={deleteIcon} alt='Alert' />
                     </td>
                   </tr>

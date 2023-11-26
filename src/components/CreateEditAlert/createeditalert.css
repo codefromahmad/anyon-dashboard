@@ -1,0 +1,275 @@
+.alert-manual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 100px;
+}
+
+.alert-manual-card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+.create-alert-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-alert-heading h4 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.alert-name p {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.nameSelect {
+  padding: 15px 20px;
+  /* width: 90%; */
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.nameSelect select {
+  display: flex;
+  /* width: 100%; */
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+  color: #66666666;
+}
+.alert-discription p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.discription-text {
+  padding: 10px 20px;
+  /* width: 90%; */
+  height: 60px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.discription-text input {
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+}
+.discription-text textArea {
+  background-color: #fafafa;
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+.alert-instrument p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.instrumentSelect {
+  padding: 15px 20px;
+  /* width: 90%; */
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.instrumentSelect select {
+  display: flex;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #fafafa;
+  color: #66666666;
+}
+.alert-price {
+  display: flex;
+  flex-direction: column;
+}
+.alert-price p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.price-mid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  column-gap: 10px;
+}
+.price-select {
+  width: 60%;
+  padding: 15px 20px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.price-select select {
+  display: flex;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+  color: #515151;
+  font-size: 13px;
+}
+.above-select {
+  width: 60%;
+  padding: 15px 20px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.above-select select {
+  display: flex;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #fafafa;
+  color: #66666666;
+  font-size: 13px;
+}
+.price-input {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+.price-input input {
+  width: 33%;
+  border: none;
+  outline: none;
+}
+.alertPriceBottom p {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 10px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.alert-volume {
+  display: flex;
+  flex-direction: column;
+}
+.alert-volume p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.volume-mid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  column-gap: 10px;
+}
+.volume-input {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+.volume-input input {
+  width: 33%;
+  border: none;
+  outline: none;
+}
+.alert-schedule p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.scheduleSelect {
+  padding: 15px 20px;
+  /* width: 90%; */
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.scheduleSelect select {
+  display: flex;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #fafafa;
+}
+.alertManualButton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  column-gap: 10px;
+  margin-top: 30px;
+}
+.proceedButton {
+  cursor: pointer;
+}
+.alertManualButtons {
+  padding: 0;
+}
+.proceedButton p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 30px;
+  background-color: #00ba77;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+}
+.cancelButton {
+  cursor: pointer;
+}
+.cancelButton p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 30px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .alert-manual-card {
+    width: 70%;
+    padding: 0 30px 10px;
+  }
+  .price-select {
+    padding: 15px 14px;
+  }
+  .above-select {
+    padding: 15px 14px;
+  }
+  .proceed-button p {
+    padding: 10px 40px;
+  }
+  .cancel-button p {
+    padding: 9px 40px;
+  }
+}
+
+@media (max-width: 426px) {
+  .nameSelect {
+    width: 87.7%;
+  }
+  .instrumentSelect {
+    width: 87.7%;
+  }
+  .scheduleSelect {
+    width: 87.7%;
+  }
+  .discription-text {
+    width: 87.7%;
+  }
+  .alertManualButtons {
+    padding: 0;
+  }
+}
+
+@media (max-width: 340px) {
+  .aboveSelect select {
+    width: fit-content;
+  }
+}

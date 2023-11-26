@@ -100,16 +100,16 @@ const Profile = () => {
 
   return (
     <div className='rounded-card'>
-      {/* <div className='laptop-query'>
+      <div className='laptop-query'>
         <TabsComponent
-          setAccountInformation={setAccountInformation}
           data={data}
           openTab={openTab}
           setOpenTab={setOpenTab}
-          setAddBank={setAddBank}
-          setChangePassword={setChangePassword}
+          // setAddBank={setAddBank}
+          // setChangePassword={setChangePassword}
+          // setAccountInformation={setAccountInformation}
         />
-      </div> */}
+      </div>
 
       <div className='for-mobile'>
         {profile && <MyAccount />}

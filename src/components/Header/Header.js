@@ -42,6 +42,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         } else if (pathname === '/accountinformation') {
           setHeaderTitle('Account Information')
         } else if (pathname === '/accountinformation/proofofid') {
+          setBackButton(true)
           setHeaderTitle('Proof of ID')
         } else if (pathname === '/accountinformation/proofofaddress') {
           setHeaderTitle('Proof of Address')
@@ -53,6 +54,8 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
           setHeaderTitle('Help Support')
         } else if (pathname === '/payment') {
           setHeaderTitle('Payment')
+        } else if (pathname === '/payment/addbank') {
+          setHeaderTitle('Add Bank')
         }
       } else {
         console.log('Its mobile screen')
@@ -61,18 +64,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         } else if (pathname === '/accountinformation') {
           setBackButton(true)
           setHeaderTitle('Account Information')
-        }
-        //  else if (pathname === '/accountinformation/proofofid') {
-        //   setBackButton(true)
-        //   setHeaderTitle('Proof of ID')
-        // } else if (pathname === '/accountinformation/proofofaddress') {
-        //   setBackButton(true)
-        //   setHeaderTitle('Proof of Address')
-        // } else if (pathname === '/accountinformation/uploadphotograph') {
-        //   setBackButton(true)
-        //   setHeaderTitle('Upload Photograph')
-        // }
-        else if (pathname === '/privacysecurity') {
+        } else if (pathname === '/privacysecurity') {
           setBackButton(true)
           setHeaderTitle('Privacy Security')
         } else if (pathname === '/helpsupport') {
@@ -151,73 +143,95 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const navigate = useNavigate()
 
   const handleBackButtonClick = () => {
-    if (history) {
-      dispatch({ type: 'setHistory', payload: false })
-      setBackButton(false)
-      setHeaderTitle('Alert')
-    } else if (profile) {
-      dispatch({ type: 'setProfile', payload: false })
-      setBackButton(false)
-      setHeaderTitle('My Account')
-    } else if (changePassword) {
-      dispatch({ type: 'setChangePassword', payload: false })
-      setBackButton(true)
-      navigate(-1)
-      setHeaderTitle('Privacy Security')
-    } else if (addBank) {
-      dispatch({ type: 'setAddBank', payload: false })
-      setBackButton(true)
-      navigate(-1)
-      setHeaderTitle('Payment')
-    } else if (accountInformation === 'accountInformation') {
-      dispatch({ type: 'setAccountInformation', payload: '' })
-      setBackButton(false)
-      navigate(-1)
-      setHeaderTitle('My Account')
-    } else if (accountInformation === 'ProofOfID') {
-      dispatch({ type: 'setAccountInformation', payload: 'accountInformation' })
-      navigate(-1)
-      setHeaderTitle('Account Information')
-    } else if (accountInformation === 'ProofOfAddress') {
-      dispatch({ type: 'setAccountInformation', payload: 'accountInformation' })
-      navigate(-1)
-      setHeaderTitle('Account Information')
-    } else if (accountInformation === 'UploadPhotograph') {
-      dispatch({ type: 'setAccountInformation', payload: 'accountInformation' })
-      navigate(-1)
-      setHeaderTitle('Account Information')
+    if (screenWidth < 426) {
+      if (history) {
+        dispatch({ type: 'setHistory', payload: false })
+        setBackButton(false)
+        setHeaderTitle('Alert')
+      } else if (profile) {
+        dispatch({ type: 'setProfile', payload: false })
+        setBackButton(false)
+        setHeaderTitle('My Account')
+      } else if (changePassword) {
+        dispatch({ type: 'setChangePassword', payload: false })
+        setBackButton(true)
+        navigate(-1)
+        setHeaderTitle('Privacy Security')
+      } else if (addBank) {
+        dispatch({ type: 'setAddBank', payload: false })
+        setBackButton(true)
+        navigate(-1)
+        setHeaderTitle('Payment')
+      } else if (accountInformation === 'accountInformation') {
+        dispatch({ type: 'setAccountInformation', payload: '' })
+        setBackButton(false)
+        navigate(-1)
+        setHeaderTitle('My Account')
+      } else if (accountInformation === 'ProofOfID') {
+        dispatch({
+          type: 'setAccountInformation',
+          payload: 'accountInformation'
+        })
+        navigate(-1)
+        setHeaderTitle('Account Information')
+      } else if (accountInformation === 'ProofOfAddress') {
+        dispatch({
+          type: 'setAccountInformation',
+          payload: 'accountInformation'
+        })
+        navigate(-1)
+        setHeaderTitle('Account Information')
+      } else if (accountInformation === 'UploadPhotograph') {
+        dispatch({
+          type: 'setAccountInformation',
+          payload: 'accountInformation'
+        })
+        navigate(-1)
+        setHeaderTitle('Account Information')
+      } else {
+        navigate(-1)
+      }
     } else {
       navigate(-1)
     }
   }
 
   useEffect(() => {
-    if (history) {
-      setHeaderTitle('History')
-      setBackButton(true)
-    } else if (profile) {
-      setBackButton(true)
-      setHeaderTitle('Profile')
-    } else if (changePassword) {
-      setBackButton(true)
-      setHeaderTitle('Change Password')
-    } else if (addBank) {
-      setBackButton(true)
-      setHeaderTitle('Add Bank')
-    } else if (accountInformation === 'accountInformation') {
-      setBackButton(true)
-      setHeaderTitle('Account Information')
-    } else if (accountInformation === 'ProofOfID') {
-      setBackButton(true)
-      setHeaderTitle('Proof of ID')
-    } else if (accountInformation === 'ProofOfAddress') {
-      setBackButton(true)
-      setHeaderTitle('Proof of Address')
-    } else if (accountInformation === 'UploadPhotograph') {
-      setBackButton(true)
-      setHeaderTitle('Upload Photograph')
+    if (screenWidth < 426) {
+      if (history) {
+        setHeaderTitle('History')
+        setBackButton(true)
+      } else if (profile) {
+        setBackButton(true)
+        setHeaderTitle('Profile')
+      } else if (changePassword) {
+        setBackButton(true)
+        setHeaderTitle('Change Password')
+      } else if (addBank) {
+        setBackButton(true)
+        setHeaderTitle('Add Bank')
+      } else if (accountInformation === 'accountInformation') {
+        setBackButton(true)
+        setHeaderTitle('Account Information')
+      } else if (accountInformation === 'ProofOfID') {
+        setBackButton(true)
+        setHeaderTitle('Proof of ID')
+      } else if (accountInformation === 'ProofOfAddress') {
+        setBackButton(true)
+        setHeaderTitle('Proof of Address')
+      } else if (accountInformation === 'UploadPhotograph') {
+        setBackButton(true)
+        setHeaderTitle('Upload Photograph')
+      }
     }
-  }, [history, profile, changePassword, addBank, accountInformation])
+  }, [
+    history,
+    profile,
+    changePassword,
+    addBank,
+    accountInformation,
+    screenWidth
+  ])
 
   return (
     <div className='header'>

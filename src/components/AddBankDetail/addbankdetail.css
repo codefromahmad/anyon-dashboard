@@ -29,10 +29,16 @@
   font-weight: 400;
   font-size: 14px;
 }
+.chooseBank div {
+  border: 0.5px solid #80808080;
+  padding: 0 10px;
+  border-radius: 5px;
+}
 .chooseBank select {
   height: 50px;
   width: 500px;
-  border: 0.5px solid #80808080;
+  border: none;
+  outline: none;
   padding: 0 10px;
   border-radius: 5px;
 }
@@ -72,7 +78,7 @@
     padding: 40px 15px 200px;
   }
   .addBankDetail {
-    padding:5px 15px 15px;
+    padding: 5px 15px 15px;
   }
   .chooseBank select {
     width: 100%;
@@ -80,7 +86,7 @@
   .chooseAccountNo input {
     width: 94%;
   }
-  .buttonToSave{
+  .buttonToSave {
     margin-top: 20px;
   }
   .buttonToSave p {

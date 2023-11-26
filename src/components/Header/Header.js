@@ -202,7 +202,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
       if (history) {
         setHeaderTitle('History')
         setBackButton(true)
-      } else if (!history) {
+      } else if (!history && pathname === '/alertmanual') {
         setHeaderTitle('Alert')
         setBackButton(false)
       } else if (profile) {

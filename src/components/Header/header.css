@@ -176,14 +176,25 @@ input::placeholder {
   color: #c3c3c3;
 }
 
-.backAndHeader {
+.backAndTitle {
   display: flex;
   align-items: center;
   margin-left: 5px;
 }
 
-.backAndHeader .back{
+.backAndTitle .back {
   cursor: pointer;
+}
+
+.backAndTitleLaptop {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.backAndTitleLaptop .back {
+  cursor: pointer;
+  padding-right: 10px;
 }
 
 @media (max-width: 600px) {

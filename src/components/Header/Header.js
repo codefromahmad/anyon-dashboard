@@ -40,21 +40,32 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         if (pathname === '/profile') {
           setHeaderTitle('My Account')
         } else if (pathname === '/accountinformation') {
+          dispatch({
+            type: 'setAccountInformation',
+            payload: 'accountInformation'
+          })
           setHeaderTitle('Account Information')
         } else if (pathname === '/accountinformation/proofofid') {
           setBackButton(true)
           setHeaderTitle('Proof of ID')
         } else if (pathname === '/accountinformation/proofofaddress') {
+          setBackButton(true)
           setHeaderTitle('Proof of Address')
         } else if (pathname === '/accountinformation/uploadphotograph') {
+          setBackButton(true)
           setHeaderTitle('Upload Photograph')
         } else if (pathname === '/privacysecurity') {
           setHeaderTitle('Privacy Security')
+        } else if (pathname === '/privacysecurity/changepassword') {
+          setBackButton(true)
+          setHeaderTitle('Change Password')
         } else if (pathname === '/helpsupport') {
           setHeaderTitle('Help Support')
         } else if (pathname === '/payment') {
           setHeaderTitle('Payment')
         } else if (pathname === '/payment/addbank') {
+          dispatch({ type: 'setAddBank', payload: true })
+          setBackButton(true)
           setHeaderTitle('Add Bank')
         }
       } else {
@@ -192,13 +203,21 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         navigate(-1)
       }
     } else {
+      if (pathname === '/privacysecurity/changepassword') {
+        dispatch({ type: 'setChangePassword', payload: false })
+        setBackButton(false)
+        setHeaderTitle('Privacy Security')
+      } else if (pathname === '/payment/addbank') {
+        dispatch({ type: 'setAddBank', payload: false })
+        setBackButton(false)
+        setHeaderTitle('Payment')
+      }
       navigate(-1)
     }
   }
 
   useEffect(() => {
     if (screenWidth < 426) {
-      console.log('history', history)
       if (history) {
         setHeaderTitle('History')
         setBackButton(true)
@@ -243,7 +262,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         <button className='menu-button' onClick={toggleMenu}>
           <IoIosMenu className='menu-icon' />
         </button>
-        <div className='backAndHeader'>
+        <div className='backAndTitle'>
           {backButton && (
             <MdKeyboardBackspace
               className='back'
@@ -263,7 +282,16 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
             : 'pl'
         }`}
       >
-        {headerTitle && <p>{headerTitle}</p>}
+        <div className='backAndTitleLaptop'>
+          {backButton && (
+            <MdKeyboardBackspace
+              className='back'
+              onClick={handleBackButtonClick}
+              size={28}
+            />
+          )}
+          {headerTitle && <p>{headerTitle}</p>}
+        </div>
         {(pathname === '/markets' || pathname === '/technicals') && (
           <div className='search-bar'>
             <FiSearch color='#C3C3C3' />

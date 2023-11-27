@@ -41,11 +41,29 @@ function App () {
 
     // Check if the pathname starts with "/wallet"
     const isWalletPage = window.location.pathname.startsWith('/wallet')
+    // const isAccountInformationPage = window.location.pathname.startsWith(
+    //   '/accountinformation'
+    // )
+    // const isPaymentPage = window.location.pathname.startsWith('/payment')
+    // const isPrivacySecurityPage =
+    //   window.location.pathname.startsWith('/privacysecurity')
 
     // Conditionally add or remove the event listener
     if (!isWalletPage && window.screenWidth > 425) {
       window.addEventListener('popstate', handleLocationChange)
     }
+
+    // if (!isAccountInformationPage && window.screenWidth > 425) {
+    //   window.addEventListener('popstate', handleLocationChange)
+    // }
+
+    // if (!isPaymentPage && window.screenWidth > 425) {
+    //   window.addEventListener('popstate', handleLocationChange)
+    // }
+
+    // if (!isPrivacySecurityPage && window.screenWidth > 425) {
+    //   window.addEventListener('popstate', handleLocationChange)
+    // }
 
     // Cleanup the event listener when the component unmounts
     return () => {

@@ -46,7 +46,7 @@
   }
 }
 @media (max-width: 425px) {
-  .laptop-query {
+  .for-laptop {
     display: none;
   }
 }

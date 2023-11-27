@@ -26,9 +26,9 @@ const Profile = () => {
 
   const [openTab, setOpenTab] = useState(pathname)
   const [accountInformation, setAccountInformation] = useState('')
-  const profile = useSelector(state => state.page.profile)
   const [changePassword, setChangePassword] = useState(false)
   const [addBank, setAddBank] = useState(false)
+  const profile = useSelector(state => state.page.profile)
   // const [activePage, setActivePage] = useState("");
 
   // const handleAccountInformation = text => {
@@ -54,25 +54,13 @@ const Profile = () => {
       id: 2,
       name: 'Account Information',
       path: '/accountinformation',
-      content: (
-        <AccountInformation
-          accountInformation={accountInformation}
-          setAccountInformation={setAccountInformation}
-          // handleAccountInformation={handleAccountInformation}
-        />
-      )
+      content: <AccountInformation />
     },
     {
       id: 3,
       name: 'Privacy & Security',
       path: '/privacysecurity',
-      content: (
-        <PrivacySecurity
-          changePassword={changePassword}
-          setChangePassword={setChangePassword}
-          // handleChangePasswordComp={handleChangePasswordComp}
-        />
-      )
+      content: <PrivacySecurity />
     },
     {
       id: 4,
@@ -84,13 +72,7 @@ const Profile = () => {
       id: 5,
       name: 'Payment',
       path: '/payment',
-      content: (
-        <Payment
-          addBank={addBank}
-          setAddBank={setAddBank}
-          handleAddBankComp={handleAddBankComp}
-        />
-      )
+      content: <Payment />
     }
   ]
 
@@ -100,42 +82,17 @@ const Profile = () => {
 
   return (
     <div className='rounded-card'>
-      <div className='laptop-query'>
-        <TabsComponent
-          data={data}
-          openTab={openTab}
-          setOpenTab={setOpenTab}
-          // setAddBank={setAddBank}
-          // setChangePassword={setChangePassword}
-          // setAccountInformation={setAccountInformation}
-        />
+      <div className='for-laptop'>
+        <TabsComponent data={data} openTab={openTab} setOpenTab={setOpenTab} />
       </div>
 
       <div className='for-mobile'>
         {profile && <MyAccount />}
-        {pathname.startsWith('/accountinformation') && (
-          <AccountInformation
-          // accountInformation={accountInformation}
-          // setAccountInformation={setAccountInformation}
-          // handleAccountInformation={handleAccountInformation}
-          />
-        )}
+        {pathname.startsWith('/accountinformation') && <AccountInformation />}
 
-        {pathname.startsWith('/privacysecurity') && (
-          <PrivacySecurity
-          // changePassword={changePassword}
-          // setChangePassword={setChangePassword}
-          // handleChangePasswordComp={handleChangePasswordComp}
-          />
-        )}
+        {pathname.startsWith('/privacysecurity') && <PrivacySecurity />}
         {pathname === '/helpsupport' && <HelpSupport />}
-        {pathname.startsWith('/payment') && (
-          <Payment
-          // addBank={addBank}
-          // setAddBank={setAddBank}
-          // handleAddBankComp={handleAddBankComp}
-          />
-        )}
+        {pathname.startsWith('/payment') && <Payment />}
       </div>
 
       {!profile && pathname === '/profile' && (

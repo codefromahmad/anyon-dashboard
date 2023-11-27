@@ -39,7 +39,6 @@
   width: 500px;
   border: none;
   outline: none;
-  padding: 0 10px;
   border-radius: 5px;
 }
 /* .chooseBank select option{
@@ -54,7 +53,6 @@
 }
 .chooseAccountNo input {
   height: 50px;
-  width: 480px;
   border: 0.5px solid #80808080;
   padding: 0 10px;
   border-radius: 5px;

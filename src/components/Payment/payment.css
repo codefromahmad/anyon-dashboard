@@ -37,8 +37,8 @@
   align-items: center;
   column-gap: 30px;
 }
-.bankAddressRight img{
-    cursor: pointer;
+.bankAddressRight img {
+  cursor: pointer;
 }
 .bankAddressRight p {
   font-weight: 400;
@@ -72,7 +72,7 @@
 }
 @media (max-width: 426px) {
   .profilePaymentCard {
-    padding: 40px 12px 200px;
+    padding: 40px 20px;
   }
   .addressForPayment {
     padding: 5px 10px;

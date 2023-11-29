@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import "./markets.css";
-import { AreaChartStock, MainAreaChart, MarketsTabs, OrderBookChart } from "../../components";
+import {
+  AreaChartStock,
+  MainAreaChart,
+  MarketsTabs,
+  OrderBookAsksChart,
+  OrderBookBidsChart,
+  Positions,
+} from "../../components";
 import stock from "../../assets/images/stock.png";
 import { IoCloseSharp } from "react-icons/io5";
+import OrderBookAsks from "../../components/Charts/OrderBookCharts/OrderBookAsks";
+import OrderBookBids from "../../components/Charts/OrderBookCharts/OrderBookBids";
 
 const Markets = ({ stocks }) => {
   const [value, setValue] = useState(1);
   const [popup, setPopup] = useState(null);
+  const [activeButton, setActiveButton] = useState("buy");
 
   const handleIncrement = () => {
     setValue(value + 1);
@@ -107,20 +117,69 @@ const Markets = ({ stocks }) => {
 
   const orderBookData = {
     bids: [
-      { price: 100, quantity: 5, time: "2023-11-15T12:00:00" },
-      { price: 99.5, quantity: 10, time: "2023-11-15T12:05:00" },
-      { price: 99, quantity: 8, time: "2023-11-15T12:10:00" },
+      { price: 100, quantity: 5 },
+      { price: 99.5, quantity: 10 },
+      { price: 99, quantity: 8 },
       // ... more bids
     ],
     asks: [
-      { price: 101, quantity: 7, time: "2023-11-15T12:15:00" },
-      { price: 102, quantity: 15, time: "2023-11-15T12:20:00" },
-      { price: 103, quantity: 20, time: "2023-11-15T12:25:00" },
+      { price: 101, quantity: 7 },
+      { price: 102, quantity: 15 },
+      { price: 103, quantity: 20 },
       // ... more asks
     ],
   };
-  
-  
+
+  const bidAskData = [
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+    {
+      bidSize: 40,
+      bidPrice: 99.5,
+      askSize: 40,
+      askPrice: 102,
+    },
+  ];
 
   return (
     <div className="marketContainer">
@@ -161,7 +220,7 @@ const Markets = ({ stocks }) => {
           </div>
         </div>
         <div className="middle-header">
-          <div onClick={() => showPopup("buy")} className="buyButton">
+          <div onClick={() => showPopup("buy")} className="buySmallButton">
             <p>Buy</p>
           </div>
           <div className="lotCalculation">
@@ -172,7 +231,7 @@ const Markets = ({ stocks }) => {
               <button onClick={handleDecrement}>-</button>
             </div>
           </div>
-          <div onClick={() => showPopup("sell")} className="sellButton">
+          <div onClick={() => showPopup("sell")} className="sellSmallButton">
             <p>Sell</p>
           </div>
         </div>
@@ -207,11 +266,99 @@ const Markets = ({ stocks }) => {
           <div className="orderBookHeader">
             <p className="heading">Order Book</p>
           </div>
-          <div>
-          {/* <OrderBookChart orderBookData={orderBookData} /> */}
+          <div className="orderBookChart">
+            {/* <div className='asks'> */}
+            <OrderBookAsks />
+            {/* </div> */}
+            {/* <div className='bids'> */}
+            <OrderBookBids />
+            {/* </div> */}
           </div>
         </div>
+        <div className="bidAskContainer">
+          <div className="bidAskHeadings">
+            <p className="bidSize">Size</p>
+            <p className="bidText">Bid</p>
+            <p className="askText">Ask</p>
+            <p className="askSize">Size</p>
+          </div>
+          {bidAskData.map((item, index) => (
+            <div className="bidAskItem">
+              <p className="bidSize">{item.bidSize}</p>
+              <div className="bidBG">
+                <p className="bidText">{item.bidPrice}</p>
+              </div>
+              <div className="askBG">
+                <p className="askText">{item.askPrice}</p>
+              </div>
+              <p className="askSize">{item.askSize}</p>
+            </div>
+          ))}
+        </div>
+        <div className="orderBook">
+          <div className="orderBookHeader">
+            <p className="heading">Trade</p>
+          </div>
+          <div className="tradeContainer">
+            <div>
+              <div
+                onClick={() => setActiveButton("buy")}
+                className={`${
+                  activeButton === "buy" ? "buyButton" : "nonActiveButton"
+                }`}
+              >
+                <p>Buy</p>
+              </div>
+              <div className="orderType">
+                <p>Order Type</p>
+                <div className="orderTypeSelect">
+                  <select id="Schedule">
+                    <option value="market">Market</option>
+                    <option value="limit">Limit</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                onClick={() => setActiveButton("sell")}
+                className={`${
+                  activeButton === "sell" ? "sellButton" : "nonActiveButton"
+                }`}
+              >
+                <p>Sell</p>
+              </div>
+              <div className="orderType">
+                <p>Order Type</p>
+                <div className="orderTypeSelect">
+                  <input type="number" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="timeInForce">
+            <p>Time-in-Force</p>
+            <div className="orderTypeSelect">
+              <select id="Schedule">
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+              </select>
+            </div>
+          </div>
+          <div className="mainButton">
+            <div
+              className={`${
+                activeButton === "sell" ? "sellButton" : "buyButton"
+              }`}
+            >
+              <p>Buy</p>
+            </div>
+          </div>
+        </div>
+        <Positions />
       </div>
+      {/* <OrderBookAsksChart orderBookData={orderBookData} /> */}
+      {/* <OrderBookBidsChart orderBookData={orderBookData} /> */}
     </div>
   );
 };

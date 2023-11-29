@@ -14,7 +14,6 @@ import ChatInput from './ChatInput/ChatInput'
 import HoldingsTable from './HoldingsTable/HoldingsTable'
 import MarketsTabs from './MarketsTabs/MarketsTabs'
 import MainAreaChart from './Charts/MainAreaChart/MainAreaChart'
-import OrderBookChart from './Charts/OrderBookChart/OrderBookChart'
 import ProofOfAddress from './ProofOfAddres/ProofOfAddress'
 import ProofOfID from './ProofOfID/ProofOfID'
 import UploadPhotograph from './UploadPhotograph/UploadPhotograph'
@@ -24,6 +23,8 @@ import ProfitLossChart from './Charts/ProfitLossChart/ProfitLossChart'
 import PieChartHoldings from './Charts/PieChartHoldings/PieChartHoldings'
 import Positions from './Positions/Positions'
 import CreateEditAlert from './CreateEditAlert/CreateEditAlert'
+import OrderBookAsksChart from './Charts/OrderBookCharts/OrderBookAsksChart'
+import OrderBookBidsChart from './Charts/OrderBookCharts/OrderBookBidsChart'
 
 export {
   Sidebar,
@@ -42,7 +43,8 @@ export {
   AreaChartStock,
   MarketsTabs,
   MainAreaChart,
-  OrderBookChart,
+  OrderBookAsksChart,
+  OrderBookBidsChart,
   ProofOfID,
   ProofOfAddress,
   UploadPhotograph,

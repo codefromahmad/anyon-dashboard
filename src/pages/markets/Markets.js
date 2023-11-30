@@ -262,7 +262,7 @@ const Markets = ({ stocks }) => {
         </>
       )}
       <div className="rightMarket">
-        <div className="orderBook">
+        <div className="orderBookContainer">
           <div className="orderBookHeader">
             <p className="heading">Order Book</p>
           </div>

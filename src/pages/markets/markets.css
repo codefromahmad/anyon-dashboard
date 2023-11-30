@@ -257,6 +257,13 @@
   color: #ff5348;
 }
 
+.orderBookContainer {
+  margin: 2px;
+  background: white;
+  border-radius: 5px;
+  height: 200px;
+}
+
 .orderBook {
   margin: 2px;
   background: white;
@@ -278,7 +285,12 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.orderBookChart canvas {
+  width: 100% !important;
+  height: 160px !important;
 }
 
 .asks {

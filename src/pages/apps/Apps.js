@@ -21,6 +21,7 @@ const Apps = () => {
         </div>
         <div className="appsCardFooter">
           <h2>All apps</h2>
+          <div className="allApps"></div>
         </div>
       </div>
     </div>

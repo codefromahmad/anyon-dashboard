@@ -50,7 +50,7 @@ export const data = {
       label: "Earning",
       data: dataset1Data,
       backgroundColor: "#00BA77",
-      barThickness: 30, // Adjust the bar thickness (width of bars)
+      barThickness: window.innerWidth > 425 ? 30 : 20, // Adjust the bar thickness (width of bars)
       categoryPercentage: 0.2, // Adjust the space between bars
     },
   ],

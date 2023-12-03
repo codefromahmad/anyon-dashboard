@@ -9,7 +9,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .walletCard {
-  padding: 20px 30px 150px;
+  padding: 20px 30px 30px;
+  height: calc(100vh - 130px);
 }
 .walletCardHeader {
   /* display: flex;
@@ -51,7 +52,7 @@
   justify-content: center;
 }
 .withdraw {
-  padding: 8px 20px;
+  padding: 8px 12px;
   border: 1px solid #02915d;
   border-radius: 5px;
 }
@@ -62,7 +63,7 @@
   font-size: 14px;
 }
 .add-funds {
-  padding: 8px 20px;
+  padding: 8px 12px;
   border-radius: 5px;
   background-color: #02915d;
 }
@@ -257,14 +258,14 @@
 }
 
 .earningsChart {
-  width: 100%;
+  width: 99%;
   padding-top: 15px;
   height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 1440px) and (min-width: 427px) {
+@media (min-width: 427px) {
   .investCardBottom {
     display: none;
   }
@@ -279,6 +280,10 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .walletCard {
+    /* padding: 10px 5px 30px; */
+    height: auto;
   }
   .investCard {
     display: flex;
@@ -320,7 +325,8 @@
     margin: 3px 8px 0;
   }
   .walletCard {
-    padding: 10px 5px 130px;
+    padding: 0px;
+    height: auto;
   }
   .text p {
     font-size: 13px;
@@ -383,5 +389,8 @@
   }
   .investCard {
     padding: 10px 0 0;
+  }
+  .earningBalanceDiv {
+    padding: 10px 11px 30px;
   }
 }

@@ -1,58 +1,63 @@
-.appsCard{
-    display: flex;
-    flex-direction: column;
+.appsCard {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
 }
-.appsCardHeading{
-    border-bottom: 1px solid #D3D3D3;
-    padding: 10px 40px ;
+.appsCardHeading {
+  border-bottom: 1px solid #d3d3d3;
+  padding: 10px 40px;
 }
-.appsCardHeading h3{
-    font-weight: 500;
-    font-size: 18px;
+.appsCardHeading h3 {
+  font-weight: 500;
+  font-size: 18px;
 }
-.financeCard{
-    display: flex;
-    flex-direction: column;
-    border: 0.5px solid #80808033;
-    border-radius: 10px;
-    width: 200px;
-    padding: 20px 30px;
-    margin: 25px 40px;
-    justify-content: center;
-    align-items: center;
+.financeCard {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #80808033;
+  border-radius: 10px;
+  width: 200px;
+  padding: 20px 30px;
+  margin: 25px 40px;
+  justify-content: center;
+  align-items: center;
 }
-.financeCardBottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.financeCardBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.financeCardBottom h4{
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-top: 15px;
+.financeCardBottom h4 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 15px;
 }
-.financeCardBottom p{
-    text-align: center;
-    margin-top: 0;
-    font-weight: 400;
-    font-size: 13px;
+.financeCardBottom p {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 13px;
 }
-.appsCardFooter h2{
-font-weight: 500;
-font-size: 18px;
-border-top: 1px solid #D3D3D3;
-padding: 40px 40px 200px;
+.appsCardFooter h2 {
+  font-weight: 500;
+  font-size: 18px;
+  border-top: 1px solid #d3d3d3;
+  /* padding: 40px 40px 200px; */
+  padding: 40px;
 }
-@media (max-width:400px) {
-    .appsCardHeading{
-        padding: 10px 15px;
-    }
-    .financeCard{
-        margin: 25px 15px;
-    }
-    .appsCardFooter h2{
-        padding: 30px 15px 200px;
-    }
+.allApps {
+  flex: 1;
+}
+@media (max-width: 400px) {
+  .appsCardHeading {
+    padding: 10px 15px;
+  }
+  .financeCard {
+    margin: 25px 15px;
+  }
+  .appsCardFooter h2 {
+    padding: 30px 15px 200px;
+  }
 }

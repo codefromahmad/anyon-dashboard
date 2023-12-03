@@ -256,8 +256,11 @@
 .custom-table img {
   padding: 5px;
 }
-@media (max-width: 1440px) and (min-width: 425px) {
+@media (min-width: 425px) {
   .mobileAiPrompt {
+    display: none;
+  }
+  .mobileAlertTop {
     display: none;
   }
 }

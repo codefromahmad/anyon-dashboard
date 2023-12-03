@@ -7,34 +7,38 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card-header {
+.home-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 100px;
+  padding: 10px 50px;
   border-bottom: 1px solid #ccc;
 }
 
-.card-header h2 {
+.home-card-header h2 {
   margin: 0;
   font-size: 28px;
   font-weight: bold;
   padding: 20px 0px;
 }
 
-.card-header p {
+.home-card-header p {
   margin: 0;
   font-size: 14px;
   color: #777;
 }
 
 .card-body {
-  padding: 10px 100px;
+  padding: 10px 50px;
 }
 
 .cards-container {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .equity-container {
@@ -44,8 +48,8 @@
   padding: 10px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
-  width: 96%;
-  margin: 10px;
+  /* width: 96%; */
+  /* margin: 10px; */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 245px;
@@ -62,6 +66,7 @@
 .equity-card-header .heading {
   font-size: 20px;
   font-weight: 500;
+  margin: 0px;
 }
 
 .opening-balance {
@@ -110,8 +115,8 @@
   padding: 10px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
-  width: 96%;
-  margin: 10px;
+  /* width: 96%; */
+  /* margin: 10px; */
   background-color: #00ba77;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 245px;
@@ -129,6 +134,7 @@
   color: #f9f9f9;
   font-size: 20px;
   font-weight: 500;
+  margin: 0px;
 }
 
 .wallet-balance {
@@ -144,7 +150,7 @@
 .wallet-row {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 20px;
 }
 
 .wallet-item img {
@@ -174,7 +180,7 @@
   padding: 10px 0px;
   font-size: 12px;
   font-weight: 300;
-  width: 235px;
+  /* width: 235px; */
   padding-bottom: 18px;
 }
 
@@ -194,8 +200,8 @@
   padding: 10px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
-  width: 96%;
-  margin: 10px;
+  /* width: 96%; */
+  margin-top: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 273px;
@@ -220,11 +226,13 @@
   font-size: 12px;
   font-weight: 400;
   color: #989898;
+  margin: 2px 0px;
 }
 
 .holdings-card-header .heading {
   font-size: 20px;
   font-weight: 500;
+  margin: 0px;
 }
 
 .opening-balance {
@@ -311,24 +319,27 @@
   width: 100%;
 }
 @media (max-width: 800px) {
+  .home-card-header {
+    padding: 10px 20px;
+  }
   .card-body {
     padding: 10px 20px;
   }
   .wallet-container {
-    width: 55%;
+    /* width: 55%; */
   }
   .wallet-row {
-    gap: 7px;
+    gap: 20px;
   }
   .wallet-row img {
-    width: 172px;
+    width: 120px;
     height: 120px;
     padding: 10px 0px;
   }
   .right-item .info {
     padding-top: 0;
     margin-top: 5px;
-    width: 150px;
+    /* width: 150px; */
   }
   .right-item p {
     margin-bottom: 0;
@@ -342,10 +353,10 @@
   }
 }
 @media (max-width: 450px) {
-  .card-header {
+  .home-card-header {
     padding: 10px 20px;
   }
-  .card-header h2 {
+  .home-card-header h2 {
     font-size: 18px;
     font-weight: 500;
   }
@@ -355,12 +366,13 @@
   .cards-container {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
   .equity-container {
-    width: 91%;
+    /* width: 91%; */
   }
   .wallet-container {
-    width: 91%;
+    /* width: 91%; */
   }
   .holdings-left-header {
     display: flex;
@@ -368,7 +380,7 @@
     align-items: flex-start;
   }
   .holdings-container {
-    width: 87%;
+    /* width: 87%; */
     height: auto;
   }
   .holdings-card-body {
@@ -393,20 +405,20 @@
   .rounded-card {
     margin: 3px 5px 0;
   }
-  .card-header {
+  .home-card-header {
     padding: 10px 20px;
   }
-  .card-header h2 {
+  .home-card-header h2 {
     font-size: 18px;
     font-weight: 500;
     padding: 12px 0;
   }
   .equity-container {
-    width: 87%;
+    /* width: 87%; */
     height: 197px;
   }
   .wallet-container {
-    width: 87%;
+    /* width: 87%; */
   }
   .homeNoText {
     padding-top: 25px;
@@ -415,5 +427,15 @@
     width: 100px;
     height: 80px;
     padding: 10px 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rounded-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-card {
+    max-width: 1200px;
   }
 }

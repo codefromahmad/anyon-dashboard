@@ -179,7 +179,7 @@
 }
 .investCardImg img {
   height: 160px;
-  width: 260px;
+  width: 200px;
 }
 .investCardRight {
   /* padding-top: 20px; */
@@ -392,5 +392,15 @@
   }
   .earningBalanceDiv {
     padding: 10px 11px 30px;
+  }
+}
+
+@media (min-width: 1442px) {
+  .rounded-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-card {
+    max-width: 1200px;
   }
 }

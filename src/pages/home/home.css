@@ -191,6 +191,7 @@
   font-weight: 300;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 
 .holdings-container {

@@ -13,7 +13,7 @@
   font-size: 25px;
   margin-bottom: 0;
 }
-.bankTransferText{
+.bankTransferText {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,9 +107,9 @@
   padding: 13px 50px;
 }
 @media (max-width: 768px) {
-.bankTransferContainer{
-  padding:90px 80px 150px ;
-}
+  .bankTransferContainer {
+    padding: 90px 80px 150px;
+  }
 }
 @media (max-width: 600px) {
   .bankTransferHeading {
@@ -156,5 +156,15 @@
   }
   .paymentButton p {
     padding: 13px 10px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rounded-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-card {
+    max-width: 1200px;
   }
 }

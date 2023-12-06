@@ -22,7 +22,38 @@ const Apps = () => {
           </div>
           <div className="appsCardFooter">
             <h2>All apps</h2>
-            <div className="allApps"></div>
+            <div className="allApps">
+              <div className="financeCard">
+                <img src={GroupImg} />
+                <div className="financeCardBottom">
+                  <h4>Finance news</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Suspendisse amet
+                    arcu bibendum rhoncus
+                  </p>
+                </div>
+              </div>
+              <div className="financeCard">
+                <img src={GroupImg} />
+                <div className="financeCardBottom">
+                  <h4>Finance news</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Suspendisse amet
+                    arcu bibendum rhoncus
+                  </p>
+                </div>
+              </div>
+              <div className="financeCard">
+                <img src={GroupImg} />
+                <div className="financeCardBottom">
+                  <h4>Finance news</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Suspendisse amet
+                    arcu bibendum rhoncus
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

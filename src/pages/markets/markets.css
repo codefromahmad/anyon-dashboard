@@ -8,21 +8,26 @@
 
 .leftMarket {
   width: calc(25% - 2px);
-  background: white;
   overflow-y: auto;
   margin: 2px;
+  background: white;
 }
 
 .middleMarket {
   width: 45%;
-  height: 60%;
+  /* height: calc(100vh - 58px); */
+  height: calc(100vh - 305px);
+  /* height: 60%; */
   background: white;
   /* background: yellow; */
 }
 
 .rightMarket {
-  width: 30%;
+  /* width: 30%; */
   /* background: #00ba77; */
+  width: calc(30% - 2px);
+  overflow-y: auto;
+  margin: 2px;
 }
 
 .stockItem {
@@ -147,6 +152,10 @@
   cursor: pointer;
 }
 
+.buySmallButton p {
+  margin: 8px;
+}
+
 .sellSmallButton {
   display: flex;
   align-items: center;
@@ -155,6 +164,10 @@
   border-radius: 8px;
   color: white;
   cursor: pointer;
+}
+
+.sellSmallButton p {
+  margin: 8px;
 }
 
 .lotCalculation {
@@ -261,7 +274,7 @@
   margin: 2px;
   background: white;
   border-radius: 5px;
-  height: 200px;
+  height: 190px;
 }
 
 .orderBook {
@@ -290,7 +303,7 @@
 
 .orderBookChart canvas {
   width: 100% !important;
-  height: 160px !important;
+  height: 130px !important;
 }
 
 .asks {
@@ -303,7 +316,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .buyButton {
@@ -326,6 +339,14 @@
   justify-content: center;
 }
 
+.buyButton p {
+  margin: 8px;
+}
+
+.sellButton p {
+  margin: 8px;
+}
+
 .nonActiveButton {
   background: #f5f5f5;
   border-radius: 8px;
@@ -337,6 +358,7 @@
 }
 .nonActiveButton p {
   color: #515151;
+  margin: 8px;
 }
 
 .orderType p {
@@ -345,7 +367,7 @@
   margin-bottom: 5px;
 }
 .orderTypeSelect {
-  padding: 12px 10px;
+  padding: 8px;
   background-color: transparent;
   border-radius: 5px;
   border: 0.3px solid #808080;
@@ -374,7 +396,7 @@
 .timeInForce p {
   font-size: 13px;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin: 5px 0px;
 }
 
 .mainButton {

@@ -3,6 +3,7 @@ import "./home.css";
 import walletImage from "../../assets/images/walletImage.svg";
 import currentValues from "../../assets/images/currentValues.svg";
 import { MarketOverview, ProfitLossChart } from "../../components";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [selectedValue, setSelectedValue] = useState("Positions");
@@ -52,7 +53,9 @@ const Home = () => {
                     <p className="info">
                       Add money to your wallet to trade, invest and save.
                     </p>
-                    <button>+ Add Funds</button>
+                    <Link to="/wallet/addfunds">
+                      <button>+ Add Funds</button>
+                    </Link>
                   </div>
                 </div>
               </div>

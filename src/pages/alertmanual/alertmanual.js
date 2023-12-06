@@ -1,38 +1,39 @@
-import React, { useState } from 'react'
-import './alertmanual.css'
-import editIcon from '../../assets/images/edit.svg'
-import deleteIcon from '../../assets/images/delete.svg'
-import { ChatInput, CreateEditAlert } from '../../components'
-import MobileAlertManual from '../../components/MobileAlertManual/MobileAlertManual'
-import { LuHistory } from 'react-icons/lu'
-import { Link, useLocation } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import AlertHistory from '../../components/AlertHistory/AlertHistory'
+import React, { useState } from "react";
+import "./alertmanual.css";
+import editIcon from "../../assets/images/edit.svg";
+import deleteIcon from "../../assets/images/delete.svg";
+import { ChatInput, CreateEditAlert } from "../../components";
+import MobileAlertManual from "../../components/MobileAlertManual/MobileAlertManual";
+import { LuHistory } from "react-icons/lu";
+import { Link, useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import AlertHistory from "../../components/AlertHistory/AlertHistory";
+import AlertLeftTop from "../../components/AlertLeft/AlertLeftTop";
 
 const alerts = [
   {
-    symbol: 'CAD',
-    time: '5:00 PM'
+    symbol: "CAD",
+    time: "5:00 PM",
   },
   {
-    symbol: 'USD',
-    time: '3:00 PM'
-  }
-]
+    symbol: "USD",
+    time: "3:00 PM",
+  },
+];
 
 const AlertManual = () => {
-  const { pathname } = useLocation()
-  const dispatch = useDispatch()
-  const history = useSelector(state => state.page.history)
-  const [title, setTitle] = useState('Create Alert')
+  const { pathname } = useLocation();
+  const dispatch = useDispatch();
+  const history = useSelector((state) => state.page.history);
+  const [title, setTitle] = useState("Create Alert");
   return (
     <>
-      <div className='alertCard'>
-        <div className='alertLeft'>
-          <div className='alertLeftTop'></div>
-          <div className='alertLeftBottom'>
+      <div className="alertCard">
+        <div className="alertLeft">
+          <AlertLeftTop />
+          <div className="alertLeftBottom">
             <h4>Alert</h4>
-            <table className='custom-table'>
+            <table className="custom-table">
               <thead>
                 <tr>
                   <th>Symbol</th>
@@ -47,11 +48,11 @@ const AlertManual = () => {
                     <td>{alert.time}</td>
                     <td>
                       <img
-                        onClick={() => setTitle('Edit Alert')}
+                        onClick={() => setTitle("Edit Alert")}
                         src={editIcon}
-                        alt='Alert'
+                        alt="Alert"
                       />
-                      <img src={deleteIcon} alt='Alert' />
+                      <img src={deleteIcon} alt="Alert" />
                     </td>
                   </tr>
                 ))}
@@ -59,9 +60,9 @@ const AlertManual = () => {
             </table>
           </div>
         </div>
-        <div className='alertRight'>
-          <div className='alertRightCard'>
-            <div className='alertRightTextCard'>
+        <div className="alertRight">
+          <div className="alertRightCard">
+            <div className="alertRightTextCard">
               <CreateEditAlert title={title} />
             </div>
           </div>
@@ -70,34 +71,34 @@ const AlertManual = () => {
       {history ? (
         <AlertHistory
           setTitle={setTitle}
-          onClick={() => dispatch({ type: 'setHistory', payload: false })}
+          onClick={() => dispatch({ type: "setHistory", payload: false })}
         />
       ) : (
-        <div className='mobileManual'>
-          <div className='mobileAlertTop'>
+        <div className="mobileManual">
+          <div className="mobileAlertTop">
             <div
-              onClick={() => dispatch({ type: 'setHistory', payload: true })}
-              className='historyIcon'
+              onClick={() => dispatch({ type: "setHistory", payload: true })}
+              className="historyIcon"
             >
               <LuHistory />
             </div>
-            <div className='aiPromptButtons'>
+            <div className="aiPromptButtons">
               <Link
-                to='/alert'
+                to="/alert"
                 className={
-                  pathname === '/alert'
-                    ? 'active-manualitem'
-                    : 'nonactive-manualitem'
+                  pathname === "/alert"
+                    ? "active-manualitem"
+                    : "nonactive-manualitem"
                 }
               >
                 <p>AI</p>
               </Link>
               <Link
-                to='/alertmanual'
+                to="/alertmanual"
                 className={
-                  pathname === '/alertmanual'
-                    ? 'active-manualitem'
-                    : 'nonactive-manualitem'
+                  pathname === "/alertmanual"
+                    ? "active-manualitem"
+                    : "nonactive-manualitem"
                 }
               >
                 <p>Manual</p>
@@ -108,7 +109,7 @@ const AlertManual = () => {
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default AlertManual
+export default AlertManual;

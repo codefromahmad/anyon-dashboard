@@ -50,3 +50,19 @@
     display: none;
   }
 }
+
+@media (min-width: 1440px) {
+  .rounded-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-card {
+    max-width: 1200px;
+  }
+  .for-mobile {
+    display: none;
+  }
+  .accountSettingDiv {
+    display: none;
+  }
+}

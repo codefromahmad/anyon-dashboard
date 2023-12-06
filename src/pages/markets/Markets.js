@@ -16,7 +16,12 @@ import OrderBookBids from "../../components/Charts/OrderBookCharts/OrderBookBids
 const Markets = ({ stocks }) => {
   const [value, setValue] = useState(1);
   const [popup, setPopup] = useState(null);
+  const [orderType, setOrderType] = useState("market");
   const [activeButton, setActiveButton] = useState("buy");
+
+  const hanldeOrderType = (event) => {
+    setOrderType(event.target.value);
+  };
 
   const handleIncrement = () => {
     setValue(value + 1);
@@ -114,21 +119,6 @@ const Markets = ({ stocks }) => {
     { time: "2024-05-12", value: 120 },
     { time: "2024-06-12", value: 90 },
   ];
-
-  const orderBookData = {
-    bids: [
-      { price: 100, quantity: 5 },
-      { price: 99.5, quantity: 10 },
-      { price: 99, quantity: 8 },
-      // ... more bids
-    ],
-    asks: [
-      { price: 101, quantity: 7 },
-      { price: 102, quantity: 15 },
-      { price: 103, quantity: 20 },
-      // ... more asks
-    ],
-  };
 
   const bidAskData = [
     {
@@ -267,12 +257,8 @@ const Markets = ({ stocks }) => {
             <p className="heading">Order Book</p>
           </div>
           <div className="orderBookChart">
-            {/* <div className='asks'> */}
             <OrderBookAsks />
-            {/* </div> */}
-            {/* <div className='bids'> */}
             <OrderBookBids />
-            {/* </div> */}
           </div>
         </div>
         <div className="bidAskContainer">
@@ -312,7 +298,11 @@ const Markets = ({ stocks }) => {
               <div className="orderType">
                 <p>Order Type</p>
                 <div className="orderTypeSelect">
-                  <select id="Schedule">
+                  <select
+                    id="Schedule"
+                    value={orderType}
+                    onChange={hanldeOrderType}
+                  >
                     <option value="market">Market</option>
                     <option value="limit">Limit</option>
                   </select>
@@ -329,13 +319,24 @@ const Markets = ({ stocks }) => {
                 <p>Sell</p>
               </div>
               <div className="orderType">
-                <p>Order Type</p>
+                <p>Quantity</p>
                 <div className="orderTypeSelect">
                   <input type="number" />
                 </div>
               </div>
             </div>
           </div>
+          {orderType === "limit" && (
+            <div className="timeInForce">
+              <p>Limit Price</p>
+              <div className="orderTypeSelect">
+                <select id="Schedule">
+                  <option value="day">90</option>
+                  <option value="week">80</option>
+                </select>
+              </div>
+            </div>
+          )}
           <div className="timeInForce">
             <p>Time-in-Force</p>
             <div className="orderTypeSelect">

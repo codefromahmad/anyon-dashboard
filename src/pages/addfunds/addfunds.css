@@ -1,7 +1,7 @@
 .rounded-card {
   /* height: 100%; */
 }
-.addFundDiv { 
+.addFundDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,6 +14,10 @@
   flex-direction: row;
   align-items: center;
   column-gap: 25px;
+}
+.addFundsBottom a {
+  text-decoration: none;
+  color: black;
 }
 .bankTransferCard {
   display: flex;
@@ -47,6 +51,7 @@
   padding: 36px 30px 25px;
   border-radius: 5px;
   row-gap: 10px;
+  cursor: pointer;
 }
 .payStackCard p {
   margin-top: 40px;
@@ -63,22 +68,32 @@
   }
 }
 @media (max-width: 426px) {
-    .addFundDiv{
-        padding: 50px 10px;
-       row-gap: 15px;
-    }
-    .addFundsText h2{
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .bankTransferCard{
-        padding:10px 10px ;
-    }
-    .payStackCard{
-        padding:40px 10px ;
-        gap: 0;
-    }
-    .payStackCard p{
-        margin-top: 20px;
-    }
+  .addFundDiv {
+    padding: 50px 10px;
+    row-gap: 15px;
+  }
+  .addFundsText h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .bankTransferCard {
+    padding: 10px 10px;
+  }
+  .payStackCard {
+    padding: 40px 10px;
+    gap: 0;
+  }
+  .payStackCard p {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rounded-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-card {
+    max-width: 1200px;
+  }
 }

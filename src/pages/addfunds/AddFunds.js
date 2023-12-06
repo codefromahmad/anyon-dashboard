@@ -6,28 +6,32 @@ import { Link } from "react-router-dom";
 
 const AddFunds = () => {
   return (
-    <div className="rounded-card">
-    <div className="addFundDiv">
-      <div className="addFundsText">
-        <h2>Add Funds</h2>
-      </div>
-      <div className="addFundsBottom">
-        <div className="bankTransferCard">
-          <img src={BankTransferImg} alt="BankTransfer" />
-          <Link to="/wallet/addfunds/banktransfer"><a href="#">Bank Transfer</a></Link>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Cursus amet leo eget lacus.
-            Etiam mauris.
-          </p>
+    <div className="rounded-card-container">
+      <div className="rounded-card">
+        <div className="addFundDiv">
+          <div className="addFundsText">
+            <h2>Add Funds</h2>
+          </div>
+          <div className="addFundsBottom">
+            <Link to="/wallet/addfunds/banktransfer">
+              <div className="bankTransferCard">
+                <img src={BankTransferImg} alt="BankTransfer" />
+                <a href="#">Bank Transfer</a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Cursus amet leo eget
+                  lacus. Etiam mauris.
+                </p>
+              </div>
+            </Link>
+            <div className="payStackCard">
+              <img src={PayStackImg} alt="Pay stack" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Cursus amet leo eget
+                lacus. Etiam mauris.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="payStackCard">
-          <img src={PayStackImg} alt="Pay stack"/>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Cursus amet leo eget lacus.
-            Etiam mauris.
-          </p>
-        </div>
-      </div>
       </div>
     </div>
   );

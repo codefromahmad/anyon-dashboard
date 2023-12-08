@@ -271,6 +271,17 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
     isMarketsPage,
   ]);
 
+  const handleDropDownClick = (item) => {
+    setDropdownMenu(false);
+    if (item.path === "/profile") {
+      if (window.innerWidth < 426) {
+        dispatch({ type: "setProfile", payload: true });
+      } else {
+        dispatch({ type: "setProfileComp", payload: item.path });
+      }
+    }
+  };
+
   return (
     <div className="header">
       <div className="left-header">
@@ -396,7 +407,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
           {dropdown.map((item, index) => (
             <Link
               to={item.path}
-              onClick={() => setDropdownMenu(false)}
+              onClick={() => handleDropDownClick(item)}
               key={index}
               className="dropdown-item"
             >

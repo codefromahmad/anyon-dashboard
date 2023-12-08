@@ -4,49 +4,55 @@ const initialState = {
   changePassword: false,
   addBank: false,
   accountInformation: null,
-  reload: false
-}
+  reload: false,
+  profileComp: "",
+};
 
 const pageDetail = (state = initialState, action) => {
   switch (action.type) {
-    case 'setHistory':
+    case "setHistory":
       return {
         ...state,
-        history: action.payload
-      }
-    case 'setProfile':
+        history: action.payload,
+      };
+    case "setProfile":
       return {
         ...state,
-        profile: action.payload
-      }
+        profile: action.payload,
+      };
+    case "setProfileComp":
+      return {
+        ...state,
+        profileComp: action.payload,
+      };
 
-    case 'setChangePassword':
+    case "setChangePassword":
       return {
         ...state,
-        changePassword: action.payload
-      }
+        changePassword: action.payload,
+      };
 
-    case 'setAddBank':
+    case "setAddBank":
       return {
         ...state,
-        addBank: action.payload
-      }
+        addBank: action.payload,
+      };
 
-    case 'setAccountInformation':
+    case "setAccountInformation":
       return {
         ...state,
-        accountInformation: action.payload
-      }
+        accountInformation: action.payload,
+      };
 
-    case 'setReload':
+    case "setReload":
       return {
         ...state,
-        reload: action.payload
-      }
+        reload: action.payload,
+      };
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default pageDetail
+export default pageDetail;

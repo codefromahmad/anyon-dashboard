@@ -1,11 +1,13 @@
 import "./tabscomponent.css";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-export default function TabsComponent({ openTab, setOpenTab, data }) {
+export default function TabsComponent({ data }) {
   const dispatch = useDispatch();
+  const profileComp = useSelector((state) => state.page.profileComp);
   const handleTabClick = (path) => {
-    setOpenTab(path);
+    dispatch({ type: "setProfileComp", payload: path });
+    console.log("profileComp", profileComp);
     if (path === "/accountinformation") {
       dispatch({
         type: "setAccountInformation",
@@ -26,7 +28,7 @@ export default function TabsComponent({ openTab, setOpenTab, data }) {
               to={tab.path}
               onClick={() => handleTabClick(tab.path)}
               className={`item-name ${
-                tab.path === openTab ? "grid-active" : "grid-nonactive"
+                tab.path === profileComp ? "grid-active" : "grid-nonactive"
               }`}
             >
               <li className={`grid-item `}>{tab.name}</li>
@@ -37,7 +39,7 @@ export default function TabsComponent({ openTab, setOpenTab, data }) {
       {data.map((tab) => (
         <div
           key={tab.name}
-          className={tab.path === openTab ? "block" : "hidden"}
+          className={tab.path === profileComp ? "block" : "hidden"}
         >
           {tab.content}
         </div>

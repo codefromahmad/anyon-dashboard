@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./profile.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { TabsComponent } from "../../components";
-import ChangePassword from "../../components/ChangePassword/ChangePassword";
-import ProofOfID from "../../components/ProofOfID/ProofOfID";
-import ProofOfAddress from "../../components/ProofOfAddres/ProofOfAddress";
-import UploadPhotograph from "../../components/UploadPhotograph/UploadPhotograph";
-import AddBankDetail from "../../components/AddBankDetail/AddBankDetail";
 
 import {
   MyAccount,
@@ -24,24 +19,7 @@ const Profile = () => {
 
   console.log("pathname", pathname);
 
-  const [openTab, setOpenTab] = useState(pathname);
-  const [accountInformation, setAccountInformation] = useState("");
-  const [changePassword, setChangePassword] = useState(false);
-  const [addBank, setAddBank] = useState(false);
   const profile = useSelector((state) => state.page.profile);
-  // const [activePage, setActivePage] = useState("");
-
-  // const handleAccountInformation = text => {
-  //   setAccountInformation(text)
-  // }
-
-  // const handleChangePasswordComp = () => {
-  //   setChangePassword(true)
-  // }
-
-  const handleAddBankComp = () => {
-    setAddBank(true);
-  };
 
   const data = [
     {
@@ -84,11 +62,7 @@ const Profile = () => {
     <div className="rounded-card-container">
       <div className="rounded-card">
         <div className="for-laptop">
-          <TabsComponent
-            data={data}
-            openTab={openTab}
-            setOpenTab={setOpenTab}
-          />
+          <TabsComponent data={data} />
         </div>
 
         <div className="for-mobile">

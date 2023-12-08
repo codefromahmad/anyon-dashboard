@@ -250,7 +250,7 @@ function App() {
                 element={<MarketsAi stocks={stocks} />}
               /> */}
 
-              <Route path="/marketsai" element={<Alert />} />
+              <Route path="/marketsai" element={<MarketsAi />} />
               <Route path="/alert" element={<Alert />} />
 
               <Route path="/holdings" element={<Holdings />} />

@@ -35,6 +35,12 @@
   background-color: #fafafa;
   border-radius: 5px;
 }
+.nameSelect .nameInput {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 .nameSelect select {
   display: flex;
   /* width: 100%; */
@@ -50,21 +56,21 @@
 }
 .discription-text {
   padding: 10px 20px;
-  /* width: 90%; */
   height: 60px;
   background-color: #fafafa;
   border-radius: 5px;
 }
-.discription-text input {
+.discription-text textarea {
   border: none;
   outline: none;
-  background-color: #fafafa;
+  background-color: transparent;
+  color: #66666666;
 }
 .discription-text textArea {
   background-color: #fafafa;
   resize: none;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 .alert-instrument p {
   font-size: 14px;
@@ -112,7 +118,7 @@
   border: none;
   outline: none;
   background-color: #fafafa;
-  color: #515151;
+  color: #66666666;
   font-size: 13px;
 }
 .above-select {

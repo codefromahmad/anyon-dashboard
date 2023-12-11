@@ -22,6 +22,7 @@ import {
   Profile,
   AlertManual,
   MarketsAi,
+  Technicals,
 } from "./pages";
 import AddFunds from "./pages/addfunds/AddFunds";
 import BankTransfer from "./pages/banktransfer/BankTransfer";
@@ -151,6 +152,42 @@ function App() {
       trend: "up",
     },
     {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
+      name: "CADBRY",
+      price: "N10.50 (+5.0%)",
+      data: nData,
+      trend: "dn",
+    },
+    {
+      name: "BLS",
+      price: "N10.50 (+5.0%)",
+      data: pData,
+      trend: "up",
+    },
+    {
       name: "BLS",
       price: "N10.50 (+5.0%)",
       data: nData,
@@ -245,10 +282,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/markets" element={<Markets stocks={stocks} />} />
-              {/* <Route
-                path="/marketsai"
-                element={<MarketsAi stocks={stocks} />}
-              /> */}
+              <Route
+                path="/technicals"
+                element={<Technicals stocks={stocks} />}
+              />
 
               <Route path="/marketsai" element={<MarketsAi />} />
               <Route path="/alert" element={<Alert />} />

@@ -7,6 +7,7 @@ import Apps from "./apps/Apps";
 import Profile from "./profile/profile";
 import AlertManual from "./alertmanual/alertmanual";
 import MarketsAi from "./marketsai/marketsai";
+import Technicals from "./technicals/Technicals";
 export {
   Home,
   Markets,
@@ -17,4 +18,5 @@ export {
   Profile,
   AlertManual,
   MarketsAi,
+  Technicals,
 };

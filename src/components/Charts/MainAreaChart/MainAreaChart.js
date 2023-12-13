@@ -1,35 +1,34 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { createChart, LineStyle } from 'lightweight-charts'
-import { format, parse } from 'date-fns'
-import './mainareachart.css'
+import React, { useEffect, useRef, useState } from "react";
+import { createChart, LineStyle } from "lightweight-charts";
+import { format, parse } from "date-fns";
+import "./mainareachart.css";
 
 const MainAreaChart = ({ data, trend }) => {
-  const chartContainer = useRef(null)
-  const tooltipRef = useRef(null)
-  const crosshairMoveSubscription = useRef(null) // Add a ref to store the subscription ID
+  const chartContainer = useRef(null);
+  const tooltipRef = useRef(null);
 
   useEffect(() => {
-    if (!chartContainer.current || !data.length) return
+    if (!chartContainer.current || !data.length) return;
 
-    console.log('Container width:', chartContainer.current.offsetWidth)
-    console.log('Number of data points:', data.length)
+    console.log("Container width:", chartContainer.current.offsetWidth);
+    console.log("Number of data points:", data.length);
 
     const chart = createChart(chartContainer.current, {
       width: chartContainer.current.offsetWidth,
       height: chartContainer.current.offsetHeight,
       crosshair: {
         vertLine: {
-          visible: false
+          visible: false,
         },
         horzLine: {
-          visible: false
-        }
-      }
-    })
+          visible: false,
+        },
+      },
+    });
 
-    const positiveColor = '#09CB09'
-    const negativeColor = '#FF0000'
-    const areaColor = trend === 'up' ? positiveColor : negativeColor
+    const positiveColor = "#09CB09";
+    const negativeColor = "#FF0000";
+    const areaColor = trend === "up" ? positiveColor : negativeColor;
 
     const areaSeries = chart.addAreaSeries({
       lineColor: areaColor,
@@ -38,8 +37,8 @@ const MainAreaChart = ({ data, trend }) => {
       lineWidth: 2,
       crosshairMarkerVisible: true,
       priceLineVisible: false,
-      lastValueVisible: false
-    })
+      lastValueVisible: false,
+    });
 
     // // Subscribe to crosshair move
     // crosshairMoveSubscription.current = chart.subscribeCrosshairMove(
@@ -71,10 +70,10 @@ const MainAreaChart = ({ data, trend }) => {
 
     const formattedData = data.map(({ time, value }) => ({
       time,
-      value
-    }))
+      value,
+    }));
 
-    areaSeries.setData(formattedData)
+    areaSeries.setData(formattedData);
 
     // Setting visible range
     // chart.timeScale().setVisibleRange({
@@ -83,58 +82,58 @@ const MainAreaChart = ({ data, trend }) => {
     // });
 
     // Setting visible range
-    chart.timeScale().fitContent()
+    chart.timeScale().fitContent();
 
     chart.applyOptions({
       leftPriceScale: {
-        visible: false
+        visible: false,
       },
       rightPriceScale: {
-        visible: true
+        visible: true,
       },
       timeScale: {
-        visible: true
+        visible: true,
       },
       grid: {
         vertLines: false,
-        horzLines: false
+        horzLines: false,
       },
       handleScroll: false,
       handleScale: false,
       localization: {
-        dateFormat: 'Mon dd'
-      }
+        dateFormat: "Mon dd",
+      },
       // localization: {
       //   timeFormatter: (timestamp) => format(timestamp, "yyyy-MM-dd HH:mm"),
       // },
-    })
+    });
 
     // Ensure the chart updates its size when the container is resized
     const handleResize = () => {
       chart.applyOptions({
         width: chartContainer.current.offsetWidth,
-        height: chartContainer.current.offsetHeight
-      })
-    }
+        height: chartContainer.current.offsetHeight,
+      });
+    };
 
-    window.addEventListener('resize', handleResize)
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener("resize", handleResize);
       // Unsubscribe from crosshair move to avoid memory leaks
       // if (crosshairMoveSubscription.current) {
       //   chart.unsubscribeCrosshairMove(crosshairMoveSubscription.current);
       // }
-      chart.remove()
-    }
-  }, [data, trend])
+      chart.remove();
+    };
+  }, [data, trend]);
 
   return (
     <>
-      <div ref={tooltipRef} className='custom-tooltip' />
-      <div ref={chartContainer} style={{ width: '100%', height: '100%' }} />
+      <div ref={tooltipRef} className="custom-tooltip" />
+      <div ref={chartContainer} style={{ width: "100%", height: "100%" }} />
     </>
-  )
-}
+  );
+};
 
-export default MainAreaChart
+export default MainAreaChart;

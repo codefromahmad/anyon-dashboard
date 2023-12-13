@@ -1,0 +1,132 @@
+.technicalsExtra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 25px;
+  position: relative;
+}
+
+.technicalsExtra p {
+  margin: 0px;
+}
+
+.compare {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.candleType {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.candleTypeDropDown {
+  position: absolute;
+  top: 40;
+  padding: 5px 20px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.priceContainer {
+  padding: 5px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.priceContainer select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.timeContainer {
+  padding: 5px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timeContainer select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.candleContainer {
+  padding: 5px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.candleDropdown {
+  position: relative;
+}
+
+.candleType {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 60px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdownOption {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdownOption:hover {
+  background-color: #ddd;
+}
+
+/* .candleSelect {
+    background: transparent;
+    border: none;
+    outline: none;
+  } */
+
+.candleContainer select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.candleSelect span {
+  display: none;
+}
+
+.expandContainer {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+}

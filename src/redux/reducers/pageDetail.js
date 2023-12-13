@@ -6,6 +6,7 @@ const initialState = {
   accountInformation: null,
   reload: false,
   profileComp: "",
+  expanded: true,
 };
 
 const pageDetail = (state = initialState, action) => {
@@ -48,6 +49,12 @@ const pageDetail = (state = initialState, action) => {
       return {
         ...state,
         reload: action.payload,
+      };
+
+    case "setExpanded":
+      return {
+        ...state,
+        expanded: action.payload,
       };
 
     default:

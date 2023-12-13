@@ -15,8 +15,9 @@
 
 .middleMarket {
   width: 45%;
-  /* height: calc(100vh - 58px); */
-  height: calc(100vh - 305px);
+  height: calc(100vh - 58px);
+  /* height: calc(100vh - 305px); */
+  /* height: calc(100vh - 304px); */
   /* height: 60%; */
   background: white;
   /* background: yellow; */
@@ -140,6 +141,13 @@
   flex-direction: row;
   gap: 10px;
   padding: 0px 30px;
+}
+
+.mainAreaContainer {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 404px);
+  padding: 50px 0px 50px 15px;
 }
 
 .buySmallButton {

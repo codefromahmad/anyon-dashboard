@@ -1,9 +1,15 @@
 import { useState } from "react";
 import "./marketstabs.css";
 import { IoExpand } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function MarketsTabs({ links }) {
   const [openTab, setOpenTab] = useState(links[0].name);
+  const dispatch = useDispatch();
+
+  const handleExpand = () => {
+    dispatch({ type: "setExpanded", payload: true });
+  };
 
   return (
     <div>
@@ -24,7 +30,7 @@ export default function MarketsTabs({ links }) {
             </li>
           ))}
           <li className="expandLi">
-            <div className="expandContainer">
+            <div className="expandContainer" onClick={handleExpand}>
               <IoExpand className="expand" />
             </div>
           </li>

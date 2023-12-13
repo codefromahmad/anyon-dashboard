@@ -26,6 +26,8 @@ import CreateEditAlert from "./CreateEditAlert/CreateEditAlert";
 import OrderBookAsksChart from "./Charts/OrderBookCharts/OrderBookAsksChart";
 import OrderBookBidsChart from "./Charts/OrderBookCharts/OrderBookBidsChart";
 import AlertLeft from "./AlertLeft/AlertLeftTop";
+import CandlestickChart from "./Charts/CandleStickChart/CandleStickChart";
+import TechnicalExtras from "./TechnicalExtras/TechnicalExtras";
 
 export {
   Sidebar,
@@ -56,4 +58,6 @@ export {
   Positions,
   CreateEditAlert,
   AlertLeft,
+  CandlestickChart,
+  TechnicalExtras,
 };

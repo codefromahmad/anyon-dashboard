@@ -5,19 +5,13 @@ import profilePicture from "../../assets/images/profile-picture.jpeg";
 // import bellIcon from "../../assets/images/bellicon.svg";
 import { IoIosMenu } from "react-icons/io";
 import { GoBell } from "react-icons/go";
-import {
-  Link,
-  unstable_HistoryRouter,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import profileIcon from "../../assets/images/menu/profile-icon.svg";
 import supportIcon from "../../assets/images/menu/support-icon.svg";
 import logoutIcon from "../../assets/images/menu/logout-icon.svg";
 import { FiSearch } from "react-icons/fi";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
-import { set } from "date-fns";
 
 const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const [headerTitle, setHeaderTitle] = useState("");
@@ -33,6 +27,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const addBank = useSelector((state) => state.page.addBank);
   console.log("dropdownMenu", dropdownMenu);
   const screenWidth = window.innerWidth;
+  const expanded = useSelector((state) => state.page.expanded);
 
   useEffect(() => {
     setBackButton(false);
@@ -123,17 +118,6 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, [pathname]);
-
-  // const pathsToCheck = [
-  //   "/accountinformation/proofofid",
-  //   "/accountinformation/proofofaddress",
-  //   "/accountinformation/uploadphotograph",
-  // ];
-
-  // // Check if the current pathname contains any of the specified paths
-  // const shouldShowBackArrow = pathsToCheck.some((path) =>
-  //   pathname.includes(path)
-  // );
 
   const dropdown = [
     {
@@ -304,26 +288,32 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
           pathname === "/markets" ||
           pathname === "/marketsai" ||
           pathname === "/technicals"
-            ? "width-25"
+            ? !expanded
+              ? "width-25"
+              : ""
             : "pl"
         }`}
       >
-        <div className="backAndTitleLaptop">
-          {backButton && (
-            <MdKeyboardBackspace
-              className="back"
-              onClick={handleBackButtonClick}
-              size={28}
-            />
-          )}
-          {headerTitle && <p>{headerTitle}</p>}
-        </div>
-        {(pathname === "/markets" || pathname === "/technicals") && (
-          <div className="search-bar">
-            <FiSearch color="#C3C3C3" />
-            <input placeholder="Search" />
+        {!expanded && (
+          <div className="backAndTitleLaptop">
+            {backButton && (
+              <MdKeyboardBackspace
+                className="back"
+                onClick={handleBackButtonClick}
+                size={28}
+              />
+            )}
+            {headerTitle && <p>{headerTitle}</p>}
           </div>
         )}
+
+        {!expanded &&
+          (pathname === "/markets" || pathname === "/technicals") && (
+            <div className="search-bar">
+              <FiSearch color="#C3C3C3" />
+              <input placeholder="Search" />
+            </div>
+          )}
       </div>
       {screenWidth > 425 &&
         (pathname === "/alert" || pathname === "/alertmanual") && (

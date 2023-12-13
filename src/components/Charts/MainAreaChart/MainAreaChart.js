@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { createChart, LineStyle } from "lightweight-charts";
 import { format, parse } from "date-fns";
 import "./mainareachart.css";
+import _debounce from "lodash/debounce"; // Import debounce from lodash
 
 const MainAreaChart = ({ data, trend }) => {
   const chartContainer = useRef(null);
@@ -73,7 +74,21 @@ const MainAreaChart = ({ data, trend }) => {
       value,
     }));
 
+    const handleResize = _debounce(() => {
+      if (chart) {
+        chart.resize(
+          chartContainer.current.offsetWidth,
+          chartContainer.current.offsetHeight
+        );
+        areaSeries.applyOptions({
+          timeScale: { rightOffset: 12, leftOffset: 12 },
+        });
+      }
+    }, 10);
+
     areaSeries.setData(formattedData);
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(chartContainer.current);
 
     // Setting visible range
     // chart.timeScale().setVisibleRange({
@@ -82,7 +97,7 @@ const MainAreaChart = ({ data, trend }) => {
     // });
 
     // Setting visible range
-    chart.timeScale().fitContent();
+    // chart.timeScale().fitContent();
 
     chart.applyOptions({
       leftPriceScale: {
@@ -109,21 +124,22 @@ const MainAreaChart = ({ data, trend }) => {
     });
 
     // Ensure the chart updates its size when the container is resized
-    const handleResize = () => {
-      chart.applyOptions({
-        width: chartContainer.current.offsetWidth,
-        height: chartContainer.current.offsetHeight,
-      });
-    };
+    // const handleResize = () => {
+    //   chart.applyOptions({
+    //     width: chartContainer.current.offsetWidth,
+    //     height: chartContainer.current.offsetHeight,
+    //   });
+    // };
 
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      // window.removeEventListener("resize", handleResize);
       // Unsubscribe from crosshair move to avoid memory leaks
       // if (crosshairMoveSubscription.current) {
       //   chart.unsubscribeCrosshairMove(crosshairMoveSubscription.current);
       // }
+      resizeObserver.disconnect();
       chart.remove();
     };
   }, [data, trend]);

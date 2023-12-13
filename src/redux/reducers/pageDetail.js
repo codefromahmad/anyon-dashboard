@@ -6,7 +6,8 @@ const initialState = {
   accountInformation: null,
   reload: false,
   profileComp: "",
-  expanded: true,
+  expanded: false,
+  confirm: false,
 };
 
 const pageDetail = (state = initialState, action) => {
@@ -55,6 +56,12 @@ const pageDetail = (state = initialState, action) => {
       return {
         ...state,
         expanded: action.payload,
+      };
+
+    case "setConfirm":
+      return {
+        ...state,
+        confirm: action.payload,
       };
 
     default:

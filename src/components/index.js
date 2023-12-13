@@ -28,6 +28,8 @@ import OrderBookBidsChart from "./Charts/OrderBookCharts/OrderBookBidsChart";
 import AlertLeft from "./AlertLeft/AlertLeftTop";
 import CandlestickChart from "./Charts/CandleStickChart/CandleStickChart";
 import TechnicalExtras from "./TechnicalExtras/TechnicalExtras";
+import BuySellLot from "./BuySellLot/BuySellLot";
+import BuySellPopUpOverlay from "./BuySellPopUpOverlay/BuySellPopUpOverlay";
 
 export {
   Sidebar,
@@ -60,4 +62,6 @@ export {
   AlertLeft,
   CandlestickChart,
   TechnicalExtras,
+  BuySellLot,
+  BuySellPopUpOverlay,
 };

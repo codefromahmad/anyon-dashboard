@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { createChart } from "lightweight-charts";
+import _debounce from "lodash/debounce"; // Import debounce from lodash
 
 const CandlestickChart = () => {
   const chartContainer = useRef(null);
 
   useEffect(() => {
     if (!chartContainer.current) return;
-
-    console.log("Container width:", chartContainer.current.offsetWidth);
 
     const chart = createChart(chartContainer.current, {
       width: chartContainer.current.offsetWidth,
@@ -35,6 +34,19 @@ const CandlestickChart = () => {
       borderDownColor: "#FF5C5C",
       wickDownColor: "#FF5C5C",
     });
+
+    const handleResize = _debounce(() => {
+      if (chart) {
+        chart.resize(
+          chartContainer.current.offsetWidth,
+          chartContainer.current.offsetHeight
+        );
+        candlestickSeries.applyOptions({
+          timeScale: { rightOffset: 12, leftOffset: 12 },
+        });
+      }
+    }, 10);
+
     const data = [
       { time: "2019-04-11", open: 80, high: 120, low: 50, close: 90 },
       { time: "2019-04-12", open: 90, high: 110, low: 70, close: 100 },
@@ -90,8 +102,11 @@ const CandlestickChart = () => {
     ];
 
     candlestickSeries.setData(data);
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(chartContainer.current);
 
     return () => {
+      resizeObserver.disconnect();
       chart.remove();
     };
   }, []);
@@ -102,8 +117,6 @@ const CandlestickChart = () => {
       style={{
         height: "100%",
         width: "100%",
-        // paddingTop: "50px",
-        // paddingBottom: "50px",
       }}
     />
   );

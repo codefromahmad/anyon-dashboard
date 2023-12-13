@@ -1,0 +1,72 @@
+.overlayMarkets {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #15151580;
+  z-index: 1;
+}
+
+.popup {
+  position: fixed; /* Use fixed instead of absolute for viewport-based positioning */
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Use translate to center the element */
+  width: 500px;
+  height: 275px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup .head {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.popup .lot {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.popup button {
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.popup button > p {
+  color: white;
+  margin: 0px;
+  padding: 10px 60px;
+}
+
+.closePopup {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.greenBack {
+  background: #00ba77;
+}
+
+.redBack {
+  background: #ff5348;
+}
+
+.greenColor {
+  color: #00ba77;
+}
+
+.redColor {
+  color: #ff5348;
+}

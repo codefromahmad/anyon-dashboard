@@ -3,7 +3,7 @@ import "./marketstabs.css";
 import { IoExpand } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 
-export default function MarketsTabs({ links }) {
+export default function MarketsTabs({ links, expand }) {
   const [openTab, setOpenTab] = useState(links[0].name);
   const dispatch = useDispatch();
 
@@ -13,27 +13,25 @@ export default function MarketsTabs({ links }) {
 
   return (
     <div>
-      <div className="gridMarketsContainer">
-        <ul className="gridMarkets">
+      <div className={`gridMarketsContainer ${expand && "bottomBorder"}`}>
+        <ul className={`${expand ? "gridMarketsExpand" : "gridMarkets"}`}>
           {links.map((tab) => (
             <li
+              onClick={() => setOpenTab(tab.name)}
               className={`gridItem ${
                 tab.name === openTab ? "gridActive" : "gridNonactive"
-              }`}
+              } ${expand && "width75"}`}
             >
-              <span
-                onClick={() => setOpenTab(tab.name)}
-                className={`itemName `}
-              >
-                {tab.name}
-              </span>
+              <span className={`itemName `}>{tab.name}</span>
             </li>
           ))}
-          <li className="expandLi">
-            <div className="expandContainer" onClick={handleExpand}>
-              <IoExpand className="expand" />
-            </div>
-          </li>
+          {!expand ? (
+            <li className="expandLi">
+              <div className="expandContainer" onClick={handleExpand}>
+                <IoExpand className="expand" />
+              </div>
+            </li>
+          ) : null}
         </ul>
       </div>
       {links.map((tab) => (

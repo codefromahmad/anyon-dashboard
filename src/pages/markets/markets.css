@@ -441,9 +441,9 @@
   }
   .mobileStockMarkets {
     background: white;
-    height: calc(100vh - 55px);
     margin: 2px;
-    min-height: -webkit-fill-available;
+    /* height: calc(100vh - 55px); */
+    /* min-height: -webkit-fill-available; */
   }
   .aiPromptButtons {
     display: flex;
@@ -499,6 +499,7 @@
   .nTextMarkets p {
     font-size: 20px;
     font-weight: bold;
+    line-height: inherit;
   }
   .om-text .price {
     font-size: 20px;
@@ -512,7 +513,11 @@
   .mainAreaContainerMobile {
     display: flex;
     align-items: center;
-    height: 250px;
-    padding: 0px 20px;
+    height: 300px;
+    padding: 0px 10px;
+  }
+  .rightMarket {
+    width: calc(100% - 10px);
+    margin: 0px 5px;
   }
 }

@@ -1,9 +1,26 @@
 .custom-tooltip {
   position: absolute;
   background-color: white;
-  padding: 8px;
-  border: 1px solid #ccc;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   pointer-events: none;
-  /* z-index: 20; */
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.date {
+  background: #00ba7799;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.closePrice {
+  background: #ffffff20;
+  font-size: 10px;
+  color: #00ba77;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

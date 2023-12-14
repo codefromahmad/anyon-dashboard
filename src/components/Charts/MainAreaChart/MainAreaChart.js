@@ -7,9 +7,10 @@ import _debounce from "lodash/debounce"; // Import debounce from lodash
 const MainAreaChart = ({ data, trend }) => {
   const chartContainer = useRef(null);
   const tooltipRef = useRef(null);
+  const crosshairMoveSubscription = useRef(null); // Declare crosshairMoveSubscription
 
   useEffect(() => {
-    if (!chartContainer.current || !data.length) return;
+    if (!chartContainer.current || !data || data.length === 0) return;
 
     console.log("Container width:", chartContainer.current.offsetWidth);
     console.log("Number of data points:", data.length);
@@ -17,14 +18,14 @@ const MainAreaChart = ({ data, trend }) => {
     const chart = createChart(chartContainer.current, {
       width: chartContainer.current.offsetWidth,
       height: chartContainer.current.offsetHeight,
-      // crosshair: {
-      //   vertLine: {
-      //     visible: false,
-      //   },
-      //   horzLine: {
-      //     visible: false,
-      //   },
-      // },
+      crosshair: {
+        vertLine: {
+          visible: true,
+        },
+        horzLine: {
+          visible: false,
+        },
+      },
     });
 
     const positiveColor = "#09CB09";
@@ -42,32 +43,33 @@ const MainAreaChart = ({ data, trend }) => {
     });
 
     // // Subscribe to crosshair move
-    // crosshairMoveSubscription.current = chart.subscribeCrosshairMove(
-    //   (param) => {
-    //     const [key, value] = param.seriesData.entries().next().value;
+    crosshairMoveSubscription.current = chart.subscribeCrosshairMove(
+      (param) => {
+        console.log("param:", param.seriesData.entries().next().value);
 
-    //     if (
-    //       param &&
-    //       param.time &&
-    //       param.seriesData &&
-    //       param.seriesData.length
-    //     ) {
-    //       const { price } = param.seriesData[0];
+        if (param && param.time) {
+          const [key, value] = param.seriesData.entries().next().value;
 
-    //       // Update tooltip content and position
-    //       if (tooltipRef.current) {
-    //         tooltipRef.current.innerHTML = `<div className="custom-tooltip">Date: ${value.time}</div><div>Price: ${value.value}</div>`;
-    //         tooltipRef.current.style.left = `${param.point.x}px`;
-    //         tooltipRef.current.style.top = `${param.point.y}px`;
-    //       }
-    //     } else {
-    //       // Hide tooltip when crosshair is not over a data point
-    //       if (tooltipRef.current) {
-    //         // tooltipRef.current.style.left = "-1000px";
-    //       }
-    //     }
-    //   }
-    // );
+          // Update tooltip content and position
+          if (tooltipRef.current) {
+            tooltipRef.current.innerHTML = `
+            <div>
+              <div class="date">${param.time}</div>
+              <div class="closePrice">Close price: ${20}</div>
+            </div>
+          `;
+            tooltipRef.current.style.left = `${param.point.x}px`;
+            tooltipRef.current.style.top = `${param.point.y}px`;
+          }
+        } else {
+          console.log("No data");
+          // Hide tooltip when crosshair is not over a data point
+          if (tooltipRef.current) {
+            tooltipRef.current.style.left = "-1000px";
+          }
+        }
+      }
+    );
 
     const formattedData = data.map(({ time, value }) => ({
       time,
@@ -136,19 +138,21 @@ const MainAreaChart = ({ data, trend }) => {
     return () => {
       // window.removeEventListener("resize", handleResize);
       // Unsubscribe from crosshair move to avoid memory leaks
-      // if (crosshairMoveSubscription.current) {
-      //   chart.unsubscribeCrosshairMove(crosshairMoveSubscription.current);
-      // }
+      if (crosshairMoveSubscription.current) {
+        chart.unsubscribeCrosshairMove(crosshairMoveSubscription.current);
+      }
       resizeObserver.disconnect();
       chart.remove();
     };
   }, [data, trend]);
 
   return (
-    <>
+    <div
+      ref={chartContainer}
+      style={{ width: "100%", height: "100%", position: "relative" }}
+    >
       <div ref={tooltipRef} className="custom-tooltip" />
-      <div ref={chartContainer} style={{ width: "100%", height: "100%" }} />
-    </>
+    </div>
   );
 };
 

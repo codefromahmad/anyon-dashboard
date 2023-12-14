@@ -428,6 +428,20 @@
   display: none;
 }
 
+.date {
+  background: #00ba7799;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.closePrice {
+  background: #ffffff99;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 @media (max-width: 426px) {
   .marketsLaptop {
     display: none;

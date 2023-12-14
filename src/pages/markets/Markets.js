@@ -17,6 +17,7 @@ import OrderBookAsks from "../../components/Charts/OrderBookCharts/OrderBookAsks
 import OrderBookBids from "../../components/Charts/OrderBookCharts/OrderBookBids";
 import { data, pData, nData, bidAskData } from "../../constants";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 
 const Markets = ({ stocks }) => {
   const [value, setValue] = useState(1);
@@ -25,6 +26,9 @@ const Markets = ({ stocks }) => {
   const [activeButton, setActiveButton] = useState("buy");
   const expanded = useSelector((state) => state.page.expanded);
   const confirm = useSelector((state) => state.page.confirm);
+  const stockSelected = useSelector((state) => state.page.stockSelected);
+  const dispatch = useDispatch();
+  const { pathname } = useLocation();
 
   const hanldeOrderType = (event) => {
     setOrderType(event.target.value);
@@ -45,6 +49,10 @@ const Markets = ({ stocks }) => {
 
   const handlePopUp = () => {
     setPopup(null);
+  };
+
+  const selectStock = (item) => {
+    dispatch({ type: "setStockSelected", payload: item });
   };
 
   return (
@@ -80,7 +88,7 @@ const Markets = ({ stocks }) => {
           <div className="marketContainer">
             <div className="leftMarket">
               {stocks.map((stock, index) => (
-                <div className="stockItem">
+                <div key={index} className="stockItem">
                   <div className="stockName">
                     <p className="name">{stock.name}</p>
                     <p className="pprice">{stock.price}</p>
@@ -103,7 +111,7 @@ const Markets = ({ stocks }) => {
                 <div>
                   <div className="marketsNoTextEquity">
                     <div className="no-text">
-                      <div className="n-text">
+                      <div className="nTextMarkets">
                         <p>N</p>
                       </div>
                       <div className="om-text">
@@ -265,7 +273,101 @@ const Markets = ({ stocks }) => {
           </div>
         )}
       </div>
-      <div className="marketsMobile"></div>
+      <div className="marketsMobile">
+        {!stockSelected && (
+          <div className="leftMarket">
+            {stocks.map((stock, index) => (
+              <div
+                onClick={() => selectStock(stock)}
+                key={index}
+                className="stockItem"
+              >
+                <div className="stockName">
+                  <p className="name">{stock.name}</p>
+                  <p className="pprice">{stock.price}</p>
+                </div>
+                <div>
+                  <AreaChartStock data={stock.data} trend={stock.trend} />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        {stockSelected && (
+          <div className="mobileStockMarkets">
+            <div className="mobileAlertTop">
+              <div className="aiPromptButtons">
+                <Link
+                  to="/technicals"
+                  className={
+                    pathname === "/technicals"
+                      ? "active-item"
+                      : "nonactive-item"
+                  }
+                >
+                  <p>Technicals</p>
+                </Link>
+                <Link
+                  to="/markets"
+                  className={
+                    pathname === "/markets" ? "active-item" : "nonactive-item"
+                  }
+                >
+                  <p>Simple</p>
+                </Link>
+                <Link
+                  to="/marketsai"
+                  className={
+                    pathname === "/marketsai" ? "active-item" : "nonactive-item"
+                  }
+                >
+                  <p>AI</p>
+                </Link>
+              </div>
+            </div>
+            <div className="stockInfo">
+              <div className="stockDetail">
+                <img src={stock} alt="stock" />
+                <div className="nameAndDesc">
+                  <p className="name">BLS</p>
+                  <p className="description">Bilingual system</p>
+                </div>
+              </div>
+              <div>
+                <div className="marketsNoTextEquity">
+                  <div className="no-text">
+                    <div className="nTextMarkets">
+                      <p>N</p>
+                    </div>
+                    <div className="om-text">
+                      <p className="price">10.50</p>
+                    </div>
+                    <p className="percent">+2.5 (+5.0%)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <BuySellLot
+              showPopup={showPopup}
+              handleDecrement={handleDecrement}
+              handleIncrement={handleIncrement}
+              value={value}
+            />
+            <MarketsTabs links={data} expand={false} />
+            <div className="mainAreaContainerMobile">
+              <MainAreaChart data={pData} trend={"up"} />
+            </div>
+          </div>
+        )}
+        {popup && (
+          <BuySellPopUpOverlay
+            popup={popup}
+            handlePopUp={handlePopUp}
+            setPopup={setPopup}
+            value={value}
+          />
+        )}
+      </div>
     </>
   );
 };

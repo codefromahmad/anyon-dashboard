@@ -8,6 +8,7 @@ const initialState = {
   profileComp: "",
   expanded: false,
   confirm: false,
+  stockSelected: null,
 };
 
 const pageDetail = (state = initialState, action) => {
@@ -62,6 +63,12 @@ const pageDetail = (state = initialState, action) => {
       return {
         ...state,
         confirm: action.payload,
+      };
+
+    case "setStockSelected":
+      return {
+        ...state,
+        stockSelected: action.payload,
       };
 
     default:

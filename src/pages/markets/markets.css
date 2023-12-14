@@ -55,6 +55,11 @@
   justify-content: space-between;
   border-bottom: 1px solid #cccccc;
   padding: 10px 15px;
+  cursor: pointer;
+}
+
+.stockItem:hover {
+  background: #f5f5f5;
 }
 
 .stockName {
@@ -93,12 +98,12 @@
   flex-direction: row;
   column-gap: 10px;
 }
-.n-text p {
+.nTextMarkets p {
   margin: 0;
   font-size: 50px;
   color: black;
   font-weight: 400;
-  /* line-height: 76.56px; */
+  line-height: 76.56px;
   font-family: "Space Grotesk", sans-serif;
 }
 .om-text .price {
@@ -417,4 +422,97 @@
 .bidAskItem {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.marketsMobile {
+  display: none;
+}
+
+@media (max-width: 426px) {
+  .marketsLaptop {
+    display: none;
+  }
+  .marketsMobile {
+    display: block;
+  }
+  .leftMarket {
+    width: 100%;
+    margin: 0px;
+  }
+  .mobileStockMarkets {
+    background: white;
+    height: calc(100vh - 55px);
+    margin: 2px;
+    min-height: -webkit-fill-available;
+  }
+  .aiPromptButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .aiPromptButtons a {
+    text-decoration: none;
+  }
+  .aiPromptButtons p {
+    margin: 0px;
+  }
+  .active-item {
+    background-color: #00ba77;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    padding: 7px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .active-item p {
+    color: white;
+  }
+  .nonactive-item {
+    font-weight: 400;
+    font-size: 13px;
+    padding: 7px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+  }
+  .nonactive-item p {
+    color: black;
+  }
+
+  .stockInfo {
+    padding: 20px;
+  }
+  .no-text {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+  }
+  .nTextMarkets,
+  .om-text {
+    display: flex;
+    align-items: flex-end;
+  }
+  .nTextMarkets p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .om-text .price {
+    font-size: 20px;
+    line-height: inherit;
+    font-weight: bold;
+  }
+  .percent {
+    font-size: 10px;
+    margin-bottom: 0px;
+  }
+  .mainAreaContainerMobile {
+    display: flex;
+    align-items: center;
+    height: 250px;
+    padding: 0px 20px;
+  }
 }

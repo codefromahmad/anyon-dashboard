@@ -149,7 +149,7 @@ const Technicals = ({ stocks }) => {
         </div>
       ) : (
         <div className="marketContainer">
-          <div className="leftMarket">
+          <div className="leftTechnicals">
             {stocks.map((stock, index) => (
               <div className="stockItem">
                 <div className="stockName">
@@ -185,7 +185,7 @@ const Technicals = ({ stocks }) => {
             value={value}
           />
           {confirm ? (
-            <div className="rightMarket">
+            <div className="rightTechnicals">
               <div className="orderBookContainer">
                 <div className="orderBookHeader">
                   <p className="heading">Order Book</p>

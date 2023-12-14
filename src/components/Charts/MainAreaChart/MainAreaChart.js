@@ -17,14 +17,14 @@ const MainAreaChart = ({ data, trend }) => {
     const chart = createChart(chartContainer.current, {
       width: chartContainer.current.offsetWidth,
       height: chartContainer.current.offsetHeight,
-      crosshair: {
-        vertLine: {
-          visible: false,
-        },
-        horzLine: {
-          visible: false,
-        },
-      },
+      // crosshair: {
+      //   vertLine: {
+      //     visible: false,
+      //   },
+      //   horzLine: {
+      //     visible: false,
+      //   },
+      // },
     });
 
     const positiveColor = "#09CB09";

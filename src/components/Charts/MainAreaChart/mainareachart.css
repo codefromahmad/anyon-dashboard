@@ -3,8 +3,8 @@
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   pointer-events: none;
-  border-radius: 10px;
-  z-index: 20;
+  border-radius: 5px;
+  z-index: 2;
 }
 
 .date {

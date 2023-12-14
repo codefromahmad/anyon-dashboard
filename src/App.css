@@ -1,5 +1,5 @@
-.app{
-  background-color: #F0F0F0;
+.app {
+  background-color: #f0f0f0;
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -12,26 +12,26 @@
   width: 100%;
   height: 100%;
   background-color: #15151580;
-  z-index: 1;
+  z-index: 2;
 }
 
-.sidebar{
+.sidebar {
   background: #03915d;
 }
 
 .popup-sidebar {
   display: flex;
   flex-direction: column;
-  background-color: #02915D;
+  background-color: #02915d;
   width: 75px;
   padding: 20px 10px;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 4;
   position: absolute;
-  top:0;
-  left:0;
-  height:calc(100vh - 40px)
+  top: 0;
+  left: 0;
+  height: calc(100vh - 40px);
 }
 
 .open {
@@ -101,11 +101,11 @@
   padding-right: 100px !important;
 }
 
-@media (min-width:601px) {
-  .popup-sidebar{
-      display: none;
+@media (min-width: 601px) {
+  .popup-sidebar {
+    display: none;
   }
-  .overlay{
+  .overlay {
     display: none;
   }
 }

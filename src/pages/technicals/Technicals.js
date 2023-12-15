@@ -5,22 +5,14 @@ import {
   BuySellLot,
   BuySellPopUpOverlay,
   CandlestickChart,
-  MainAreaChart,
   MarketsTabs,
-  OrderBookAsksChart,
-  OrderBookBidsChart,
   Positions,
   TechnicalExtras,
 } from "../../components";
 import stock from "../../assets/images/stock.png";
-import { IoCloseSharp, IoAddCircleOutline, IoExpand } from "react-icons/io5";
-import { HiPencil } from "react-icons/hi2";
 import { BiCandles } from "react-icons/bi";
 import OrderBookAsks from "../../components/Charts/OrderBookCharts/OrderBookAsks";
 import OrderBookBids from "../../components/Charts/OrderBookCharts/OrderBookBids";
-import Select from "react-select";
-import { HiChevronDown } from "react-icons/hi2";
-import { IoSettingsOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { data } from "../../constants";
@@ -393,6 +385,9 @@ const Technicals = ({ stocks }) => {
                 handleIncrement={handleIncrement}
                 value={value}
               />
+              <div className="technicalExtrasContainer">
+                <TechnicalExtras />
+              </div>
               <MarketsTabs links={data} expand={false} />
               <div className="mainAreaContainerMobile">
                 <CandlestickChart />

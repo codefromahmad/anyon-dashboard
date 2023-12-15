@@ -290,4 +290,14 @@
   .technicalsLaptop {
     display: none;
   }
+
+  .technicalExtrasContainer {
+    /* border-radius: 0px;
+    background: white;
+    margin: 0px;
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: none;
+    width: 100%; */
+  }
 }

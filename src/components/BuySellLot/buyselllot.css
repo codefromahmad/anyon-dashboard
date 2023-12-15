@@ -71,4 +71,13 @@
   .pNormal {
     padding: 0px 20px;
   }
+  .middleHeader {
+    justify-content: center;
+  }
+  .buySmallButton {
+    padding: 0px 20px;
+  }
+  .sellSmallButton {
+    padding: 0px 20px;
+  }
 }

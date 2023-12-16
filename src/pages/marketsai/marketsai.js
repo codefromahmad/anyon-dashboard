@@ -159,49 +159,53 @@ const MarketsAi = () => {
           </div>
         </div>
       </div>
-      {history ? (
-        <AlertHistory
-          onClick={() => dispatch({ type: "setHistory", payload: false })}
-        />
-      ) : (
-        <div className="mobileAiPrompt">
-          <div className="mobileAlertTop">
-            <div
-              onClick={() => dispatch({ type: "setHistory", payload: true })}
-              className="historyIcon"
-            >
-              <LuHistory />
+      <div className="mobileAiPromptContainer">
+        {history ? (
+          <AlertHistory
+            onClick={() => dispatch({ type: "setHistory", payload: false })}
+          />
+        ) : (
+          <div className="mobileAiPrompt">
+            <div className="mobileAlertTop">
+              <div
+                onClick={() => dispatch({ type: "setHistory", payload: true })}
+                className="historyIcon"
+              >
+                <LuHistory />
+              </div>
+              <div className="aiPromptButtons">
+                <Link
+                  to="/technicals"
+                  className={
+                    pathname === "/technicals"
+                      ? "active-item"
+                      : "nonactive-item"
+                  }
+                >
+                  <p>Technicals</p>
+                </Link>
+                <Link
+                  to="/markets"
+                  className={
+                    pathname === "/simple" ? "active-item" : "nonactive-item"
+                  }
+                >
+                  <p>Simple</p>
+                </Link>
+                <Link
+                  to="/marketsai"
+                  className={
+                    pathname === "/marketsai" ? "active-item" : "nonactive-item"
+                  }
+                >
+                  <p>AI</p>
+                </Link>
+              </div>
             </div>
-            <div className="aiPromptButtons">
-              <Link
-                to="/technicals"
-                className={
-                  pathname === "/technicals" ? "active-item" : "nonactive-item"
-                }
-              >
-                <p>Technicals</p>
-              </Link>
-              <Link
-                to="/markets"
-                className={
-                  pathname === "/simple" ? "active-item" : "nonactive-item"
-                }
-              >
-                <p>Simple</p>
-              </Link>
-              <Link
-                to="/marketsai"
-                className={
-                  pathname === "/marketsai" ? "active-item" : "nonactive-item"
-                }
-              >
-                <p>AI</p>
-              </Link>
-            </div>
+            <AiPrompt />
           </div>
-          <AiPrompt />
-        </div>
-      )}
+        )}
+      </div>
     </>
   );
 };

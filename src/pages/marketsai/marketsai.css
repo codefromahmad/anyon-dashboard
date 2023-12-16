@@ -282,6 +282,9 @@
   .alertCard {
     display: none;
   }
+  .mobileAiPromptContainer {
+    background: red;
+  }
   .mobileAiPrompt {
     display: flex;
     flex-direction: column;
@@ -315,26 +318,30 @@
     font-weight: 400;
     font-size: 13px;
     color: white;
-    padding: 7px 40px;
+    padding: 7px 0px;
+    width: 75px;
     border-radius: 5px;
     cursor: pointer;
   }
   .active-item p {
     color: white;
+    text-align: center;
   }
   .nonactive-item {
     font-weight: 400;
     font-size: 13px;
-    padding: 7px 25px;
+    padding: 7px 0px;
+    width: 75px;
     border-radius: 5px;
     cursor: pointer;
     background-color: #f5f5f5;
   }
   .nonactive-item p {
+    text-align: center;
     color: black;
   }
   .historyIcon {
     position: absolute;
-    left: 23px;
+    left: 18px;
   }
 }

@@ -54,7 +54,7 @@ const MainAreaChart = ({ data, trend }) => {
           if (tooltipRef.current) {
             tooltipRef.current.innerHTML = `
             <div>
-              <div class="date">${param.time}</div>
+              <div class="valueDate">${param.time}</div>
               <div class="closePrice">Close price: ${20}</div>
             </div>
           `;

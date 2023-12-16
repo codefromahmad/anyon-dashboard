@@ -132,7 +132,7 @@ const HoldingsTable = () => {
 
   return (
     <div className="holdingsTableContainer">
-      <table className="table" responsive hover>
+      <table className="holdingTable" responsive hover>
         <thead>
           <tr>
             <th className="border instrument">Instrument</th>

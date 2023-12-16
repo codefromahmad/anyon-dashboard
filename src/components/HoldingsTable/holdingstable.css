@@ -11,30 +11,30 @@
   font-size: 15px;
   font-weight: 500;
 }
-.table {
+.holdingTable {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
   background-color: white;
   border-radius: 5px;
 }
-table thead tr {
+.holdingTable thead tr {
   border-top: none;
   border-bottom: 1px solid #f0f0f0;
 }
 
-table .border {
+.holdingTable .border {
   border-right: 1px solid #f0f0f0;
   border-left: 1px solid white;
 }
 
-table tr {
+.holdingTable tr {
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
 }
 
-thead th,
-tbody td {
+.holdingTable thead th,
+.holdingTable tbody td {
   padding: 14px;
   text-align: left;
   font-size: 13px;
@@ -43,7 +43,7 @@ tbody td {
   text-align: center;
 }
 
-thead th {
+.holdingTable thead th {
   font-size: 13px;
   font-weight: 400;
   color: #515151cc;

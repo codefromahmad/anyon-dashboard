@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+
+.rounded-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  /* padding: 10px; */
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.walletCard {
+  padding: 20px 30px 30px;
+  height: calc(100vh - 130px);
+}
+.walletCardHeader {
+  /* display: flex;
+  flex-direction: row;
+  column-gap: 30px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+.walletTwoCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+.walletBalanceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 25px 30px;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+}
+.wallet-balance-card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.text p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.wallet-balance-card-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.withdraw {
+  padding: 8px 12px;
+  border: 1px solid #02915d;
+  border-radius: 5px;
+}
+.withdraw a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  font-size: 14px;
+}
+.add-funds {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #02915d;
+}
+.add-funds a {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.wallet-balance-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.no-text {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.n-text p {
+  margin: 0;
+  font-size: 50px;
+  color: black;
+  font-weight: 400;
+  line-height: 76.56px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.o-text p {
+  margin: 0;
+  font-size: 50px;
+  color: #00ba77;
+  font-weight: 400;
+  line-height: 76.56px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.contentDiv p {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #00ba77;
+}
+.totalReturnCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #d9d9d9;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+.totalReturnText p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.totalReturnBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.smallText p {
+  font-size: 13px;
+  margin-bottom: 0;
+  color: #00ba77;
+}
+
+.todaysReturnCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #d9d9d9;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+.todaysReturnText p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.todaysReturnBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.smallText p {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #00ba77;
+}
+.walletCardFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  padding-top: 20px;
+}
+.investCard {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 0px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #02915d;
+}
+.investCard {
+  /* padding: 30px 20px; */
+  /* padding-left: 0; */
+  column-gap: 10px;
+}
+.investCardImg {
+  display: flex;
+  align-items: center;
+}
+.investCardImg img {
+  height: 160px;
+  width: 200px;
+}
+.investCardRight {
+  /* padding-top: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.investCardRight h3 {
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.investCardText {
+  margin-bottom: 25px;
+}
+.investCardText p {
+  font-size: 13px;
+  color: #f9f9f9;
+  font-weight: 300;
+  margin: 0;
+  line-height: 16.59px;
+  padding: 15px 0px;
+}
+.investButton a {
+  padding: 15px 30px;
+  background: white;
+  width: max-content;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.earningBalanceDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 25px 30px;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+}
+.earningBalanceCardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.text p {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+.earningBalanceCardButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectOption {
+  width: 100px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.selectOption select {
+  border: none;
+  outline: none;
+}
+
+.earningsChart {
+  width: 99%;
+  padding-top: 15px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 427px) {
+  .investCardBottom {
+    display: none;
+  }
+}
+@media (max-width: 780px) {
+  .walletCardHeader {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .walletCardFooter {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .walletCard {
+    /* padding: 10px 5px 30px; */
+    height: auto;
+  }
+  .investCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .investCardImg img {
+    padding-top: 20px;
+  }
+  .investCardRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .walletCardHeader {
+    padding: 10px;
+  }
+  .walletTwoCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .walletCardFooter {
+    padding: 10px;
+    gap: 30px;
+  }
+  .walletBalanceDiv {
+    padding: 10px;
+  }
+}
+@media (max-width: 426px) {
+  .rounded-card {
+    margin: 3px 8px 0;
+  }
+  .walletCard {
+    padding: 0px;
+    height: auto;
+  }
+  .text p {
+    font-size: 13px;
+  }
+  .totalReturnText {
+    font-size: 13px;
+  }
+  .todaysReturnText {
+    font-size: 13px;
+  }
+  .wallet-balance-card-buttons {
+    column-gap: 5px;
+  }
+  .withdraw {
+    padding: 4px 7px;
+  }
+  .withdraw a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  .add-funds {
+    padding: 5px 7px;
+  }
+  .add-funds a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  .investButton a {
+    padding: 12px 20px;
+  }
+  .investCardRight {
+    display: none;
+  }
+  .investCardBottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 40px;
+  }
+  .investCardBottom h3 {
+    display: flex;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .investCardBottomText {
+    margin-bottom: 25px;
+  }
+  .investCardBottomText p {
+    font-size: 13px;
+    color: #f9f9f9;
+    font-weight: 300;
+    margin: 0;
+    line-height: 16.59px;
+  }
+  .investCard {
+    padding: 10px 0 0;
+  }
+  .earningBalanceDiv {
+    padding: 10px 11px 30px;
+  }
+}
+
+@media (min-width: 1442px) {
+  .rounded-card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-card {
+    max-width: 1200px;
+  }
+}

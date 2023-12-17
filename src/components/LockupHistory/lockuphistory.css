@@ -1,0 +1,129 @@
+.lockupTableContainer {
+  margin-top: 20px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+}
+.lockupTableHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.lockupHeaderLeft p {
+  font-weight: 500;
+}
+.lockupHeaderRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.lockupSearchBar {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* background: #d9d9d94d; */
+}
+
+.lockupSearchBar input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding-left: 4px;
+  color: #c3c3c3;
+  outline: none;
+}
+
+input::placeholder {
+  color: #c3c3c3;
+}
+.selectFilter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.selectFilter p {
+  margin: 0px;
+}
+.lockupTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.lockupTable tbody {
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+}
+.lockupTable thead tr {
+  border-top: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.lockupTable tr th {
+  cursor: pointer;
+}
+
+.lockupTable .border {
+  border-right: 1px solid #f0f0f0;
+  border-left: 1px solid white;
+}
+
+.lockupTable tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.lockupTable thead th,
+.lockupTable tbody td {
+  padding: 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 400;
+  color: #515151cc;
+}
+
+.lockupTable thead th {
+  font-size: 13px;
+  font-weight: 400;
+  color: #515151cc;
+}
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0px 10px;
+}
+.paginationContainer .pages span {
+  color: #16161699;
+  font-size: 14px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination span {
+  padding: 0px 16px;
+  font-size: 14px;
+}
+.pagination button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  background: #00ba77 !important;
+  color: white;
+}

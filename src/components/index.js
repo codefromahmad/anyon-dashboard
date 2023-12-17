@@ -30,6 +30,8 @@ import CandlestickChart from "./Charts/CandleStickChart/CandleStickChart";
 import TechnicalExtras from "./TechnicalExtras/TechnicalExtras";
 import BuySellLot from "./BuySellLot/BuySellLot";
 import BuySellPopUpOverlay from "./BuySellPopUpOverlay/BuySellPopUpOverlay";
+import LockupHistory from "./LockupHistory/LockupHistory";
+import WalletTable from "./WalletTable/WalletTable";
 
 export {
   Sidebar,
@@ -64,4 +66,6 @@ export {
   TechnicalExtras,
   BuySellLot,
   BuySellPopUpOverlay,
+  LockupHistory,
+  WalletTable,
 };

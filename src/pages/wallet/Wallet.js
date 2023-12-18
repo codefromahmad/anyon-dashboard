@@ -189,6 +189,16 @@ const Wallet = () => {
                       </Link>
                     </div>
                   </div>
+                  <div className="topLeftSavingsMobile">
+                    <p>You have a total of:&nbsp;</p>
+                    <div className="addFundsSavingsMobile">
+                      <p>$ 1,408,774.87</p>
+                      <Link to="/wallet/addfunds">
+                        <img src={addGreen} alt="addFunds" />
+                        <a href="#">Add funds</a>
+                      </Link>
+                    </div>
+                  </div>
                   <div className="topLeftSavings1">
                     <p>How much do you want to save?&nbsp;&nbsp;</p>
                     <div className="amountToSave">
@@ -215,11 +225,7 @@ const Wallet = () => {
                   <div className="topLeftSavings1">
                     <p>For how long? (in months)&nbsp;&nbsp;</p>
                     <div className="amountToSave">
-                      <input
-                        readOnly
-                        value={"471,256.89"}
-                        placeholder="Search"
-                      />
+                      <input value={"471,256.89"} placeholder="Search" />
                     </div>
                   </div>
                   <div className="calculateContainer">

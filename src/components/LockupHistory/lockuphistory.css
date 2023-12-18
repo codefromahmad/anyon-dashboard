@@ -127,3 +127,20 @@ input::placeholder {
   background: #00ba77 !important;
   color: white;
 }
+
+@media (max-width: 426px) {
+  .lockupTableWrapper {
+    overflow-x: auto;
+  }
+  .lockupTableHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+  }
+  .lockupHeaderLeft p {
+    margin-top: 0px;
+  }
+  .lockupTableContainer {
+    margin-top: 0px;
+  }
+}

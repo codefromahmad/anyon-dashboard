@@ -205,8 +205,8 @@
   text-decoration: none;
 }
 .bannerContainer {
-  /* display: flex; */
-  /* justify-content: center; */
+  display: flex;
+  justify-content: center;
 }
 
 .locked-container {
@@ -570,6 +570,9 @@
 .bannerContainerMobile {
   display: none;
 }
+.topLeftSavingsMobile {
+  display: none;
+}
 
 @media (max-width: 426px) {
   .rounded-card {
@@ -608,6 +611,7 @@
     display: none;
   }
   .bannerContainerMobile {
+    display: block;
     background: #00ba77;
     height: 250px;
     margin: 20px 0px;
@@ -654,6 +658,10 @@
     height: 190px;
     padding: 0px;
   }
+  .bannerContentMobile img {
+    width: 160px;
+    height: 100px;
+  }
   .startSavingNow {
     display: block;
     padding: 10px;
@@ -666,6 +674,79 @@
     width: 100%;
     position: relative;
     z-index: 10;
+  }
+
+  /* Savings */
+  .savingsCalculations {
+    grid-template-columns: 1fr;
+  }
+  .topLeftSavings {
+    display: none;
+  }
+  .rightSavings {
+    border-left: none;
+    border-top: 1px solid #d8d8d8;
+  }
+  .topLeftSavings1 {
+    flex-direction: column;
+  }
+  .topLeftSavings1 p {
+    width: -webkit-fill-available;
+    margin: 0px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: #16161699;
+  }
+  .amountToSave {
+    width: -webkit-fill-available;
+  }
+  .amountToSave input {
+    font-size: 20px;
+  }
+  .bottomRightSavings p {
+    font-size: 20px;
+  }
+  .topRightSavings span {
+    font-size: 20px;
+  }
+  .topRightSavings1 span {
+    font-size: 20px;
+  }
+  .bottomRightSavings .greenBold {
+    font-size: 20px;
+  }
+  .topLeftSavingsMobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .topLeftSavingsMobile p {
+    margin: 0px;
+    color: #16161699;
+  }
+  .addFundsSavingsMobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .addFundsSavingsMobile a {
+    text-decoration: none;
+    color: #00ba77 !important;
+  }
+  .addFundsSavingsMobile img {
+    margin: 0px 8px;
+  }
+  .addFundsSavingsMobile p {
+    padding: 10px 0px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0px;
+    color: #000;
+  }
+  .calculateContainer {
+    justify-content: flex-end;
+  }
+  .lockupSave {
+    margin-top: 10px;
   }
 }
 

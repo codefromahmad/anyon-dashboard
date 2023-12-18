@@ -313,38 +313,40 @@ const LockupHistory = () => {
           </div>
         </div>
       </div>
-      <table className="lockupTable" responsive hover>
-        <thead>
-          <tr>
-            <th onClick={() => handleSort("dateAndtime")}>
-              Title <img src={upDown} alt="upDown" />
-            </th>
-            <th onClick={() => handleSort("type")}>
-              Amount <img src={upDown} alt="upDown" />
-            </th>
-            <th onClick={() => handleSort("channel")}>
-              Duration(in months) <img src={upDown} alt="upDown" />
-            </th>
-            <th onClick={() => handleSort("amount")}>
-              Interest rate <img src={upDown} alt="upDown" />
-            </th>
-            <th onClick={() => handleSort("status")}>
-              Status <img src={upDown} alt="upDown" />
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedCurrentItems.map((row, index) => (
-            <tr key={index}>
-              <td>{row.title}</td>
-              <td>{row.amount}</td>
-              <td>{row.duration}</td>
-              <td>{row.rate}</td>
-              <td>{row.status}</td>
+      <div className="lockupTableWrapper">
+        <table className="lockupTable" responsive hover>
+          <thead>
+            <tr>
+              <th onClick={() => handleSort("dateAndtime")}>
+                Title <img src={upDown} alt="upDown" />
+              </th>
+              <th onClick={() => handleSort("type")}>
+                Amount <img src={upDown} alt="upDown" />
+              </th>
+              <th onClick={() => handleSort("channel")}>
+                Duration(in months) <img src={upDown} alt="upDown" />
+              </th>
+              <th onClick={() => handleSort("amount")}>
+                Interest rate <img src={upDown} alt="upDown" />
+              </th>
+              <th onClick={() => handleSort("status")}>
+                Status <img src={upDown} alt="upDown" />
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {sortedCurrentItems.map((row, index) => (
+              <tr key={index}>
+                <td>{row.title}</td>
+                <td>{row.amount}</td>
+                <td>{row.duration}</td>
+                <td>{row.rate}</td>
+                <td>{row.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Pagination controls */}
       <div className="paginationContainer">

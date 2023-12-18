@@ -319,6 +319,32 @@
   height: 250px;
   width: 100%;
 }
+.market-card-body canvas {
+  height: 200px;
+}
+.inviteContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0px;
+}
+.inviteWrapper {
+  border: 1px solid #d9d9d9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.inviteBtn {
+  border: none;
+  background: #00ba77;
+  color: white;
+  padding: 8px 0px;
+  width: 120px;
+  cursor: pointer;
+}
+
 @media (max-width: 800px) {
   .home-card-header {
     padding: 10px 20px;
@@ -369,19 +395,12 @@
     flex-direction: column;
     gap: 20px;
   }
-  .equity-container {
-    /* width: 91%; */
-  }
-  .wallet-container {
-    /* width: 91%; */
-  }
   .holdings-left-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   .holdings-container {
-    /* width: 87%; */
     height: auto;
   }
   .holdings-card-body {
@@ -391,7 +410,6 @@
   .holdings-card-body img {
     display: flex;
     align-items: center;
-    /* width: 225px; */
     padding: 30px 0px;
   }
   .homeNoText {
@@ -400,6 +418,20 @@
   .holdings-card-header .heading {
     font-size: 18px;
     font-weight: 500;
+  }
+  .inviteContainer {
+    grid-template-columns: 1fr;
+  }
+  .inviteWrapper img {
+    width: 120px;
+  }
+  .inviteBtn {
+    border: none;
+    background: #00ba77;
+    color: white;
+    padding: 5px 0px;
+    width: 100px;
+    font-size: 14px;
   }
 }
 @media (max-width: 350px) {

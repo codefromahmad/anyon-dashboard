@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./home.css";
 import walletImage from "../../assets/images/walletImage.svg";
+import invite from "../../assets/images/invite.svg";
 import currentValues from "../../assets/images/currentValues.svg";
 import { MarketOverview, ProfitLossChart } from "../../components";
 import { Link } from "react-router-dom";
@@ -123,6 +124,18 @@ const Home = () => {
             <div className="market-card-body">
               <MarketOverview />
             </div>
+          </div>
+          <div className="inviteContainer">
+            <div className="inviteWrapper">
+              <img src={invite} alt="wallet" />
+              <div>
+                <p className="inviteText">
+                  Invite friends and family and get rewarded!
+                </p>
+                <button className="inviteBtn">Refer</button>
+              </div>
+            </div>
+            <div />
           </div>
         </div>
       </div>

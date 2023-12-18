@@ -21,6 +21,8 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const history = useSelector((state) => state.page.history);
   const profile = useSelector((state) => state.page.profile);
   const changePassword = useSelector((state) => state.page.changePassword);
+  const walletPage = useSelector((state) => state.page.walletPage);
+  const lockup = useSelector((state) => state.page.lockup);
   const accountInformation = useSelector(
     (state) => state.page.accountInformation
   );
@@ -83,11 +85,7 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
           setHeaderTitle("Payment");
         }
       }
-
-      if (pathname === "/wallet") {
-        setBackButton(false);
-        setHeaderTitle("Wallet");
-      } else if (pathname === "/alert" || pathname === "/alertmanual") {
+      if (pathname === "/alert" || pathname === "/alertmanual") {
         setHeaderTitle("Alert");
       } else if (pathname === "/wallet/addfunds") {
         setBackButton(true);
@@ -106,6 +104,8 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         setHeaderTitle("Enter OTP");
       } else if (pathname === "/apps") {
         setHeaderTitle("Apps");
+      } else if (pathname === "/holdings") {
+        setHeaderTitle("Holdings");
       }
     };
     handleResize();
@@ -140,7 +140,10 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
   const navigate = useNavigate();
 
   const handleBackButtonClick = () => {
-    if (screenWidth < 426) {
+    if (lockup) {
+      dispatch({ type: "setLockup", payload: false });
+      setBackButton(false);
+    } else if (screenWidth < 426) {
       if (history) {
         dispatch({ type: "setHistory", payload: false });
         setBackButton(false);
@@ -244,6 +247,16 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
         setBackButton(false);
       }
     }
+    if (walletPage === "wallet" && pathname === "/wallet") {
+      setBackButton(false);
+      setHeaderTitle("My Wallet");
+    } else if (walletPage === "savings" && !lockup && pathname === "/wallet") {
+      setBackButton(false);
+      setHeaderTitle("Savings Lock");
+    } else if (walletPage === "savings" && lockup && pathname === "/wallet") {
+      setBackButton(true);
+      setHeaderTitle("Lockup History");
+    }
   }, [
     history,
     profile,
@@ -253,6 +266,9 @@ const Header = ({ toggleMenu, dropdownMenu, setDropdownMenu }) => {
     screenWidth,
     isHomePge,
     isMarketsPage,
+    walletPage,
+    lockup,
+    pathname,
   ]);
 
   const handleDropDownClick = (item) => {

@@ -9,14 +9,25 @@ import { Link } from "react-router-dom";
 import investImg from "../../assets/images/Group 282.svg";
 import { MdHistory } from "react-icons/md";
 import { LockupHistory, WalletTable } from "../../components";
+import { useDispatch, useSelector } from "react-redux";
 
 const Wallet = () => {
-  const [selected, setSelected] = useState("wallet");
-  const [section, setSection] = useState("savings");
   const [sliderValue, setSliderValue] = useState(100);
+  const walletPage = useSelector((state) => state.page.walletPage);
+  const lockup = useSelector((state) => state.page.lockup);
+  const dispatch = useDispatch();
 
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
+  };
+
+  const handleSelected = (wallet) => {
+    dispatch({ type: "setWalletPage", payload: wallet });
+    dispatch({ type: "setLockup", payload: false });
+  };
+
+  const handleLockup = () => {
+    dispatch({ type: "setLockup", payload: true });
   };
 
   return (
@@ -25,19 +36,19 @@ const Wallet = () => {
         <div className="walletCard">
           <div className="walletCardHeader">
             <div
-              onClick={() => setSelected("wallet")}
-              className={`wallet ${selected === "wallet" && "borderGreen"}`}
+              onClick={() => handleSelected("wallet")}
+              className={`wallet ${walletPage === "wallet" && "borderGreen"}`}
             >
               <p>My Wallet</p>
             </div>
             <div
-              onClick={() => setSelected("savings")}
-              className={`savings ${selected === "savings" && "borderGreen"}`}
+              onClick={() => handleSelected("savings")}
+              className={`savings ${walletPage === "savings" && "borderGreen"}`}
             >
               <p>Savings Lock</p>
             </div>
           </div>
-          {selected === "wallet" ? (
+          {walletPage === "wallet" ? (
             <div>
               <div className="walletCardsContainer">
                 <div className="balance-container">
@@ -109,12 +120,12 @@ const Wallet = () => {
               </div>
               <WalletTable />
             </div>
-          ) : section === "savings" ? (
+          ) : !lockup ? (
             <div>
               <div className="locked-container">
                 <div className="locked-card-header">
                   <p className="heading">Locked Savings</p>
-                  <div onClick={() => setSection("lockup")} className="heading">
+                  <div onClick={handleLockup} className="lockupHistory">
                     <MdHistory
                       color="#00ba77"
                       style={{ fontSize: "20px", marginRight: "5px" }}

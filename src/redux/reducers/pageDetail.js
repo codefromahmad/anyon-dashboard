@@ -9,6 +9,8 @@ const initialState = {
   expanded: false,
   confirm: false,
   stockSelected: null,
+  walletPage: "wallet",
+  lockup: false,
 };
 
 const pageDetail = (state = initialState, action) => {
@@ -69,6 +71,18 @@ const pageDetail = (state = initialState, action) => {
       return {
         ...state,
         stockSelected: action.payload,
+      };
+
+    case "setWalletPage":
+      return {
+        ...state,
+        walletPage: action.payload,
+      };
+
+    case "setLockup":
+      return {
+        ...state,
+        lockup: action.payload,
       };
 
     default:

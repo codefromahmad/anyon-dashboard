@@ -127,3 +127,41 @@ input::placeholder {
   background: #00ba77 !important;
   color: white;
 }
+
+@media (max-width: 426px) {
+  .walletTableWrapper {
+    overflow-x: auto;
+  }
+  .walletTable {
+    margin: 10px 0px;
+  }
+  .walletTableHeader {
+    flex-direction: column;
+  }
+  .walletHeaderLeft {
+    display: flex;
+    justify-content: flex-start;
+    width: -webkit-fill-available;
+  }
+  .walletHeaderRight {
+    width: -webkit-fill-available;
+    flex-direction: column;
+  }
+  .walletSearchBar,
+  .selectFilter {
+    width: -webkit-fill-available;
+    justify-content: center;
+    padding: 10px;
+  }
+  .paginationContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    margin-top: 10px;
+    gap: 20px;
+  }
+  .pages {
+    display: flex;
+    justify-content: center;
+  }
+}

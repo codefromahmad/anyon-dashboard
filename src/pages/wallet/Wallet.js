@@ -50,6 +50,22 @@ const Wallet = () => {
           </div>
           {walletPage === "wallet" ? (
             <div>
+              <div className="addFundsWithdrawMobile">
+                <div className="wallet-balance-card-buttons">
+                  <div className="add-funds">
+                    <img src={addFunds} alt="addFunds" />
+                    <Link to="/wallet/addfunds">
+                      <a href="#">Add funds</a>
+                    </Link>
+                  </div>
+                  <div className="withdraw">
+                    <img src={withdraw} alt="withdraw" />
+                    <Link to="/wallet/withdraw">
+                      <a href="#">Withdraw</a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <div className="walletCardsContainer">
                 <div className="balance-container">
                   <div className="balance-card-header">
@@ -109,14 +125,35 @@ const Wallet = () => {
                   <div className="bannerContent">
                     <img src={investImg} alt="InvestImg" />
                     <div className="middleTexts">
+                      <p>Save and Make Interest</p>
                       <p>Lockup & Save</p>
-                      <p>Lockup & Save</p>
-                      <p>Lockup & Save</p>
+                      <p>With 9ja Stocks</p>
                     </div>
                     <button>Start Saving Now</button>
                   </div>
                   <div />
                 </div>
+                <button className="startSavingNow">Start Saving Now</button>
+              </div>
+              <div className="bannerContainerMobile">
+                <img className="coin9" src={coin} alt="coin" />
+                <img className="coin10" src={coin} alt="coin" />
+                <img className="coin11" src={coin} alt="coin" />
+                <img className="coin8" src={coin} alt="coin" />
+                <img className="coin7" src={coin} alt="coin" />
+                <div className="bannerContentMobile">
+                  <img src={investImg} alt="InvestImg" />
+                  <div className="middleTexts">
+                    <p>Save and Make Interest</p>
+                    <p>Lockup & Save</p>
+                    <p>With 9ja Stocks</p>
+                  </div>
+                </div>
+                <button className="startSavingNow">Start Saving Now</button>
+                {/* <div className="banner">
+                  <div />
+                  <button className="startSavingNow">Start Saving Now</button>
+                </div> */}
               </div>
               <WalletTable />
             </div>

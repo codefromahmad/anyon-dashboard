@@ -157,6 +157,9 @@
   justify-content: flex-end;
   padding: 20px 0px;
 }
+.addFundsWithdrawMobile {
+  display: none;
+}
 
 .wallet-balance-card-buttons {
   display: flex;
@@ -183,7 +186,7 @@
   font-weight: bold;
 }
 .add-funds {
-  padding: 8px 12px;
+  padding: 10px 12px;
   border-radius: 5px;
   background-color: #00ba77;
   display: flex;
@@ -202,8 +205,8 @@
   text-decoration: none;
 }
 .bannerContainer {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .locked-container {
@@ -561,14 +564,108 @@
   font-size: 16px;
   font-weight: bold;
 }
+.startSavingNow {
+  display: none;
+}
+.bannerContainerMobile {
+  display: none;
+}
 
 @media (max-width: 426px) {
   .rounded-card {
     margin: 3px 8px 0;
   }
   .walletCard {
-    padding: 0px;
+    padding: 10px;
     height: auto;
+  }
+  .walletCardsContainer {
+    grid-template-columns: 1fr;
+  }
+  .addFundsWithdraw {
+    display: none;
+  }
+  .addFundsWithdrawMobile {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 0px 20px 0px;
+  }
+  .wallet-balance-card-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .add-funds,
+  .withdraw {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .bannerContainer {
+    display: none;
+  }
+  .bannerContainerMobile {
+    background: #00ba77;
+    height: 250px;
+    margin: 20px 0px;
+    padding: 0px 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .coin9 {
+    position: absolute;
+    top: -25px;
+    right: -46px;
+    width: 153px;
+  }
+  .coin10 {
+    position: absolute;
+    width: 95px;
+    right: -42px;
+    bottom: 20%;
+  }
+  .coin7 {
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    width: 20px;
+  }
+  .coin8 {
+    position: absolute;
+    left: 33%;
+    bottom: 30%;
+    width: 20px;
+  }
+  .coin11 {
+    position: absolute;
+    left: 16%;
+    bottom: 10px;
+    width: 20px;
+  }
+  .bannerContentMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 190px;
+    padding: 0px;
+  }
+  .startSavingNow {
+    display: block;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    z-index: 10;
   }
 }
 
